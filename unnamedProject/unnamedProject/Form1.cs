@@ -48,6 +48,7 @@ namespace unnamedProject
             textBox1.Text = null;
             textBox2.Text = null;
             textBox3.Text = null;
+            Form1.ActiveForm.Text = "Register";
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -89,6 +90,7 @@ namespace unnamedProject
             textBox1.Text = null;
             textBox2.Text = null;
             textBox3.Text = null;
+            Form1.ActiveForm.Text = "Login";
         }
     }
 }
