@@ -1,6 +1,6 @@
 ﻿namespace unnamedProject
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,173 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.labelLogin = new System.Windows.Forms.Label();
+            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.usernameBox = new System.Windows.Forms.TextBox();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.signIn = new System.Windows.Forms.Button();
+            this.errorIncorrect = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // labelLogin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(456, 91);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "WELCOME";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labelLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.Location = new System.Drawing.Point(158, 25);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(40, 13);
+            this.labelLogin.TabIndex = 0;
+            this.labelLogin.Text = "LOGIN";
+            this.labelLogin.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button2
+            // passwordBox
             // 
-            this.button2.Location = new System.Drawing.Point(532, 270);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Register";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.passwordBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.passwordBox.Location = new System.Drawing.Point(64, 112);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.PasswordChar = '*';
+            this.passwordBox.Size = new System.Drawing.Size(235, 20);
+            this.passwordBox.TabIndex = 3;
+            this.passwordBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox1
+            // usernameBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(348, 213);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(312, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.usernameBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.usernameBox.Location = new System.Drawing.Point(64, 61);
+            this.usernameBox.Name = "usernameBox";
+            this.usernameBox.Size = new System.Drawing.Size(235, 20);
+            this.usernameBox.TabIndex = 4;
+            this.usernameBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox2
+            // labelUsername
             // 
-            this.textBox2.Location = new System.Drawing.Point(348, 150);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(312, 22);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.labelUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Location = new System.Drawing.Point(64, 42);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(55, 13);
+            this.labelUsername.TabIndex = 5;
+            this.labelUsername.Text = "Username";
+            this.labelUsername.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label2
+            // labelPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(348, 127);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Username";
+            this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Location = new System.Drawing.Point(64, 96);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(53, 13);
+            this.labelPassword.TabIndex = 6;
+            this.labelPassword.Text = "Password";
+            this.labelPassword.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label3
+            // signIn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(348, 193);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Password";
+            this.signIn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.signIn.Location = new System.Drawing.Point(140, 145);
+            this.signIn.Name = "signIn";
+            this.signIn.Size = new System.Drawing.Size(75, 23);
+            this.signIn.TabIndex = 7;
+            this.signIn.Text = "Sign In";
+            this.signIn.UseVisualStyleBackColor = true;
+            this.signIn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // errorIncorrect
             // 
-            this.button1.Location = new System.Drawing.Point(376, 270);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Sign In";
-            this.button1.UseVisualStyleBackColor = true;
+            this.errorIncorrect.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.errorIncorrect.AutoSize = true;
+            this.errorIncorrect.ForeColor = System.Drawing.Color.Red;
+            this.errorIncorrect.Location = new System.Drawing.Point(48, 4);
+            this.errorIncorrect.Name = "errorIncorrect";
+            this.errorIncorrect.Size = new System.Drawing.Size(277, 13);
+            this.errorIncorrect.TabIndex = 12;
+            this.errorIncorrect.Text = "ERROR: USERNAME OR PASSWORD IS INCORRECT";
+            this.errorIncorrect.Visible = false;
+            this.errorIncorrect.Click += new System.EventHandler(this.label6_Click);
             // 
-            // textBox3
+            // LoginForm
             // 
-            this.textBox3.Location = new System.Drawing.Point(348, 270);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(312, 22);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.Visible = false;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(348, 250);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 17);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Confirm Password";
-            this.label4.Visible = false;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(460, 305);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Register";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(372, 50);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(266, 17);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "ERROR: PASSWORDS DO NOT MATCH";
-            this.label6.Visible = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(395, 353);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(220, 17);
-            this.linkLabel1.TabIndex = 13;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Already have an account? Log In.";
-            this.linkLabel1.Visible = false;
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(371, 184);
+            this.Controls.Add(this.errorIncorrect);
+            this.Controls.Add(this.signIn);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelUsername);
+            this.Controls.Add(this.usernameBox);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.labelLogin);
+            this.MinimumSize = new System.Drawing.Size(387, 223);
+            this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -204,18 +137,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.TextBox usernameBox;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Button signIn;
+        private System.Windows.Forms.Label errorIncorrect;
     }
 }
 
