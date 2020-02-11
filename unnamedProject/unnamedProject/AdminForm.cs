@@ -5,8 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace unnamedProject
 {
@@ -20,7 +22,14 @@ namespace unnamedProject
         private void logOut_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new LoginForm().Show();
+            var logIn = new Thread(() => Application.Run(new LoginForm()));
+            logIn.Start();
+            this.Close();
+        }
+
+        private void register_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

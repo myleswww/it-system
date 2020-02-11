@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace unnamedProject
 {
@@ -53,7 +55,9 @@ namespace unnamedProject
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new AdminForm().Show();
+            var admin = new Thread(() => Application.Run(new AdminForm()));
+            admin.Start();
+            this.Close();
         }
 
         private void label2_Click(object sender, EventArgs e)
