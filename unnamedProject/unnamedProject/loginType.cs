@@ -65,7 +65,7 @@ namespace unnamedProject
             command.Parameters.AddWithValue("@lastName", lname);
             command.Parameters.AddWithValue("@levelAccess", levelAccess);
             command.ExecuteNonQuery();
-
+            MessageBox.Show("User added!", "User added", MessageBoxButtons.OK);
             sda.Dispose();
             sqlcon.Close();
         }
