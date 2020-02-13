@@ -29,7 +29,10 @@ namespace unnamedProject
 
         private void register_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            var reg = new Thread(() => Application.Run(new register()));
+            reg.Start();
+            this.Close();
         }
     }
 }
