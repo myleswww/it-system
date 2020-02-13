@@ -54,10 +54,17 @@ namespace unnamedProject
         //SignIn
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var admin = new Thread(() => Application.Run(new AdminForm()));
-            admin.Start();
-            this.Close();
+            loginType login = new loginType();
+            bool DaveTheFriendlyObject = login.checkAndRecieve(usernameBox.Text, passwordBox.Text);
+            if (DaveTheFriendlyObject)
+            {
+                this.Hide();
+                this.Close();
+            }
+            else
+            {
+                errorIncorrect.Visible = true;
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
