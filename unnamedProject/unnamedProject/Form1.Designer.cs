@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.labelLogin = new System.Windows.Forms.Label();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.usernameBox = new System.Windows.Forms.TextBox();
@@ -41,6 +42,7 @@
             // 
             this.labelLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLogin.AutoSize = true;
+            this.labelLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelLogin.Location = new System.Drawing.Point(211, 31);
             this.labelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLogin.Name = "labelLogin";
@@ -78,6 +80,7 @@
             // 
             this.labelUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelUsername.AutoSize = true;
+            this.labelUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelUsername.Location = new System.Drawing.Point(85, 52);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
@@ -90,6 +93,7 @@
             // 
             this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPassword.AutoSize = true;
+            this.labelPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelPassword.Location = new System.Drawing.Point(85, 118);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
@@ -101,6 +105,10 @@
             // signIn
             // 
             this.signIn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.signIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.signIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.signIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.signIn.Location = new System.Drawing.Point(187, 178);
             this.signIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.signIn.Name = "signIn";
@@ -128,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(495, 226);
             this.Controls.Add(this.errorIncorrect);
             this.Controls.Add(this.signIn);
@@ -137,11 +145,12 @@
             this.Controls.Add(this.usernameBox);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.labelLogin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MinimumSize = new System.Drawing.Size(510, 264);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "w";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
