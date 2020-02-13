@@ -39,5 +39,17 @@ namespace unnamedProject
         {
 
         }
+
+        private void buttonCollapse_Click(object sender, EventArgs e)
+        {   if (optionPanel.Visible == false)
+            {
+                optionPanel.Show();
+            }
+            else if(optionPanel.Visible == true)
+            {
+                optionPanel.Hide();
+            }
+
+        }
     }
 }
