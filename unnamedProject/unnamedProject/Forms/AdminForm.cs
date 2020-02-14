@@ -70,10 +70,19 @@ namespace unnamedProject
             {
 
                 WindowState = FormWindowState.Normal;
+                fullBtn.FlatAppearance.BorderSize = 1;
+                fullBtn.Width = 15;
+                fullBtn.Height = 12;
+                fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
+                fullBtn.ImageIndex = -1;
             }
             else
             {
                 WindowState = FormWindowState.Maximized;
+                fullBtn.ImageIndex = 0;
+                fullBtn.FlatAppearance.BorderSize = 0;
+                fullBtn.Width = 15;
+                fullBtn.Height = 15;
             }
         }
 
@@ -84,7 +93,7 @@ namespace unnamedProject
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
+            //WindowState = FormWindowState.Maximized;
             if(this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
             {
                 //maximize button image is set to the png image
@@ -96,9 +105,10 @@ namespace unnamedProject
             else
             {
                 fullBtn.FlatAppearance.BorderSize = 1;
-                fullBtn.Width = 20;
+                fullBtn.Width = 15;
                 fullBtn.Height = 12;
-                
+                fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
+                fullBtn.ImageIndex = -1;
 
             }
         }

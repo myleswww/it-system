@@ -98,7 +98,6 @@
             this.optionPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.optionPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.optionPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("optionPanel.BackgroundImage")));
             this.optionPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.optionPanel.Controls.Add(this.register);
             this.optionPanel.Controls.Add(this.usersBtn);
