@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(register));
             this.username = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
             this.email = new System.Windows.Forms.TextBox();
@@ -45,52 +47,67 @@
             this.error = new System.Windows.Forms.Label();
             this.levelAccess = new System.Windows.Forms.NumericUpDown();
             this.back = new System.Windows.Forms.Button();
+            this.backButtonList = new System.Windows.Forms.ImageList(this.components);
+            this.ast1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.levelAccess)).BeginInit();
             this.SuspendLayout();
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(144, 81);
+            this.username.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.username.Location = new System.Drawing.Point(134, 122);
+            this.username.Margin = new System.Windows.Forms.Padding(4);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(100, 20);
+            this.username.Size = new System.Drawing.Size(132, 22);
             this.username.TabIndex = 0;
+            this.username.TextChanged += new System.EventHandler(this.username_TextChanged);
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(331, 81);
+            this.password.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.password.Location = new System.Drawing.Point(133, 188);
+            this.password.Margin = new System.Windows.Forms.Padding(4);
             this.password.Name = "password";
             this.password.PasswordChar = '*';
-            this.password.Size = new System.Drawing.Size(100, 20);
+            this.password.Size = new System.Drawing.Size(132, 22);
             this.password.TabIndex = 1;
             this.password.UseSystemPasswordChar = true;
             // 
             // email
             // 
-            this.email.Location = new System.Drawing.Point(518, 241);
+            this.email.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.email.Location = new System.Drawing.Point(323, 256);
+            this.email.Margin = new System.Windows.Forms.Padding(4);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(100, 20);
+            this.email.Size = new System.Drawing.Size(132, 22);
             this.email.TabIndex = 2;
             // 
             // firstName
             // 
-            this.firstName.Location = new System.Drawing.Point(144, 241);
+            this.firstName.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.firstName.Location = new System.Drawing.Point(323, 122);
+            this.firstName.Margin = new System.Windows.Forms.Padding(4);
             this.firstName.Name = "firstName";
-            this.firstName.Size = new System.Drawing.Size(100, 20);
+            this.firstName.Size = new System.Drawing.Size(132, 22);
             this.firstName.TabIndex = 3;
             // 
             // lastName
             // 
-            this.lastName.Location = new System.Drawing.Point(331, 241);
+            this.lastName.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lastName.Location = new System.Drawing.Point(323, 188);
+            this.lastName.Margin = new System.Windows.Forms.Padding(4);
             this.lastName.Name = "lastName";
-            this.lastName.Size = new System.Drawing.Size(100, 20);
+            this.lastName.Size = new System.Drawing.Size(132, 22);
             this.lastName.TabIndex = 4;
             // 
             // confirm
             // 
-            this.confirm.Location = new System.Drawing.Point(331, 134);
+            this.confirm.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.confirm.Location = new System.Drawing.Point(133, 256);
+            this.confirm.Margin = new System.Windows.Forms.Padding(4);
             this.confirm.Name = "confirm";
             this.confirm.PasswordChar = '*';
-            this.confirm.Size = new System.Drawing.Size(100, 20);
+            this.confirm.Size = new System.Drawing.Size(132, 22);
             this.confirm.TabIndex = 6;
             this.confirm.UseSystemPasswordChar = true;
             this.confirm.TextChanged += new System.EventHandler(this.confirm_TextChanged);
@@ -98,27 +115,37 @@
             // UsernameLabel
             // 
             this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Location = new System.Drawing.Point(141, 54);
+            this.UsernameLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.UsernameLabel.Location = new System.Drawing.Point(134, 101);
+            this.UsernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(55, 13);
+            this.UsernameLabel.Size = new System.Drawing.Size(83, 19);
             this.UsernameLabel.TabIndex = 7;
             this.UsernameLabel.Text = "Username";
+            this.UsernameLabel.Click += new System.EventHandler(this.UsernameLabel_Click);
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(328, 65);
+            this.passwordLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.passwordLabel.Location = new System.Drawing.Point(134, 167);
+            this.passwordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(53, 13);
+            this.passwordLabel.Size = new System.Drawing.Size(80, 19);
             this.passwordLabel.TabIndex = 8;
             this.passwordLabel.Text = "Password";
             // 
             // confirmLabel
             // 
             this.confirmLabel.AutoSize = true;
-            this.confirmLabel.Location = new System.Drawing.Point(333, 118);
+            this.confirmLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.confirmLabel.Location = new System.Drawing.Point(134, 233);
+            this.confirmLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.confirmLabel.Name = "confirmLabel";
-            this.confirmLabel.Size = new System.Drawing.Size(91, 13);
+            this.confirmLabel.Size = new System.Drawing.Size(145, 19);
             this.confirmLabel.TabIndex = 9;
             this.confirmLabel.Text = "Confirm Password";
             this.confirmLabel.Click += new System.EventHandler(this.confirmLabel_Click);
@@ -126,27 +153,36 @@
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(515, 225);
+            this.emailLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F);
+            this.emailLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.emailLabel.Location = new System.Drawing.Point(326, 235);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(31, 13);
+            this.emailLabel.Size = new System.Drawing.Size(51, 19);
             this.emailLabel.TabIndex = 10;
-            this.emailLabel.Text = "email";
+            this.emailLabel.Text = "Email";
             // 
             // firstnameLabel
             // 
             this.firstnameLabel.AutoSize = true;
-            this.firstnameLabel.Location = new System.Drawing.Point(141, 225);
+            this.firstnameLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F);
+            this.firstnameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.firstnameLabel.Location = new System.Drawing.Point(326, 101);
+            this.firstnameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstnameLabel.Name = "firstnameLabel";
-            this.firstnameLabel.Size = new System.Drawing.Size(57, 13);
+            this.firstnameLabel.Size = new System.Drawing.Size(88, 19);
             this.firstnameLabel.TabIndex = 11;
             this.firstnameLabel.Text = "First Name";
             // 
             // lastnameLabel
             // 
             this.lastnameLabel.AutoSize = true;
-            this.lastnameLabel.Location = new System.Drawing.Point(328, 225);
+            this.lastnameLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F);
+            this.lastnameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lastnameLabel.Location = new System.Drawing.Point(326, 167);
+            this.lastnameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lastnameLabel.Name = "lastnameLabel";
-            this.lastnameLabel.Size = new System.Drawing.Size(58, 13);
+            this.lastnameLabel.Size = new System.Drawing.Size(86, 19);
             this.lastnameLabel.TabIndex = 12;
             this.lastnameLabel.Text = "Last Name";
             this.lastnameLabel.Click += new System.EventHandler(this.lastnameLabel_Click);
@@ -154,17 +190,26 @@
             // levelAccessLabel
             // 
             this.levelAccessLabel.AutoSize = true;
-            this.levelAccessLabel.Location = new System.Drawing.Point(515, 67);
+            this.levelAccessLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F);
+            this.levelAccessLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.levelAccessLabel.Location = new System.Drawing.Point(522, 167);
+            this.levelAccessLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.levelAccessLabel.Name = "levelAccessLabel";
-            this.levelAccessLabel.Size = new System.Drawing.Size(71, 13);
+            this.levelAccessLabel.Size = new System.Drawing.Size(100, 19);
             this.levelAccessLabel.TabIndex = 13;
             this.levelAccessLabel.Text = "Level Access";
             // 
             // submit
             // 
-            this.submit.Location = new System.Drawing.Point(349, 340);
+            this.submit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.submit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submit.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.submit.Location = new System.Drawing.Point(329, 313);
+            this.submit.Margin = new System.Windows.Forms.Padding(4);
             this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(75, 23);
+            this.submit.Size = new System.Drawing.Size(100, 28);
             this.submit.TabIndex = 14;
             this.submit.Text = "Register";
             this.submit.UseVisualStyleBackColor = true;
@@ -174,38 +219,71 @@
             // 
             this.error.AutoSize = true;
             this.error.ForeColor = System.Drawing.Color.Red;
-            this.error.Location = new System.Drawing.Point(314, 32);
+            this.error.Location = new System.Drawing.Point(431, 81);
+            this.error.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.error.Name = "error";
-            this.error.Size = new System.Drawing.Size(0, 13);
+            this.error.Size = new System.Drawing.Size(0, 17);
             this.error.TabIndex = 15;
             // 
             // levelAccess
             // 
-            this.levelAccess.Location = new System.Drawing.Point(518, 83);
+            this.levelAccess.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.levelAccess.Location = new System.Drawing.Point(525, 188);
+            this.levelAccess.Margin = new System.Windows.Forms.Padding(4);
             this.levelAccess.Maximum = new decimal(new int[] {
             5,
             0,
             0,
             0});
             this.levelAccess.Name = "levelAccess";
-            this.levelAccess.Size = new System.Drawing.Size(120, 20);
+            this.levelAccess.Size = new System.Drawing.Size(160, 22);
             this.levelAccess.TabIndex = 16;
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(28, 21);
+            this.back.BackColor = System.Drawing.Color.Transparent;
+            this.back.FlatAppearance.BorderSize = 0;
+            this.back.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.back.ImageIndex = 2;
+            this.back.ImageList = this.backButtonList;
+            this.back.Location = new System.Drawing.Point(13, 13);
+            this.back.Margin = new System.Windows.Forms.Padding(4);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(75, 23);
+            this.back.Size = new System.Drawing.Size(98, 85);
             this.back.TabIndex = 17;
-            this.back.Text = "back";
-            this.back.UseVisualStyleBackColor = true;
+            this.back.UseVisualStyleBackColor = false;
             this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // backButtonList
+            // 
+            this.backButtonList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("backButtonList.ImageStream")));
+            this.backButtonList.TransparentColor = System.Drawing.Color.Transparent;
+            this.backButtonList.Images.SetKeyName(0, "back-button.png");
+            this.backButtonList.Images.SetKeyName(1, "icons8-go-back-100.png");
+            this.backButtonList.Images.SetKeyName(2, "icons8-rewind-button-round-80.png");
+            // 
+            // ast1
+            // 
+            this.ast1.AutoSize = true;
+            this.ast1.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ast1.ForeColor = System.Drawing.Color.Red;
+            this.ast1.Location = new System.Drawing.Point(216, 101);
+            this.ast1.Name = "ast1";
+            this.ast1.Size = new System.Drawing.Size(16, 19);
+            this.ast1.TabIndex = 18;
+            this.ast1.Text = "*";
+            this.ast1.Visible = false;
             // 
             // register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(793, 429);
+            this.Controls.Add(this.ast1);
             this.Controls.Add(this.back);
             this.Controls.Add(this.levelAccess);
             this.Controls.Add(this.error);
@@ -223,6 +301,8 @@
             this.Controls.Add(this.email);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "register";
             this.Text = "Register New User";
             ((System.ComponentModel.ISupportInitialize)(this.levelAccess)).EndInit();
@@ -250,5 +330,7 @@
         private System.Windows.Forms.Label error;
         private System.Windows.Forms.NumericUpDown levelAccess;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.ImageList backButtonList;
+        private System.Windows.Forms.Label ast1;
     }
 }

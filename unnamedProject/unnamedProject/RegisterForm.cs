@@ -60,5 +60,22 @@ namespace unnamedProject
             admin.Start();
             this.Close();
         }
+
+        private void username_TextChanged(object sender, EventArgs e)
+        {
+            if (username.Text == "") //if a user does not fill in a text box, a red asterisk appears
+            {
+                ast1.Visible = true;
+            }
+            else
+            {
+                ast1.Visible = false;
+            }
+        }
+
+        private void UsernameLabel_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

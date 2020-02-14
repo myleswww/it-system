@@ -42,11 +42,12 @@
             // 
             this.labelLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLogin.AutoSize = true;
+            this.labelLogin.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelLogin.Location = new System.Drawing.Point(211, 31);
+            this.labelLogin.Location = new System.Drawing.Point(199, 25);
             this.labelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(51, 17);
+            this.labelLogin.Size = new System.Drawing.Size(64, 22);
             this.labelLogin.TabIndex = 0;
             this.labelLogin.Text = "LOGIN";
             this.labelLogin.Click += new System.EventHandler(this.label1_Click);
@@ -69,6 +70,7 @@
             this.usernameBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernameBox.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.usernameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usernameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameBox.Location = new System.Drawing.Point(85, 75);
             this.usernameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.usernameBox.Name = "usernameBox";
@@ -80,11 +82,12 @@
             // 
             this.labelUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Britannic Bold", 10F);
             this.labelUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelUsername.Location = new System.Drawing.Point(85, 52);
+            this.labelUsername.Location = new System.Drawing.Point(87, 49);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(73, 17);
+            this.labelUsername.Size = new System.Drawing.Size(83, 19);
             this.labelUsername.TabIndex = 5;
             this.labelUsername.Text = "Username";
             this.labelUsername.Click += new System.EventHandler(this.label2_Click);
@@ -93,11 +96,12 @@
             // 
             this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPassword.AutoSize = true;
+            this.labelPassword.Font = new System.Drawing.Font("Britannic Bold", 10F);
             this.labelPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPassword.Location = new System.Drawing.Point(85, 118);
+            this.labelPassword.Location = new System.Drawing.Point(87, 112);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(69, 17);
+            this.labelPassword.Size = new System.Drawing.Size(80, 19);
             this.labelPassword.TabIndex = 6;
             this.labelPassword.Text = "Password";
             this.labelPassword.Click += new System.EventHandler(this.label3_Click);
@@ -108,6 +112,7 @@
             this.signIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.signIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.signIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signIn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.signIn.Location = new System.Drawing.Point(187, 178);
             this.signIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -122,11 +127,12 @@
             // 
             this.errorIncorrect.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.errorIncorrect.AutoSize = true;
+            this.errorIncorrect.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorIncorrect.ForeColor = System.Drawing.Color.Red;
-            this.errorIncorrect.Location = new System.Drawing.Point(64, 5);
+            this.errorIncorrect.Location = new System.Drawing.Point(85, 9);
             this.errorIncorrect.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.errorIncorrect.Name = "errorIncorrect";
-            this.errorIncorrect.Size = new System.Drawing.Size(352, 17);
+            this.errorIncorrect.Size = new System.Drawing.Size(309, 16);
             this.errorIncorrect.TabIndex = 12;
             this.errorIncorrect.Text = "ERROR: USERNAME OR PASSWORD IS INCORRECT";
             this.errorIncorrect.Visible = false;
@@ -145,6 +151,7 @@
             this.Controls.Add(this.usernameBox);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.labelLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MinimumSize = new System.Drawing.Size(510, 264);

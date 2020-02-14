@@ -40,31 +40,40 @@
             // 
             // logOut
             // 
+            this.logOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.logOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.logOut.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.logOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.logOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.logOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOut.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.logOut.Location = new System.Drawing.Point(4, 4);
-            this.logOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logOut.Location = new System.Drawing.Point(0, 47);
+            this.logOut.Margin = new System.Windows.Forms.Padding(0);
             this.logOut.Name = "logOut";
-            this.logOut.Size = new System.Drawing.Size(108, 28);
+            this.logOut.Size = new System.Drawing.Size(214, 28);
             this.logOut.TabIndex = 0;
             this.logOut.Text = "Log Out";
-            this.logOut.UseVisualStyleBackColor = true;
+            this.logOut.UseVisualStyleBackColor = false;
             this.logOut.Click += new System.EventHandler(this.logOut_Click);
             // 
             // register
             // 
-            this.register.BackColor = System.Drawing.Color.Transparent;
+            this.register.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.register.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.register.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.register.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.register.Location = new System.Drawing.Point(4, 40);
-            this.register.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.register.Location = new System.Drawing.Point(0, 0);
+            this.register.Margin = new System.Windows.Forms.Padding(0);
             this.register.Name = "register";
-            this.register.Size = new System.Drawing.Size(108, 47);
+            this.register.Size = new System.Drawing.Size(214, 47);
             this.register.TabIndex = 1;
             this.register.Text = "Register New User";
             this.register.UseVisualStyleBackColor = false;
@@ -74,11 +83,13 @@
             // 
             this.optionPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.optionPanel.Controls.Add(this.logOut);
+            this.optionPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.optionPanel.Controls.Add(this.register);
-            this.optionPanel.Location = new System.Drawing.Point(12, 59);
+            this.optionPanel.Controls.Add(this.logOut);
+            this.optionPanel.Location = new System.Drawing.Point(-2, 59);
+            this.optionPanel.Margin = new System.Windows.Forms.Padding(0);
             this.optionPanel.Name = "optionPanel";
-            this.optionPanel.Size = new System.Drawing.Size(200, 214);
+            this.optionPanel.Size = new System.Drawing.Size(214, 501);
             this.optionPanel.TabIndex = 2;
             this.optionPanel.Visible = false;
             this.optionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
