@@ -52,5 +52,33 @@ namespace unnamedProject
             }
 
         }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitBtn_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void fullBtn_Click(object sender, EventArgs e)
+        {
+            if (this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
+            {
+
+                WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

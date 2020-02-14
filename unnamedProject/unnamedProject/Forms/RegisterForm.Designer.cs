@@ -55,10 +55,14 @@
             this.eAst = new System.Windows.Forms.Label();
             this.accessAst = new System.Windows.Forms.Label();
             this.roleCombo = new System.Windows.Forms.ComboBox();
+            this.minimizeBtn = new System.Windows.Forms.Button();
+            this.fullBtn = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // username
             // 
+            this.username.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.username.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.username.Location = new System.Drawing.Point(134, 122);
             this.username.Margin = new System.Windows.Forms.Padding(4);
@@ -69,6 +73,7 @@
             // 
             // password
             // 
+            this.password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.password.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.password.Location = new System.Drawing.Point(133, 188);
             this.password.Margin = new System.Windows.Forms.Padding(4);
@@ -81,6 +86,7 @@
             // 
             // email
             // 
+            this.email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.email.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.email.Location = new System.Drawing.Point(323, 256);
             this.email.Margin = new System.Windows.Forms.Padding(4);
@@ -91,6 +97,7 @@
             // 
             // firstName
             // 
+            this.firstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.firstName.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.firstName.Location = new System.Drawing.Point(323, 122);
             this.firstName.Margin = new System.Windows.Forms.Padding(4);
@@ -101,6 +108,7 @@
             // 
             // lastName
             // 
+            this.lastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lastName.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lastName.Location = new System.Drawing.Point(323, 188);
             this.lastName.Margin = new System.Windows.Forms.Padding(4);
@@ -111,6 +119,7 @@
             // 
             // confirm
             // 
+            this.confirm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.confirm.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.confirm.Location = new System.Drawing.Point(133, 256);
             this.confirm.Margin = new System.Windows.Forms.Padding(4);
@@ -123,6 +132,7 @@
             // 
             // UsernameLabel
             // 
+            this.UsernameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -136,6 +146,7 @@
             // 
             // passwordLabel
             // 
+            this.passwordLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -148,6 +159,7 @@
             // 
             // confirmLabel
             // 
+            this.confirmLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.confirmLabel.AutoSize = true;
             this.confirmLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -161,6 +173,7 @@
             // 
             // emailLabel
             // 
+            this.emailLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.emailLabel.AutoSize = true;
             this.emailLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F);
             this.emailLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -173,6 +186,7 @@
             // 
             // firstnameLabel
             // 
+            this.firstnameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.firstnameLabel.AutoSize = true;
             this.firstnameLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F);
             this.firstnameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -185,6 +199,7 @@
             // 
             // lastnameLabel
             // 
+            this.lastnameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lastnameLabel.AutoSize = true;
             this.lastnameLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F);
             this.lastnameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -198,6 +213,7 @@
             // 
             // levelAccessLabel
             // 
+            this.levelAccessLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.levelAccessLabel.AutoSize = true;
             this.levelAccessLabel.Font = new System.Drawing.Font("Britannic Bold", 10.2F);
             this.levelAccessLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -210,6 +226,7 @@
             // 
             // submit
             // 
+            this.submit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.submit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.submit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
@@ -227,6 +244,7 @@
             // 
             // error
             // 
+            this.error.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.error.AutoSize = true;
             this.error.ForeColor = System.Drawing.Color.Red;
             this.error.Location = new System.Drawing.Point(431, 81);
@@ -265,6 +283,7 @@
             // 
             // ast1
             // 
+            this.ast1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ast1.AutoSize = true;
             this.ast1.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ast1.ForeColor = System.Drawing.Color.Red;
@@ -277,6 +296,7 @@
             // 
             // passAst
             // 
+            this.passAst.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passAst.AutoSize = true;
             this.passAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passAst.ForeColor = System.Drawing.Color.Red;
@@ -290,6 +310,7 @@
             // 
             // conPassAst
             // 
+            this.conPassAst.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.conPassAst.AutoSize = true;
             this.conPassAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conPassAst.ForeColor = System.Drawing.Color.Red;
@@ -302,6 +323,7 @@
             // 
             // fNameAst
             // 
+            this.fNameAst.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fNameAst.AutoSize = true;
             this.fNameAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fNameAst.ForeColor = System.Drawing.Color.Red;
@@ -314,6 +336,7 @@
             // 
             // lNameAst
             // 
+            this.lNameAst.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lNameAst.AutoSize = true;
             this.lNameAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNameAst.ForeColor = System.Drawing.Color.Red;
@@ -326,6 +349,7 @@
             // 
             // eAst
             // 
+            this.eAst.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.eAst.AutoSize = true;
             this.eAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eAst.ForeColor = System.Drawing.Color.Red;
@@ -338,6 +362,7 @@
             // 
             // accessAst
             // 
+            this.accessAst.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.accessAst.AutoSize = true;
             this.accessAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accessAst.ForeColor = System.Drawing.Color.Red;
@@ -349,6 +374,7 @@
             // 
             // roleCombo
             // 
+            this.roleCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roleCombo.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.roleCombo.FormattingEnabled = true;
             this.roleCombo.Items.AddRange(new object[] {
@@ -361,12 +387,64 @@
             this.roleCombo.Size = new System.Drawing.Size(160, 24);
             this.roleCombo.TabIndex = 25;
             // 
+            // minimizeBtn
+            // 
+            this.minimizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeBtn.FlatAppearance.BorderSize = 0;
+            this.minimizeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.minimizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeBtn.Font = new System.Drawing.Font("ROG Fonts", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.minimizeBtn.Location = new System.Drawing.Point(688, 9);
+            this.minimizeBtn.Name = "minimizeBtn";
+            this.minimizeBtn.Size = new System.Drawing.Size(24, 32);
+            this.minimizeBtn.TabIndex = 28;
+            this.minimizeBtn.Text = "-";
+            this.minimizeBtn.UseVisualStyleBackColor = true;
+            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
+            // 
+            // fullBtn
+            // 
+            this.fullBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.fullBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.fullBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.fullBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fullBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.fullBtn.Location = new System.Drawing.Point(718, 20);
+            this.fullBtn.Name = "fullBtn";
+            this.fullBtn.Size = new System.Drawing.Size(20, 12);
+            this.fullBtn.TabIndex = 27;
+            this.fullBtn.UseVisualStyleBackColor = true;
+            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitBtn.FlatAppearance.BorderSize = 0;
+            this.exitBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.exitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("ROG Fonts", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.exitBtn.Location = new System.Drawing.Point(741, 9);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(43, 32);
+            this.exitBtn.TabIndex = 26;
+            this.exitBtn.Text = "X";
+            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(793, 429);
+            this.Controls.Add(this.minimizeBtn);
+            this.Controls.Add(this.fullBtn);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.roleCombo);
             this.Controls.Add(this.accessAst);
             this.Controls.Add(this.eAst);
@@ -391,6 +469,7 @@
             this.Controls.Add(this.email);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "register";
@@ -427,5 +506,8 @@
         private System.Windows.Forms.Label eAst;
         private System.Windows.Forms.Label accessAst;
         private System.Windows.Forms.ComboBox roleCombo;
+        private System.Windows.Forms.Button minimizeBtn;
+        private System.Windows.Forms.Button fullBtn;
+        private System.Windows.Forms.Button exitBtn;
     }
 }
