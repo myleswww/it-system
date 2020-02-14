@@ -84,7 +84,23 @@ namespace unnamedProject
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+            WindowState = FormWindowState.Maximized;
+            if(this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
+            {
+                //maximize button image is set to the png image
+                fullBtn.ImageIndex = 0;
+                fullBtn.FlatAppearance.BorderSize = 0;
+                fullBtn.Width = 15;
+                fullBtn.Height = 15;
+            }
+            else
+            {
+                fullBtn.FlatAppearance.BorderSize = 1;
+                fullBtn.Width = 20;
+                fullBtn.Height = 12;
+                
 
+            }
         }
     }
 }

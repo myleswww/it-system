@@ -67,22 +67,22 @@ namespace unnamedProject
                 {
                     loginType login = new loginType();
                     login.newUser(username.Text, password.Text, firstName.Text, lastName.Text, email.Text, accessValue);
-                    this.Hide();
+                    
                     var admin = new Thread(() => Application.Run(new AdminForm()));
                     admin.Start();
                     Thread th = Thread.CurrentThread;
                     th.Abort();
-                    this.Close();
+                    
                 }
             }
         }
 
         private void back_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             var admin = new Thread(() => Application.Run(new AdminForm()));
             admin.Start();
-            this.Close();
+            
             Thread th = Thread.CurrentThread;
             th.Abort();
         }
@@ -185,6 +185,11 @@ namespace unnamedProject
         private void minimizeBtn_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void register_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
         }
     }
 }
