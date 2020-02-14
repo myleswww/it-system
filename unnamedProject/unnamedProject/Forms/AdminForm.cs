@@ -41,7 +41,8 @@ namespace unnamedProject
         }
 
         private void buttonCollapse_Click(object sender, EventArgs e)
-        {   if (optionPanel.Visible == false)
+        {
+            if (optionPanel.Visible == false)
             {
                 optionPanel.Show();
             }

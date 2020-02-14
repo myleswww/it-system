@@ -45,7 +45,6 @@
             this.levelAccessLabel = new System.Windows.Forms.Label();
             this.submit = new System.Windows.Forms.Button();
             this.error = new System.Windows.Forms.Label();
-            this.levelAccess = new System.Windows.Forms.NumericUpDown();
             this.back = new System.Windows.Forms.Button();
             this.backButtonList = new System.Windows.Forms.ImageList(this.components);
             this.ast1 = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@
             this.lNameAst = new System.Windows.Forms.Label();
             this.eAst = new System.Windows.Forms.Label();
             this.accessAst = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.levelAccess)).BeginInit();
+            this.roleCombo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // username
@@ -211,6 +210,7 @@
             // 
             // submit
             // 
+            this.submit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.submit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -235,24 +235,11 @@
             this.error.Size = new System.Drawing.Size(0, 17);
             this.error.TabIndex = 15;
             // 
-            // levelAccess
-            // 
-            this.levelAccess.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.levelAccess.Location = new System.Drawing.Point(525, 188);
-            this.levelAccess.Margin = new System.Windows.Forms.Padding(4);
-            this.levelAccess.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.levelAccess.Name = "levelAccess";
-            this.levelAccess.Size = new System.Drawing.Size(160, 22);
-            this.levelAccess.TabIndex = 16;
-            this.levelAccess.ValueChanged += new System.EventHandler(this.levelAccess_ValueChanged);
-            // 
             // back
             // 
+            this.back.AutoSize = true;
             this.back.BackColor = System.Drawing.Color.Transparent;
+            this.back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.back.FlatAppearance.BorderSize = 0;
             this.back.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -263,7 +250,7 @@
             this.back.Location = new System.Drawing.Point(13, 13);
             this.back.Margin = new System.Windows.Forms.Padding(4);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(98, 85);
+            this.back.Size = new System.Drawing.Size(88, 85);
             this.back.TabIndex = 17;
             this.back.UseVisualStyleBackColor = false;
             this.back.Click += new System.EventHandler(this.back_Click);
@@ -360,12 +347,27 @@
             this.accessAst.TabIndex = 24;
             this.accessAst.Text = "*";
             // 
+            // roleCombo
+            // 
+            this.roleCombo.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.roleCombo.FormattingEnabled = true;
+            this.roleCombo.Items.AddRange(new object[] {
+            "Admin",
+            "IT Support Member",
+            "Project Member",
+            "Report Manager"});
+            this.roleCombo.Location = new System.Drawing.Point(526, 189);
+            this.roleCombo.Name = "roleCombo";
+            this.roleCombo.Size = new System.Drawing.Size(160, 24);
+            this.roleCombo.TabIndex = 25;
+            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(793, 429);
+            this.Controls.Add(this.roleCombo);
             this.Controls.Add(this.accessAst);
             this.Controls.Add(this.eAst);
             this.Controls.Add(this.lNameAst);
@@ -374,7 +376,6 @@
             this.Controls.Add(this.passAst);
             this.Controls.Add(this.ast1);
             this.Controls.Add(this.back);
-            this.Controls.Add(this.levelAccess);
             this.Controls.Add(this.error);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.levelAccessLabel);
@@ -394,7 +395,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "register";
             this.Text = "Register New User";
-            ((System.ComponentModel.ISupportInitialize)(this.levelAccess)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,7 +417,6 @@
         private System.Windows.Forms.Label levelAccessLabel;
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.Label error;
-        private System.Windows.Forms.NumericUpDown levelAccess;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.ImageList backButtonList;
         private System.Windows.Forms.Label ast1;
@@ -427,5 +426,6 @@
         private System.Windows.Forms.Label lNameAst;
         private System.Windows.Forms.Label eAst;
         private System.Windows.Forms.Label accessAst;
+        private System.Windows.Forms.ComboBox roleCombo;
     }
 }

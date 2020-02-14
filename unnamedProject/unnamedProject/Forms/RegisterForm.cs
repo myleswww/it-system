@@ -42,6 +42,21 @@ namespace unnamedProject
 
         private void submit_Click(object sender, EventArgs e)
         {
+            int accessValue;
+            switch (roleCombo.Text) //switch statement determines access value of user being registered
+            {
+                case "Admin": accessValue = 0;
+                     break;
+                case "Report Manager": accessValue = 1;
+                    break;
+                case "IT Support Member": accessValue = 2;
+                    break;
+                case "Project Member": accessValue = 3;
+                    break;
+                 default: accessValue = 3;
+                    break;
+            }
+                
             if (password.Text == "" || confirm.Text == "" || username.Text == "" || firstName.Text == "" ||  lastName.Text == "" || email.Text == "")
                 error.Text = "Error: null values... why you do this?";
             else
@@ -51,7 +66,7 @@ namespace unnamedProject
                 else
                 {
                     loginType login = new loginType();
-                    login.newUser(username.Text,password.Text,firstName.Text,lastName.Text,email.Text,(int)levelAccess.Value);
+                    login.newUser(username.Text, password.Text, firstName.Text, lastName.Text, email.Text, accessValue);
                     this.Hide();
                     var admin = new Thread(() => Application.Run(new AdminForm()));
                     admin.Start();

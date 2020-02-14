@@ -58,7 +58,7 @@
             this.passwordBox.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordBox.Location = new System.Drawing.Point(85, 138);
-            this.passwordBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(312, 22);
@@ -72,7 +72,7 @@
             this.usernameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.usernameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameBox.Location = new System.Drawing.Point(85, 75);
-            this.usernameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usernameBox.Margin = new System.Windows.Forms.Padding(4);
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(312, 22);
             this.usernameBox.TabIndex = 4;
@@ -109,13 +109,14 @@
             // signIn
             // 
             this.signIn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.signIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.signIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.signIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signIn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.signIn.Location = new System.Drawing.Point(187, 178);
-            this.signIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.signIn.Margin = new System.Windows.Forms.Padding(4);
             this.signIn.Name = "signIn";
             this.signIn.Size = new System.Drawing.Size(100, 28);
             this.signIn.TabIndex = 7;
@@ -153,7 +154,7 @@
             this.Controls.Add(this.labelLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(510, 264);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -43,6 +43,7 @@
             this.logOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.logOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.logOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logOut.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.logOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.logOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
@@ -62,8 +63,10 @@
             // 
             this.register.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.register.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.register.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.register.Cursor = System.Windows.Forms.Cursors.Hand;
             this.register.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
@@ -98,9 +101,10 @@
             // 
             this.buttonCollapse.BackColor = System.Drawing.Color.Transparent;
             this.buttonCollapse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonCollapse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCollapse.FlatAppearance.BorderSize = 0;
-            this.buttonCollapse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.buttonCollapse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.buttonCollapse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonCollapse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonCollapse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCollapse.ForeColor = System.Drawing.Color.Transparent;
             this.buttonCollapse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -129,7 +133,7 @@
             this.Controls.Add(this.optionPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
             this.optionPanel.ResumeLayout(false);
