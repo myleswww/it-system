@@ -60,6 +60,8 @@ namespace unnamedProject
             {
                 this.Hide();
                 this.Close();
+                Thread th = Thread.CurrentThread;
+                th.Abort();
             }
             else
             {

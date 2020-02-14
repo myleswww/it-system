@@ -22,12 +22,18 @@ namespace unnamedProject
             sda.Fill(dtbl);
             if (dtbl.Rows.Count == 1)
             {
-                if (true)
+                if (dtbl.Rows[0]["levelAccess"].ToString() == "0")
                 {
                     var admin = new Thread(() => Application.Run(new AdminForm()));
                     admin.Start();
+                    Thread th = Thread.CurrentThread;
+                    th.Abort();
                     sqlcon.Close();
                     return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
             else

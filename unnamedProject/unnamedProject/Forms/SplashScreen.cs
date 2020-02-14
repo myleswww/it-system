@@ -13,10 +13,12 @@ namespace unnamedProject.Forms
 {
     public partial class SplashScreen : Form
     {
+        
         System.Windows.Forms.Timer tmr;
         public SplashScreen()
         {
             InitializeComponent();
+           
         }
 
         private void SplashScreen_Load(object sender, EventArgs e)
@@ -50,8 +52,13 @@ namespace unnamedProject.Forms
 
             var login = new Thread(() => Application.Run(new LoginForm()));
             login.Start();
+            
             //hide this form
+            
+            Thread th = Thread.CurrentThread;
+            th.Abort();
             this.Close();
+
         }
     }
 }

@@ -70,6 +70,8 @@ namespace unnamedProject
                     this.Hide();
                     var admin = new Thread(() => Application.Run(new AdminForm()));
                     admin.Start();
+                    Thread th = Thread.CurrentThread;
+                    th.Abort();
                     this.Close();
                 }
             }
@@ -81,6 +83,8 @@ namespace unnamedProject
             var admin = new Thread(() => Application.Run(new AdminForm()));
             admin.Start();
             this.Close();
+            Thread th = Thread.CurrentThread;
+            th.Abort();
         }
 
         private void username_TextChanged(object sender, EventArgs e)

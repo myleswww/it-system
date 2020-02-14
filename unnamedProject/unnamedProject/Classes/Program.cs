@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace unnamedProject
 {
+   
     static class Program
     {
         
@@ -17,7 +19,8 @@ namespace unnamedProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.SplashScreen());
+            Thread prim = new Thread(() => Application.Run(new Forms.SplashScreen()));
+            prim.Start();
         }
     }
 }
