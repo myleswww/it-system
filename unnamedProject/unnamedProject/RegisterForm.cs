@@ -30,7 +30,14 @@ namespace unnamedProject
 
         private void confirm_TextChanged(object sender, EventArgs e)
         {
-
+            if (confirm.Text == "") //if a user does not fill in a text box, a red asterisk appears
+            {
+                conPassAst.Visible = true;
+            }
+            else
+            {
+                conPassAst.Visible = false;
+            }
         }
 
         private void submit_Click(object sender, EventArgs e)
@@ -72,10 +79,69 @@ namespace unnamedProject
                 ast1.Visible = false;
             }
         }
+        
 
         private void UsernameLabel_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+            if (password.Text == "") //if a user does not fill in a text box, a red asterisk appears
+            {
+                passAst.Visible = true;
+            }
+            else
+            {
+                passAst.Visible = false;
+            }
+        }
+
+        private void firstName_TextChanged(object sender, EventArgs e)
+        {
+            if (firstName.Text == "") //if a user does not fill in a text box, a red asterisk appears
+            {
+                fNameAst.Visible = true;
+            }
+            else
+            {
+                fNameAst.Visible = false;
+            }
+        }
+
+        private void lastName_TextChanged(object sender, EventArgs e)
+        {
+            if (lastName.Text == "") //if a user does not fill in a text box, a red asterisk appears
+            {
+                lNameAst.Visible = true;
+            }
+            else
+            {
+                lNameAst.Visible = false;
+            }
+        }
+
+        private void email_TextChanged(object sender, EventArgs e)
+        {
+            if (email.Text == "") //if a user does not fill in a text box, a red asterisk appears
+            {
+                eAst.Visible = true;
+            }
+            else
+            {
+                eAst.Visible = false;
+            }
+        }
+
+        private void levelAccess_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

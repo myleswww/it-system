@@ -49,6 +49,12 @@
             this.back = new System.Windows.Forms.Button();
             this.backButtonList = new System.Windows.Forms.ImageList(this.components);
             this.ast1 = new System.Windows.Forms.Label();
+            this.passAst = new System.Windows.Forms.Label();
+            this.conPassAst = new System.Windows.Forms.Label();
+            this.fNameAst = new System.Windows.Forms.Label();
+            this.lNameAst = new System.Windows.Forms.Label();
+            this.eAst = new System.Windows.Forms.Label();
+            this.accessAst = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.levelAccess)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +78,7 @@
             this.password.Size = new System.Drawing.Size(132, 22);
             this.password.TabIndex = 1;
             this.password.UseSystemPasswordChar = true;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // email
             // 
@@ -81,6 +88,7 @@
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(132, 22);
             this.email.TabIndex = 2;
+            this.email.TextChanged += new System.EventHandler(this.email_TextChanged);
             // 
             // firstName
             // 
@@ -90,6 +98,7 @@
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(132, 22);
             this.firstName.TabIndex = 3;
+            this.firstName.TextChanged += new System.EventHandler(this.firstName_TextChanged);
             // 
             // lastName
             // 
@@ -99,6 +108,7 @@
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(132, 22);
             this.lastName.TabIndex = 4;
+            this.lastName.TextChanged += new System.EventHandler(this.lastName_TextChanged);
             // 
             // confirm
             // 
@@ -238,6 +248,7 @@
             this.levelAccess.Name = "levelAccess";
             this.levelAccess.Size = new System.Drawing.Size(160, 22);
             this.levelAccess.TabIndex = 16;
+            this.levelAccess.ValueChanged += new System.EventHandler(this.levelAccess_ValueChanged);
             // 
             // back
             // 
@@ -277,12 +288,90 @@
             this.ast1.Text = "*";
             this.ast1.Visible = false;
             // 
+            // passAst
+            // 
+            this.passAst.AutoSize = true;
+            this.passAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passAst.ForeColor = System.Drawing.Color.Red;
+            this.passAst.Location = new System.Drawing.Point(216, 167);
+            this.passAst.Name = "passAst";
+            this.passAst.Size = new System.Drawing.Size(16, 19);
+            this.passAst.TabIndex = 19;
+            this.passAst.Text = "*";
+            this.passAst.Visible = false;
+            this.passAst.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // conPassAst
+            // 
+            this.conPassAst.AutoSize = true;
+            this.conPassAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conPassAst.ForeColor = System.Drawing.Color.Red;
+            this.conPassAst.Location = new System.Drawing.Point(276, 233);
+            this.conPassAst.Name = "conPassAst";
+            this.conPassAst.Size = new System.Drawing.Size(16, 19);
+            this.conPassAst.TabIndex = 20;
+            this.conPassAst.Text = "*";
+            this.conPassAst.Visible = false;
+            // 
+            // fNameAst
+            // 
+            this.fNameAst.AutoSize = true;
+            this.fNameAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fNameAst.ForeColor = System.Drawing.Color.Red;
+            this.fNameAst.Location = new System.Drawing.Point(413, 101);
+            this.fNameAst.Name = "fNameAst";
+            this.fNameAst.Size = new System.Drawing.Size(16, 19);
+            this.fNameAst.TabIndex = 21;
+            this.fNameAst.Text = "*";
+            this.fNameAst.Visible = false;
+            // 
+            // lNameAst
+            // 
+            this.lNameAst.AutoSize = true;
+            this.lNameAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNameAst.ForeColor = System.Drawing.Color.Red;
+            this.lNameAst.Location = new System.Drawing.Point(413, 167);
+            this.lNameAst.Name = "lNameAst";
+            this.lNameAst.Size = new System.Drawing.Size(16, 19);
+            this.lNameAst.TabIndex = 22;
+            this.lNameAst.Text = "*";
+            this.lNameAst.Visible = false;
+            // 
+            // eAst
+            // 
+            this.eAst.AutoSize = true;
+            this.eAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eAst.ForeColor = System.Drawing.Color.Red;
+            this.eAst.Location = new System.Drawing.Point(375, 233);
+            this.eAst.Name = "eAst";
+            this.eAst.Size = new System.Drawing.Size(16, 19);
+            this.eAst.TabIndex = 23;
+            this.eAst.Text = "*";
+            this.eAst.Visible = false;
+            // 
+            // accessAst
+            // 
+            this.accessAst.AutoSize = true;
+            this.accessAst.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accessAst.ForeColor = System.Drawing.Color.Red;
+            this.accessAst.Location = new System.Drawing.Point(619, 167);
+            this.accessAst.Name = "accessAst";
+            this.accessAst.Size = new System.Drawing.Size(16, 19);
+            this.accessAst.TabIndex = 24;
+            this.accessAst.Text = "*";
+            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(793, 429);
+            this.Controls.Add(this.accessAst);
+            this.Controls.Add(this.eAst);
+            this.Controls.Add(this.lNameAst);
+            this.Controls.Add(this.fNameAst);
+            this.Controls.Add(this.conPassAst);
+            this.Controls.Add(this.passAst);
             this.Controls.Add(this.ast1);
             this.Controls.Add(this.back);
             this.Controls.Add(this.levelAccess);
@@ -332,5 +421,11 @@
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.ImageList backButtonList;
         private System.Windows.Forms.Label ast1;
+        private System.Windows.Forms.Label passAst;
+        private System.Windows.Forms.Label conPassAst;
+        private System.Windows.Forms.Label fNameAst;
+        private System.Windows.Forms.Label lNameAst;
+        private System.Windows.Forms.Label eAst;
+        private System.Windows.Forms.Label accessAst;
     }
 }
