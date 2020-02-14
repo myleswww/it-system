@@ -166,6 +166,7 @@
             // fullBtn
             // 
             this.fullBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.fullBtn.FlatAppearance.BorderSize = 2;
             this.fullBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.fullBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.fullBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
