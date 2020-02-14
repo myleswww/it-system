@@ -162,6 +162,7 @@ namespace unnamedProject
         private void exitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void fullBtn_Click(object sender, EventArgs e)

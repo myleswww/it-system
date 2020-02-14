@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,7 +13,7 @@ namespace unnamedProject.Forms
 {
     public partial class SplashScreen : Form
     {
-        Timer tmr;
+        System.Windows.Forms.Timer tmr;
         public SplashScreen()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace unnamedProject.Forms
 
         private void SplashScreen_Shown(object sender, EventArgs e)
         {
-            tmr = new Timer();
+            tmr = new System.Windows.Forms.Timer();
 
             //set time interval 3 sec
 
@@ -47,14 +48,10 @@ namespace unnamedProject.Forms
 
             //display mainform
 
-            LoginForm mf = new LoginForm();
-
-            mf.Show();
-
+            var login = new Thread(() => Application.Run(new LoginForm()));
+            login.Start();
             //hide this form
-
-            this.Hide();
-
+            this.Close();
         }
     }
 }

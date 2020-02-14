@@ -61,6 +61,7 @@ namespace unnamedProject
         private void exitBtn_Click_1(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void fullBtn_Click(object sender, EventArgs e)
@@ -79,6 +80,11 @@ namespace unnamedProject
         private void minimizeBtn_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

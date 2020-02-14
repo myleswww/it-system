@@ -192,6 +192,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.optionPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

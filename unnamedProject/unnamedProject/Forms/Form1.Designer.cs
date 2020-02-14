@@ -68,7 +68,7 @@
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(312, 22);
-            this.passwordBox.TabIndex = 3;
+            this.passwordBox.TabIndex = 2;
             this.passwordBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // usernameBox
@@ -81,7 +81,7 @@
             this.usernameBox.Margin = new System.Windows.Forms.Padding(4);
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(312, 22);
-            this.usernameBox.TabIndex = 4;
+            this.usernameBox.TabIndex = 1;
             this.usernameBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // labelUsername
@@ -125,7 +125,7 @@
             this.signIn.Margin = new System.Windows.Forms.Padding(4);
             this.signIn.Name = "signIn";
             this.signIn.Size = new System.Drawing.Size(100, 28);
-            this.signIn.TabIndex = 7;
+            this.signIn.TabIndex = 3;
             this.signIn.Text = "Sign In";
             this.signIn.UseVisualStyleBackColor = true;
             this.signIn.Click += new System.EventHandler(this.button1_Click);
@@ -158,7 +158,7 @@
             this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(43, 32);
-            this.exitBtn.TabIndex = 13;
+            this.exitBtn.TabIndex = 6;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
@@ -174,7 +174,7 @@
             this.fullBtn.Location = new System.Drawing.Point(634, 20);
             this.fullBtn.Name = "fullBtn";
             this.fullBtn.Size = new System.Drawing.Size(20, 12);
-            this.fullBtn.TabIndex = 14;
+            this.fullBtn.TabIndex = 5;
             this.fullBtn.UseVisualStyleBackColor = true;
             this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
             // 
@@ -190,7 +190,7 @@
             this.minimizeBtn.Location = new System.Drawing.Point(604, 9);
             this.minimizeBtn.Name = "minimizeBtn";
             this.minimizeBtn.Size = new System.Drawing.Size(24, 32);
-            this.minimizeBtn.TabIndex = 15;
+            this.minimizeBtn.TabIndex = 4;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
             this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
@@ -219,7 +219,8 @@
             this.logo.Location = new System.Drawing.Point(12, 12);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(111, 102);
-            this.logo.TabIndex = 17;
+            this.logo.TabIndex = 16;
+            this.logo.TabStop = false;
             this.logo.UseVisualStyleBackColor = true;
             // 
             // LoginForm
