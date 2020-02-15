@@ -75,6 +75,7 @@ namespace unnamedProject
                 fullBtn.Height = 12;
                 fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
                 fullBtn.ImageIndex = -1;
+                
             }
             else
             {
@@ -93,6 +94,7 @@ namespace unnamedProject
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+            
             //WindowState = FormWindowState.Maximized;
             if(this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
             {

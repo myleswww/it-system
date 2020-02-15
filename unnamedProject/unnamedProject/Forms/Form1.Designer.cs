@@ -38,7 +38,6 @@
             this.signIn = new System.Windows.Forms.Button();
             this.errorIncorrect = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
-            this.fullBtn = new System.Windows.Forms.Button();
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.logoList = new System.Windows.Forms.ImageList(this.components);
             this.logo = new System.Windows.Forms.Button();
@@ -163,21 +162,6 @@
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // fullBtn
-            // 
-            this.fullBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.fullBtn.FlatAppearance.BorderSize = 2;
-            this.fullBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.fullBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.fullBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fullBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.fullBtn.Location = new System.Drawing.Point(634, 20);
-            this.fullBtn.Name = "fullBtn";
-            this.fullBtn.Size = new System.Drawing.Size(20, 12);
-            this.fullBtn.TabIndex = 5;
-            this.fullBtn.UseVisualStyleBackColor = true;
-            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
-            // 
             // minimizeBtn
             // 
             this.minimizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -187,7 +171,7 @@
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeBtn.Font = new System.Drawing.Font("ROG Fonts", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.minimizeBtn.Location = new System.Drawing.Point(604, 9);
+            this.minimizeBtn.Location = new System.Drawing.Point(630, 9);
             this.minimizeBtn.Name = "minimizeBtn";
             this.minimizeBtn.Size = new System.Drawing.Size(24, 32);
             this.minimizeBtn.TabIndex = 4;
@@ -225,13 +209,12 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(709, 404);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.minimizeBtn);
-            this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.errorIncorrect);
             this.Controls.Add(this.signIn);
@@ -263,7 +246,6 @@
         private System.Windows.Forms.Button signIn;
         private System.Windows.Forms.Label errorIncorrect;
         private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.Button fullBtn;
         private System.Windows.Forms.Button minimizeBtn;
         private System.Windows.Forms.ImageList logoList;
         private System.Windows.Forms.Button logo;
