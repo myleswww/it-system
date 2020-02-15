@@ -189,7 +189,7 @@ namespace unnamedProject
 
         private void register_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
+            //WindowState = FormWindowState.Maximized;
         }
     }
 }

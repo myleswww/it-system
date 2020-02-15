@@ -101,6 +101,7 @@ namespace unnamedProject
                 fullBtn.FlatAppearance.BorderSize = 0;
                 fullBtn.Width = 15;
                 fullBtn.Height = 15;
+
             }
             else
             {
@@ -111,6 +112,11 @@ namespace unnamedProject
                 fullBtn.ImageIndex = -1;
 
             }
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

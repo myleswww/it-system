@@ -263,12 +263,12 @@
             this.back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.back.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.back.ImageIndex = 2;
+            this.back.ImageIndex = 1;
             this.back.ImageList = this.backButtonList;
             this.back.Location = new System.Drawing.Point(13, 13);
             this.back.Margin = new System.Windows.Forms.Padding(4);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(88, 85);
+            this.back.Size = new System.Drawing.Size(86, 86);
             this.back.TabIndex = 17;
             this.back.UseVisualStyleBackColor = false;
             this.back.Click += new System.EventHandler(this.back_Click);
@@ -277,9 +277,8 @@
             // 
             this.backButtonList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("backButtonList.ImageStream")));
             this.backButtonList.TransparentColor = System.Drawing.Color.Transparent;
-            this.backButtonList.Images.SetKeyName(0, "back-button.png");
-            this.backButtonList.Images.SetKeyName(1, "icons8-go-back-100.png");
-            this.backButtonList.Images.SetKeyName(2, "icons8-rewind-button-round-80.png");
+            this.backButtonList.Images.SetKeyName(0, "icons8-rewind-button-round-80.png");
+            this.backButtonList.Images.SetKeyName(1, "backbutton.png");
             // 
             // ast1
             // 
@@ -474,6 +473,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register New User";
             this.Load += new System.EventHandler(this.register_Load);
             this.ResumeLayout(false);
