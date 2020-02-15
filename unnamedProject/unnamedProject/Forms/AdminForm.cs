@@ -14,6 +14,7 @@ namespace unnamedProject
 {
     public partial class AdminForm : Form
     {
+        
         public AdminForm()
         {
             InitializeComponent();
@@ -51,6 +52,7 @@ namespace unnamedProject
                 optionPanel.Hide();
             }
 
+            
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
