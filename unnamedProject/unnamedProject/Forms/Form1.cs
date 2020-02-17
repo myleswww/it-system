@@ -59,9 +59,10 @@ namespace unnamedProject
             if (DaveTheFriendlyObject)
             {
                 this.Hide();
-                this.Close();
+                
                 Thread th = Thread.CurrentThread;
                 th.Abort();
+                this.Close();
             }
             else
             {
