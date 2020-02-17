@@ -38,9 +38,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(243, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(562, -9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(295, 303);
+            this.pictureBox1.Size = new System.Drawing.Size(482, 469);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -49,11 +49,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("ROG Fonts", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(129, 339);
+            this.label1.Location = new System.Drawing.Point(105, 253);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(544, 72);
             this.label1.TabIndex = 1;
             this.label1.Text = "IT Help Desk";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // SplashScreen
             // 
