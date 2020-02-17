@@ -25,6 +25,7 @@ namespace unnamedProject
                 if (dtbl.Rows[0]["levelAccess"].ToString() == "0")
                 {
                     var admin = new Thread(() => Application.Run(new AdminForm()));
+                    admin.SetApartmentState(ApartmentState.STA);
                     admin.Start();
                     Thread th = Thread.CurrentThread;
                     th.Abort();
