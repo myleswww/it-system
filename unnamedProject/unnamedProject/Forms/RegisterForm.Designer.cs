@@ -142,7 +142,6 @@
             this.UsernameLabel.Size = new System.Drawing.Size(83, 19);
             this.UsernameLabel.TabIndex = 7;
             this.UsernameLabel.Text = "Username";
-            this.UsernameLabel.Click += new System.EventHandler(this.UsernameLabel_Click);
             // 
             // passwordLabel
             // 
@@ -169,7 +168,6 @@
             this.confirmLabel.Size = new System.Drawing.Size(145, 19);
             this.confirmLabel.TabIndex = 9;
             this.confirmLabel.Text = "Confirm Password";
-            this.confirmLabel.Click += new System.EventHandler(this.confirmLabel_Click);
             // 
             // emailLabel
             // 
@@ -209,7 +207,6 @@
             this.lastnameLabel.Size = new System.Drawing.Size(86, 19);
             this.lastnameLabel.TabIndex = 12;
             this.lastnameLabel.Text = "Last Name";
-            this.lastnameLabel.Click += new System.EventHandler(this.lastnameLabel_Click);
             // 
             // levelAccessLabel
             // 
@@ -305,7 +302,6 @@
             this.passAst.TabIndex = 19;
             this.passAst.Text = "*";
             this.passAst.Visible = false;
-            this.passAst.Click += new System.EventHandler(this.label1_Click);
             // 
             // conPassAst
             // 

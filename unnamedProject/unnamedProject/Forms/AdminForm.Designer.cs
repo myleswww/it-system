@@ -124,7 +124,6 @@
             this.optionPanel.Size = new System.Drawing.Size(214, 501);
             this.optionPanel.TabIndex = 2;
             this.optionPanel.Visible = false;
-            this.optionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // usersBtn
             // 
