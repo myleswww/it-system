@@ -61,13 +61,16 @@ namespace unnamedProject
             if (this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
             {
 
-                WindowState = FormWindowState.Normal;
+                WindowState = FormWindowState.Normal; //All of this is for the button itself
                 fullBtn.FlatAppearance.BorderSize = 1;
                 fullBtn.Width = 15;
                 fullBtn.Height = 12;
                 fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
                 fullBtn.ImageIndex = -1;
                 
+
+                //screen scaling
+
             }
             else
             {
@@ -76,6 +79,9 @@ namespace unnamedProject
                 fullBtn.FlatAppearance.BorderSize = 0;
                 fullBtn.Width = 15;
                 fullBtn.Height = 15;
+
+                //screen scaling
+               
             }
         }
 
