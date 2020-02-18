@@ -45,13 +45,13 @@
             this.exitBtn = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.newTab = new System.Windows.Forms.Button();
-            this.FAPTab = new System.Windows.Forms.Button();
-            this.closedTab = new System.Windows.Forms.Button();
-            this.openTab = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.openTab = new System.Windows.Forms.Button();
+            this.closedTab = new System.Windows.Forms.Button();
+            this.FAPTab = new System.Windows.Forms.Button();
+            this.newTab = new System.Windows.Forms.Button();
             this.onlineHelpBtn = new System.Windows.Forms.Button();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.optionPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -231,7 +231,7 @@
             this.minimizeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.minimizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeBtn.Font = new System.Drawing.Font("ROG Fonts", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.minimizeBtn.Location = new System.Drawing.Point(962, 7);
             this.minimizeBtn.Name = "minimizeBtn";
@@ -270,7 +270,7 @@
             this.exitBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.exitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Font = new System.Drawing.Font("ROG Fonts", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exitBtn.Location = new System.Drawing.Point(1015, 9);
             this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -287,56 +287,31 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 59);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1067, 490);
             this.flowLayoutPanel1.TabIndex = 19;
             // 
-            // newTab
+            // flowLayoutPanel2
             // 
-            this.newTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.newTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.newTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newTab.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.newTab.Location = new System.Drawing.Point(227, 0);
-            this.newTab.Margin = new System.Windows.Forms.Padding(0);
-            this.newTab.Name = "newTab";
-            this.newTab.Size = new System.Drawing.Size(75, 29);
-            this.newTab.TabIndex = 3;
-            this.newTab.Text = "New";
-            this.newTab.UseVisualStyleBackColor = true;
-            // 
-            // FAPTab
-            // 
-            this.FAPTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.FAPTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.FAPTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FAPTab.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FAPTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.FAPTab.Location = new System.Drawing.Point(152, 0);
-            this.FAPTab.Margin = new System.Windows.Forms.Padding(0);
-            this.FAPTab.Name = "FAPTab";
-            this.FAPTab.Size = new System.Drawing.Size(75, 29);
-            this.FAPTab.TabIndex = 2;
-            this.FAPTab.Text = "FAP";
-            this.FAPTab.UseVisualStyleBackColor = true;
-            // 
-            // closedTab
-            // 
-            this.closedTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.closedTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.closedTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closedTab.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closedTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.closedTab.Location = new System.Drawing.Point(77, 0);
-            this.closedTab.Margin = new System.Windows.Forms.Padding(0);
-            this.closedTab.Name = "closedTab";
-            this.closedTab.Size = new System.Drawing.Size(75, 29);
-            this.closedTab.TabIndex = 1;
-            this.closedTab.Text = "Closed";
-            this.closedTab.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Lime;
+            this.flowLayoutPanel2.Controls.Add(this.openTab);
+            this.flowLayoutPanel2.Controls.Add(this.closedTab);
+            this.flowLayoutPanel2.Controls.Add(this.FAPTab);
+            this.flowLayoutPanel2.Controls.Add(this.newTab);
+            this.flowLayoutPanel2.Controls.Add(this.onlineHelpBtn);
+            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel3);
+            this.flowLayoutPanel2.Controls.Add(this.tableLayoutPanel1);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1057, 483);
+            this.flowLayoutPanel2.TabIndex = 22;
             // 
             // openTab
             // 
@@ -353,33 +328,50 @@
             this.openTab.Text = "Open";
             this.openTab.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel2
+            // closedTab
             // 
-            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel2.Controls.Add(this.openTab);
-            this.flowLayoutPanel2.Controls.Add(this.closedTab);
-            this.flowLayoutPanel2.Controls.Add(this.FAPTab);
-            this.flowLayoutPanel2.Controls.Add(this.newTab);
-            this.flowLayoutPanel2.Controls.Add(this.onlineHelpBtn);
-            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel3);
-            this.flowLayoutPanel2.Controls.Add(this.tableLayoutPanel1);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1057, 483);
-            this.flowLayoutPanel2.TabIndex = 22;
+            this.closedTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.closedTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.closedTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closedTab.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closedTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.closedTab.Location = new System.Drawing.Point(77, 0);
+            this.closedTab.Margin = new System.Windows.Forms.Padding(0);
+            this.closedTab.Name = "closedTab";
+            this.closedTab.Size = new System.Drawing.Size(75, 29);
+            this.closedTab.TabIndex = 1;
+            this.closedTab.Text = "Closed";
+            this.closedTab.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel3
+            // FAPTab
             // 
-            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel3.AutoSize = true;
-            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(421, 24);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(2, 2);
-            this.flowLayoutPanel3.TabIndex = 4;
+            this.FAPTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.FAPTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.FAPTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FAPTab.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FAPTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FAPTab.Location = new System.Drawing.Point(152, 0);
+            this.FAPTab.Margin = new System.Windows.Forms.Padding(0);
+            this.FAPTab.Name = "FAPTab";
+            this.FAPTab.Size = new System.Drawing.Size(75, 29);
+            this.FAPTab.TabIndex = 2;
+            this.FAPTab.Text = "FAP";
+            this.FAPTab.UseVisualStyleBackColor = true;
+            // 
+            // newTab
+            // 
+            this.newTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.newTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.newTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newTab.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.newTab.Location = new System.Drawing.Point(227, 0);
+            this.newTab.Margin = new System.Windows.Forms.Padding(0);
+            this.newTab.Name = "newTab";
+            this.newTab.Size = new System.Drawing.Size(75, 29);
+            this.newTab.TabIndex = 3;
+            this.newTab.Text = "New";
+            this.newTab.UseVisualStyleBackColor = true;
             // 
             // onlineHelpBtn
             // 
@@ -396,9 +388,21 @@
             this.onlineHelpBtn.Text = "Online Help";
             this.onlineHelpBtn.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel3.AutoSize = true;
+            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(421, 24);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(2, 2);
+            this.flowLayoutPanel3.TabIndex = 4;
+            // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
