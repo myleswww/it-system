@@ -54,7 +54,6 @@
             this.label1.Size = new System.Drawing.Size(544, 72);
             this.label1.TabIndex = 1;
             this.label1.Text = "IT Help Desk";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // SplashScreen
             // 
@@ -68,7 +67,6 @@
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
-            this.Load += new System.EventHandler(this.SplashScreen_Load);
             this.Shown += new System.EventHandler(this.SplashScreen_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

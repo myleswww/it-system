@@ -55,7 +55,6 @@
             this.labelLogin.Size = new System.Drawing.Size(64, 22);
             this.labelLogin.TabIndex = 0;
             this.labelLogin.Text = "LOGIN";
-            this.labelLogin.Click += new System.EventHandler(this.label1_Click);
             // 
             // passwordBox
             // 
@@ -68,7 +67,6 @@
             this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(312, 22);
             this.passwordBox.TabIndex = 2;
-            this.passwordBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // usernameBox
             // 
@@ -81,7 +79,6 @@
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(312, 22);
             this.usernameBox.TabIndex = 1;
-            this.usernameBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // labelUsername
             // 
@@ -95,7 +92,6 @@
             this.labelUsername.Size = new System.Drawing.Size(83, 19);
             this.labelUsername.TabIndex = 5;
             this.labelUsername.Text = "Username";
-            this.labelUsername.Click += new System.EventHandler(this.label2_Click);
             // 
             // labelPassword
             // 
@@ -109,7 +105,6 @@
             this.labelPassword.Size = new System.Drawing.Size(80, 19);
             this.labelPassword.TabIndex = 6;
             this.labelPassword.Text = "Password";
-            this.labelPassword.Click += new System.EventHandler(this.label3_Click);
             // 
             // signIn
             // 
@@ -142,7 +137,6 @@
             this.errorIncorrect.TabIndex = 12;
             this.errorIncorrect.Text = "ERROR: USERNAME OR PASSWORD IS INCORRECT";
             this.errorIncorrect.Visible = false;
-            this.errorIncorrect.Click += new System.EventHandler(this.label6_Click);
             // 
             // exitBtn
             // 
@@ -230,7 +224,6 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

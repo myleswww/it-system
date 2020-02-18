@@ -21,11 +21,6 @@ namespace unnamedProject.Forms
            
         }
 
-        private void SplashScreen_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void SplashScreen_Shown(object sender, EventArgs e)
         {
             tmr = new System.Windows.Forms.Timer();
@@ -61,9 +56,5 @@ namespace unnamedProject.Forms
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

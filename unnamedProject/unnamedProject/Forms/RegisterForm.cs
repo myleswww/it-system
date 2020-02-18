@@ -18,16 +18,6 @@ namespace unnamedProject
             InitializeComponent();
         }
 
-        private void lastnameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void confirmLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void confirm_TextChanged(object sender, EventArgs e)
         {
             if (confirm.Text == "") //if a user does not fill in a text box, a red asterisk appears
@@ -100,15 +90,6 @@ namespace unnamedProject
         }
         
 
-        private void UsernameLabel_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void password_TextChanged(object sender, EventArgs e)
         {
@@ -156,11 +137,6 @@ namespace unnamedProject
             {
                 eAst.Visible = false;
             }
-        }
-
-        private void levelAccess_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void exitBtn_Click(object sender, EventArgs e)

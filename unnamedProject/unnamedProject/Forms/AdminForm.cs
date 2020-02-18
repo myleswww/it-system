@@ -36,11 +36,6 @@ namespace unnamedProject
             this.Close();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void buttonCollapse_Click(object sender, EventArgs e)
         {
             if (optionPanel.Visible == false)
@@ -53,11 +48,6 @@ namespace unnamedProject
             }
 
             
-        }
-
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void exitBtn_Click_1(object sender, EventArgs e)
@@ -116,11 +106,6 @@ namespace unnamedProject
                 fullBtn.ImageIndex = -1;
 
             }
-        }
-
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
