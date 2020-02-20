@@ -63,11 +63,11 @@ namespace unnamedProject.Forms
         private void SplashScreen_Load(object sender, EventArgs e)
         {
             
-            PrivateFontCollection privateFont = new PrivateFontCollection(); //create new private font collection
-            privateFont.AddFontFile(path);          //add the file path of the font to the collection
-            FontFamily fontFamily = privateFont.Families[0];        //set the fontfamily to the index of the font file that we want
-            Font rogFont = new Font(fontFamily, 36, FontStyle.Regular);     //set the font to the previous fontfamily value, set font size, and fontstyle
-            lblTitle.Font = rogFont;        //set font of label
+            //PrivateFontCollection privateFont = new PrivateFontCollection(); //create new private font collection
+            //privateFont.AddFontFile(path);          //add the file path of the font to the collection
+            //FontFamily fontFamily = privateFont.Families[0];        //set the fontfamily to the index of the font file that we want
+            //Font rogFont = new Font(fontFamily, 36, FontStyle.Regular);     //set the font to the previous fontfamily value, set font size, and fontstyle
+            //lblTitle.Font = rogFont;        //set font of label
             
         }
     }
