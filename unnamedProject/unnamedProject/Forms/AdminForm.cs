@@ -101,11 +101,12 @@ namespace unnamedProject
                 fullBtn.FlatAppearance.BorderSize = 0;
                 fullBtn.Width = 15;
                 fullBtn.Height = 15;
-
+                ticketTable.Width = mainPanel.Width;
+                ticketTable.Height = mainPanel.Height - 29;
             }
             else
             {
-                fullBtn.FlatAppearance.BorderSize = 1;
+                fullBtn.FlatAppearance.BorderSize = 1; //increaase boarderwidth
                 fullBtn.Width = 15;
                 fullBtn.Height = 12;
                 fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;

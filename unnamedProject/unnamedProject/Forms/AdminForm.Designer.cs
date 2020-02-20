@@ -50,7 +50,7 @@
             this.FAPTab = new System.Windows.Forms.Button();
             this.newTab = new System.Windows.Forms.Button();
             this.onlineHelpBtn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ticketTable = new System.Windows.Forms.TableLayoutPanel();
             this.optionPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -289,7 +289,7 @@
             this.mainPanel.Controls.Add(this.FAPTab);
             this.mainPanel.Controls.Add(this.newTab);
             this.mainPanel.Controls.Add(this.onlineHelpBtn);
-            this.mainPanel.Controls.Add(this.tableLayoutPanel1);
+            this.mainPanel.Controls.Add(this.ticketTable);
             this.mainPanel.Location = new System.Drawing.Point(1, 61);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1071, 499);
@@ -370,21 +370,20 @@
             this.onlineHelpBtn.Text = "Online Help";
             this.onlineHelpBtn.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
+            // ticketTable
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Yellow;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 32);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1062, 467);
-            this.tableLayoutPanel1.TabIndex = 11;
+            this.ticketTable.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ticketTable.BackColor = System.Drawing.Color.Yellow;
+            this.ticketTable.ColumnCount = 2;
+            this.ticketTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ticketTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ticketTable.Location = new System.Drawing.Point(3, 32);
+            this.ticketTable.Name = "ticketTable";
+            this.ticketTable.RowCount = 2;
+            this.ticketTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ticketTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ticketTable.Size = new System.Drawing.Size(1062, 467);
+            this.ticketTable.TabIndex = 11;
             // 
             // AdminForm
             // 
@@ -433,6 +432,6 @@
         private System.Windows.Forms.Button FAPTab;
         private System.Windows.Forms.Button newTab;
         private System.Windows.Forms.Button onlineHelpBtn;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel ticketTable;
     }
 }
