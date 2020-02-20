@@ -44,18 +44,15 @@
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.exitBtn = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.openTab = new System.Windows.Forms.Button();
             this.closedTab = new System.Windows.Forms.Button();
             this.FAPTab = new System.Windows.Forms.Button();
             this.newTab = new System.Windows.Forms.Button();
             this.onlineHelpBtn = new System.Windows.Forms.Button();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.optionPanel.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // logOut
@@ -281,39 +278,22 @@
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click_1);
             // 
-            // flowLayoutPanel1
+            // mainPanel
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 59);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1067, 490);
-            this.flowLayoutPanel1.TabIndex = 19;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Lime;
-            this.flowLayoutPanel2.Controls.Add(this.openTab);
-            this.flowLayoutPanel2.Controls.Add(this.closedTab);
-            this.flowLayoutPanel2.Controls.Add(this.FAPTab);
-            this.flowLayoutPanel2.Controls.Add(this.newTab);
-            this.flowLayoutPanel2.Controls.Add(this.onlineHelpBtn);
-            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel3);
-            this.flowLayoutPanel2.Controls.Add(this.tableLayoutPanel1);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1060, 486);
-            this.flowLayoutPanel2.TabIndex = 22;
+            this.mainPanel.BackColor = System.Drawing.Color.Lime;
+            this.mainPanel.Controls.Add(this.openTab);
+            this.mainPanel.Controls.Add(this.closedTab);
+            this.mainPanel.Controls.Add(this.FAPTab);
+            this.mainPanel.Controls.Add(this.newTab);
+            this.mainPanel.Controls.Add(this.onlineHelpBtn);
+            this.mainPanel.Controls.Add(this.tableLayoutPanel1);
+            this.mainPanel.Location = new System.Drawing.Point(1, 61);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1071, 499);
+            this.mainPanel.TabIndex = 19;
             // 
             // openTab
             // 
@@ -326,7 +306,7 @@
             this.openTab.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
             this.openTab.Name = "openTab";
             this.openTab.Size = new System.Drawing.Size(75, 29);
-            this.openTab.TabIndex = 0;
+            this.openTab.TabIndex = 6;
             this.openTab.Text = "Open";
             this.openTab.UseVisualStyleBackColor = true;
             // 
@@ -341,7 +321,7 @@
             this.closedTab.Margin = new System.Windows.Forms.Padding(0);
             this.closedTab.Name = "closedTab";
             this.closedTab.Size = new System.Drawing.Size(75, 29);
-            this.closedTab.TabIndex = 1;
+            this.closedTab.TabIndex = 7;
             this.closedTab.Text = "Closed";
             this.closedTab.UseVisualStyleBackColor = true;
             // 
@@ -356,7 +336,7 @@
             this.FAPTab.Margin = new System.Windows.Forms.Padding(0);
             this.FAPTab.Name = "FAPTab";
             this.FAPTab.Size = new System.Drawing.Size(75, 29);
-            this.FAPTab.TabIndex = 2;
+            this.FAPTab.TabIndex = 8;
             this.FAPTab.Text = "FAP";
             this.FAPTab.UseVisualStyleBackColor = true;
             // 
@@ -371,7 +351,7 @@
             this.newTab.Margin = new System.Windows.Forms.Padding(0);
             this.newTab.Name = "newTab";
             this.newTab.Size = new System.Drawing.Size(75, 29);
-            this.newTab.TabIndex = 3;
+            this.newTab.TabIndex = 9;
             this.newTab.Text = "New";
             this.newTab.UseVisualStyleBackColor = true;
             // 
@@ -386,28 +366,15 @@
             this.onlineHelpBtn.Margin = new System.Windows.Forms.Padding(0);
             this.onlineHelpBtn.Name = "onlineHelpBtn";
             this.onlineHelpBtn.Size = new System.Drawing.Size(116, 29);
-            this.onlineHelpBtn.TabIndex = 5;
+            this.onlineHelpBtn.TabIndex = 10;
             this.onlineHelpBtn.Text = "Online Help";
             this.onlineHelpBtn.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel3.AutoSize = true;
-            this.flowLayoutPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(421, 24);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(2, 2);
-            this.flowLayoutPanel3.TabIndex = 4;
-            // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Yellow;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -416,8 +383,8 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1054, 451);
-            this.tableLayoutPanel1.TabIndex = 6;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1062, 467);
+            this.tableLayoutPanel1.TabIndex = 11;
             // 
             // AdminForm
             // 
@@ -425,12 +392,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.optionPanel);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.buttonCollapse);
             this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.optionPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -439,10 +406,7 @@
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.optionPanel.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
+            this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -463,13 +427,11 @@
         private System.Windows.Forms.ImageList imageList2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel mainPanel;
         private System.Windows.Forms.Button openTab;
         private System.Windows.Forms.Button closedTab;
         private System.Windows.Forms.Button FAPTab;
         private System.Windows.Forms.Button newTab;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button onlineHelpBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
