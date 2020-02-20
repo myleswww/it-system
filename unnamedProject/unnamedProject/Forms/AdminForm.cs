@@ -101,8 +101,9 @@ namespace unnamedProject
                 fullBtn.FlatAppearance.BorderSize = 0;
                 fullBtn.Width = 15;
                 fullBtn.Height = 15;
-                ticketTable.Width = mainPanel.Width;
-                ticketTable.Height = mainPanel.Height - 29;
+                ticketTable.Size = new Size(mainPanel.Width, (mainPanel.Height - 29));
+                //ticketTable.Width = mainPanel.Width;
+                //ticketTable.Height = mainPanel.Height - 29;
             }
             else
             {
