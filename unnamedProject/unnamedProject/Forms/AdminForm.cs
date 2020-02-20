@@ -67,7 +67,7 @@ namespace unnamedProject
                 fullBtn.Height = 12;
                 fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
                 fullBtn.ImageIndex = -1;
-                
+                ticketTable.Size = mainPanel.Size;
 
                 //screen scaling
 
@@ -79,9 +79,9 @@ namespace unnamedProject
                 fullBtn.FlatAppearance.BorderSize = 0;
                 fullBtn.Width = 15;
                 fullBtn.Height = 15;
-
+                ticketTable.Size = mainPanel.Size;
                 //screen scaling
-               
+
             }
         }
 
@@ -101,9 +101,7 @@ namespace unnamedProject
                 fullBtn.FlatAppearance.BorderSize = 0;
                 fullBtn.Width = 15;
                 fullBtn.Height = 15;
-                ticketTable.Size = new Size(mainPanel.Width, (mainPanel.Height - 29));
-                //ticketTable.Width = mainPanel.Width;
-                //ticketTable.Height = mainPanel.Height - 29;
+                ticketTable.Size = mainPanel.Size;
             }
             else
             {
@@ -112,7 +110,7 @@ namespace unnamedProject
                 fullBtn.Height = 12;
                 fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
                 fullBtn.ImageIndex = -1;
-
+                ticketTable.Size = mainPanel.Size;
             }
         }
     }
