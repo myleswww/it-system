@@ -121,6 +121,7 @@
             this.optionPanel.Size = new System.Drawing.Size(214, 501);
             this.optionPanel.TabIndex = 2;
             this.optionPanel.Visible = false;
+            this.optionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.optionPanel_Paint);
             // 
             // usersBtn
             // 
@@ -392,12 +393,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.buttonCollapse);
             this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.optionPanel);
+            this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);

@@ -117,5 +117,10 @@ namespace unnamedProject
 
             }
         }
+
+        private void optionPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
