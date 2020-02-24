@@ -67,7 +67,7 @@ namespace unnamedProject
                 fullBtn.Height = 12;
                 fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
                 fullBtn.ImageIndex = -1;
-                tableLayoutPanel1.Size = mainPanel.Size;
+                ticketTable.Size = mainPanel.Size;
 
 
                 //screen scaling
@@ -80,7 +80,7 @@ namespace unnamedProject
                 fullBtn.FlatAppearance.BorderSize = 0;
                 fullBtn.Width = 15;
                 fullBtn.Height = 15;
-                tableLayoutPanel1.Size = mainPanel.Size;
+                ticketTable.Size = mainPanel.Size;
 
                 //screen scaling
 
