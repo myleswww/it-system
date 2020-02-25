@@ -12,7 +12,7 @@ namespace unnamedProject
 {
     class loginType
     {
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=nhds2020.database.windows.net;Initial Catalog=NothingHelpDeskSpring2020; Authentication=Active Directory Password ;User ID=mohern@butler.edu;Password=Littlebro77%");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=nhds2020.database.windows.net;Initial Catalog=NothingHelpDeskSpring2020;User ID=fruit;Password=mangoMaster!");
         public bool checkAndRecieve(string userName, string passWord)
         {
             sqlcon.Open();
