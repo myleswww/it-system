@@ -43,7 +43,7 @@ namespace unnamedProject
                     break;
                 case "Project Member": accessValue = 3;
                     break;
-                 default: accessValue = 3;
+                 default: accessValue = 4;
                     break;
             }
                 
@@ -166,6 +166,11 @@ namespace unnamedProject
         private void register_Load(object sender, EventArgs e)
         {
             //WindowState = FormWindowState.Maximized;
+        }
+
+        private void roleCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

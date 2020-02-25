@@ -32,6 +32,36 @@ namespace unnamedProject
                     sqlcon.Close();
                     return true;
                 }
+                else if(dtbl.Rows[0]["levelAccess"].ToString() == "1")
+                {
+                    var reportManager = new Thread(() => Application.Run(new Forms.ReportManagerForm()));
+                    reportManager.SetApartmentState(ApartmentState.STA);
+                    reportManager.Start();
+                    Thread th = Thread.CurrentThread;
+                    th.Abort();
+                    sqlcon.Close();
+                    return true;
+                }
+                else if (dtbl.Rows[0]["levelAccess"].ToString() == "2")
+                {
+                    var supportMember = new Thread(() => Application.Run(new Forms.SupportForm()));
+                    supportMember.SetApartmentState(ApartmentState.STA);
+                    supportMember.Start();
+                    Thread th = Thread.CurrentThread;
+                    th.Abort();
+                    sqlcon.Close();
+                    return true;
+                }
+                else if (dtbl.Rows[0]["levelAccess"].ToString() == "3")
+                {
+                    var projectMember = new Thread(() => Application.Run(new Forms.ProjectMemberForm()));
+                    projectMember.SetApartmentState(ApartmentState.STA);
+                    projectMember.Start();
+                    Thread th = Thread.CurrentThread;
+                    th.Abort();
+                    sqlcon.Close();
+                    return true;
+                }
                 else
                 {
                     return false;

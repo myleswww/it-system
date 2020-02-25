@@ -381,6 +381,7 @@
             this.roleCombo.Name = "roleCombo";
             this.roleCombo.Size = new System.Drawing.Size(160, 24);
             this.roleCombo.TabIndex = 25;
+            this.roleCombo.SelectedIndexChanged += new System.EventHandler(this.roleCombo_SelectedIndexChanged);
             // 
             // minimizeBtn
             // 
