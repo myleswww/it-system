@@ -67,6 +67,12 @@
     <Compile Include="Forms\ProjectMemberForm.Designer.cs">
       <DependentUpon>ProjectMemberForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ReportManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportManagerForm.Designer.cs">
+      <DependentUpon>ReportManagerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProjectMemberForm.resx">
       <DependentUpon>ProjectMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportManagerForm.resx">
+      <DependentUpon>ReportManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
