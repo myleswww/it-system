@@ -11,47 +11,41 @@ using System.Windows.Forms;
 
 namespace unnamedProject.Forms
 {
-    public partial class SupportForm : Form
+    public partial class ReportManagerForm : Form
     {
-        public SupportForm()
+        public ReportManagerForm()
         {
             InitializeComponent();
         }
 
-        private void SupportForm_Load(object sender, EventArgs e)
+        private void logOut_Click(object sender, EventArgs e)
         {
-            if (this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
-            {
-                //maximize button image is set to the png image
-                fullBtn.ImageIndex = 0;
-                fullBtn.FlatAppearance.BorderSize = 0;
-                fullBtn.Width = 15;
-                fullBtn.Height = 15;
+            this.Hide();
+            var logIn = new Thread(() => Application.Run(new LoginForm()));
+            logIn.Start();
+            this.Close();
+        }
 
-
-
-            }
-            else
-            {
-                fullBtn.FlatAppearance.BorderSize = 1;
-                fullBtn.Width = 15;
-                fullBtn.Height = 12;
-                fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
-                fullBtn.ImageIndex = -1;
-
-            }
+        private void register_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var reg = new Thread(() => Application.Run(new register()));
+            reg.Start();
+            this.Close();
         }
 
         private void buttonCollapse_Click(object sender, EventArgs e)
         {
-            if(optionPanel.Visible == true)
+            if (optionPanel.Visible == false)
             {
-                optionPanel.Visible = false;
+                optionPanel.Show();
             }
-            else if(optionPanel.Visible == false)
+            else if (optionPanel.Visible == true)
             {
-                optionPanel.Visible = true;
+                optionPanel.Hide();
             }
+
+
         }
 
         private void exitBtn_Click_1(object sender, EventArgs e)
@@ -96,12 +90,28 @@ namespace unnamedProject.Forms
             WindowState = FormWindowState.Minimized;
         }
 
-        private void logOut_Click(object sender, EventArgs e)
+        private void ReportManagerForm_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            var logIn = new Thread(() => Application.Run(new LoginForm()));
-            logIn.Start();
-            this.Close();
+            if (this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
+            {
+                //maximize button image is set to the png image
+                fullBtn.ImageIndex = 0;
+                fullBtn.FlatAppearance.BorderSize = 0;
+                fullBtn.Width = 15;
+                fullBtn.Height = 15;
+
+
+
+            }
+            else
+            {
+                fullBtn.FlatAppearance.BorderSize = 1;
+                fullBtn.Width = 15;
+                fullBtn.Height = 12;
+                fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
+                fullBtn.ImageIndex = -1;
+
+            }
         }
     }
 }
