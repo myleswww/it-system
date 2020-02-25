@@ -94,5 +94,13 @@ namespace unnamedProject.Forms
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void logOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var logIn = new Thread(() => Application.Run(new LoginForm()));
+            logIn.Start();
+            this.Close();
+        }
     }
 }
