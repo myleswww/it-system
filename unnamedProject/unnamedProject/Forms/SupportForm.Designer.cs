@@ -77,7 +77,7 @@
             this.buttonCollapse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCollapse.ImageIndex = 0;
             this.buttonCollapse.ImageList = this.imageList1;
-            this.buttonCollapse.Location = new System.Drawing.Point(12, 12);
+            this.buttonCollapse.Location = new System.Drawing.Point(16, 7);
             this.buttonCollapse.Name = "buttonCollapse";
             this.buttonCollapse.Size = new System.Drawing.Size(63, 46);
             this.buttonCollapse.TabIndex = 4;
