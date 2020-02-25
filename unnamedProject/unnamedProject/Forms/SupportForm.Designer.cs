@@ -82,6 +82,7 @@
             this.buttonCollapse.Size = new System.Drawing.Size(63, 46);
             this.buttonCollapse.TabIndex = 4;
             this.buttonCollapse.UseVisualStyleBackColor = false;
+            this.buttonCollapse.Click += new System.EventHandler(this.buttonCollapse_Click);
             // 
             // minimizeBtn
             // 
@@ -310,6 +311,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SupportForm";
             this.Text = "SupportForm";
+            this.Load += new System.EventHandler(this.SupportForm_Load);
             this.mainPanel.ResumeLayout(false);
             this.optionPanel.ResumeLayout(false);
             this.ResumeLayout(false);

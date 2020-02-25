@@ -117,5 +117,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\588a6507d06f6719692a2d15.png" />
+    <Content Include="Images\artificial-intelligence %285%29.png" />
+    <Content Include="Images\back-button.png" />
+    <Content Include="Images\backbutton.png" />
+    <Content Include="Images\brain %281%29.png" />
+    <Content Include="Images\brain.png" />
+    <Content Include="Images\icons8-rewind-button-round-80.png" />
+    <Content Include="Images\toilet.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
