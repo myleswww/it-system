@@ -92,7 +92,7 @@
             this.email.Margin = new System.Windows.Forms.Padding(4);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(132, 22);
-            this.email.TabIndex = 2;
+            this.email.TabIndex = 5;
             this.email.TextChanged += new System.EventHandler(this.email_TextChanged);
             // 
             // firstName
@@ -126,7 +126,7 @@
             this.confirm.Name = "confirm";
             this.confirm.PasswordChar = '*';
             this.confirm.Size = new System.Drawing.Size(132, 22);
-            this.confirm.TabIndex = 6;
+            this.confirm.TabIndex = 2;
             this.confirm.UseSystemPasswordChar = true;
             this.confirm.TextChanged += new System.EventHandler(this.confirm_TextChanged);
             // 
@@ -234,7 +234,7 @@
             this.submit.Margin = new System.Windows.Forms.Padding(4);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(100, 28);
-            this.submit.TabIndex = 14;
+            this.submit.TabIndex = 7;
             this.submit.Text = "Register";
             this.submit.UseVisualStyleBackColor = true;
             this.submit.Click += new System.EventHandler(this.submit_Click);
@@ -266,7 +266,7 @@
             this.back.Margin = new System.Windows.Forms.Padding(4);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(48, 48);
-            this.back.TabIndex = 17;
+            this.back.TabIndex = 8;
             this.back.UseVisualStyleBackColor = false;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
@@ -380,7 +380,7 @@
             this.roleCombo.Location = new System.Drawing.Point(526, 189);
             this.roleCombo.Name = "roleCombo";
             this.roleCombo.Size = new System.Drawing.Size(160, 24);
-            this.roleCombo.TabIndex = 25;
+            this.roleCombo.TabIndex = 6;
             this.roleCombo.SelectedIndexChanged += new System.EventHandler(this.roleCombo_SelectedIndexChanged);
             // 
             // minimizeBtn
@@ -395,7 +395,7 @@
             this.minimizeBtn.Location = new System.Drawing.Point(688, 9);
             this.minimizeBtn.Name = "minimizeBtn";
             this.minimizeBtn.Size = new System.Drawing.Size(24, 32);
-            this.minimizeBtn.TabIndex = 28;
+            this.minimizeBtn.TabIndex = 9;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
             this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
@@ -411,7 +411,7 @@
             this.fullBtn.Location = new System.Drawing.Point(718, 20);
             this.fullBtn.Name = "fullBtn";
             this.fullBtn.Size = new System.Drawing.Size(20, 12);
-            this.fullBtn.TabIndex = 27;
+            this.fullBtn.TabIndex = 10;
             this.fullBtn.UseVisualStyleBackColor = true;
             this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
             // 
@@ -428,7 +428,7 @@
             this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(43, 32);
-            this.exitBtn.TabIndex = 26;
+            this.exitBtn.TabIndex = 11;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);

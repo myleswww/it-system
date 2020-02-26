@@ -103,5 +103,11 @@ namespace unnamedProject.Forms
             logIn.Start();
             this.Close();
         }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
     }
 }
