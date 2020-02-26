@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace unnamedProject
 {
-    class Admin
+    class Tickets
     {
 
     }
