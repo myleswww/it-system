@@ -70,6 +70,7 @@
             this.buttonCollapse.Size = new System.Drawing.Size(70, 46);
             this.buttonCollapse.TabIndex = 4;
             this.buttonCollapse.UseVisualStyleBackColor = false;
+            this.buttonCollapse.Click += new System.EventHandler(this.buttonCollapse_Click_1);
             // 
             // imageList1
             // 

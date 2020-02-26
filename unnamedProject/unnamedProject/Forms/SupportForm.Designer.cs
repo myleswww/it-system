@@ -114,6 +114,7 @@
             this.fullBtn.Size = new System.Drawing.Size(20, 12);
             this.fullBtn.TabIndex = 20;
             this.fullBtn.UseVisualStyleBackColor = true;
+            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click_1);
             // 
             // exitBtn
             // 
