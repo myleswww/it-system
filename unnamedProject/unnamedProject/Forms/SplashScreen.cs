@@ -11,6 +11,10 @@ using System.Windows.Forms;
 using System.Drawing.Text;
 using System.IO;
 
+/// <summary>
+/// Authors:Myles Wright, Matthew O'hern, Parker Winters, and Nick Stitely
+/// </summary>
+
 namespace unnamedProject.Forms
 {
     public partial class SplashScreen : Form

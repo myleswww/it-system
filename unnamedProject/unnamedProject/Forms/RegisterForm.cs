@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 
+/// <summary>
+/// Authors:Myles Wright, Matthew O'hern, Parker Winters, and Nick Stitely
+/// </summary>
+
 namespace unnamedProject
 {
     public partial class register : Form

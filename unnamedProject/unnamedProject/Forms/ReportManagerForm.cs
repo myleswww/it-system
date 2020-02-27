@@ -9,6 +9,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Authors:Myles Wright, Matthew O'hern, Parker Winters, and Nick Stitely
+/// </summary>
+
 namespace unnamedProject.Forms
 {
     public partial class ReportManagerForm : Form
@@ -124,6 +128,17 @@ namespace unnamedProject.Forms
             {
                 optionPanel.Hide();
             }
+        }
+
+        private void logOut_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            var logIn = new Thread(() => Application.Run(new LoginForm()));
+            logIn.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
         }
     }
 }

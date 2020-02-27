@@ -8,6 +8,10 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Threading;
 
+/// <summary>
+/// Authors:Myles Wright, Matthew O'hern, Parker Winters, and Nick Stitely
+/// </summary>
+
 namespace unnamedProject
 {
     class loginType

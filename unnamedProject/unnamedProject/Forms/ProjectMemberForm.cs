@@ -9,6 +9,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Authors:Myles Wright, Matthew O'hern, Parker Winters, and Nick Stitely
+/// </summary>
+
 namespace unnamedProject.Forms
 {
     public partial class ProjectMemberForm : Form
@@ -102,6 +106,9 @@ namespace unnamedProject.Forms
             this.Hide();
             var logIn = new Thread(() => Application.Run(new LoginForm()));
             logIn.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
             this.Close();
         }
     }

@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+/// <summary>
+/// Authors:Myles Wright, Matthew O'hern, Parker Winters, and Nick Stitely
+/// </summary>
+
 namespace unnamedProject
 {
     public partial class AdminForm : Form
@@ -25,6 +29,9 @@ namespace unnamedProject
             this.Hide();
             var logIn = new Thread(() => Application.Run(new LoginForm()));
             logIn.Start();
+
+            Thread th = Thread.CurrentThread; //aborts the current thread
+            th.Abort();
             this.Close();
         }
 
@@ -33,6 +40,9 @@ namespace unnamedProject
             this.Hide();
             var reg = new Thread(() => Application.Run(new register()));
             reg.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
             this.Close();
         }
 
