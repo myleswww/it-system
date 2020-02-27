@@ -336,6 +336,7 @@
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReportManagerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportManagerForm";
             this.Load += new System.EventHandler(this.ReportManagerForm_Load);
             this.mainPanel.ResumeLayout(false);

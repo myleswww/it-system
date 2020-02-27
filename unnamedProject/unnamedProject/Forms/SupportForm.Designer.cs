@@ -312,6 +312,7 @@
             this.Controls.Add(this.buttonCollapse);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SupportForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SupportForm";
             this.Load += new System.EventHandler(this.SupportForm_Load);
             this.mainPanel.ResumeLayout(false);

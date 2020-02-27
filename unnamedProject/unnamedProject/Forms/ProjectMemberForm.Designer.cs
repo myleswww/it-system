@@ -314,6 +314,7 @@
             this.Controls.Add(this.buttonCollapse);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProjectMemberForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProjectMemberForm";
             this.Load += new System.EventHandler(this.ProjectMemberForm_Load);
             this.mainPanel.ResumeLayout(false);
