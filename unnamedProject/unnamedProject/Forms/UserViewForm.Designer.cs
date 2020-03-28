@@ -38,6 +38,14 @@
             this.exitBtn = new System.Windows.Forms.Button();
             this.backButtonList = new System.Windows.Forms.ImageList(this.components);
             this.back = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ComboBoxSort = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.LblName = new System.Windows.Forms.Label();
+            this.LblID = new System.Windows.Forms.Label();
+            this.LblLvlAccess = new System.Windows.Forms.Label();
+            this.LblAllUsers = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -62,9 +70,9 @@
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.minimizeBtn.Location = new System.Drawing.Point(695, 7);
+            this.minimizeBtn.Location = new System.Drawing.Point(608, 7);
             this.minimizeBtn.Name = "minimizeBtn";
-            this.minimizeBtn.Size = new System.Drawing.Size(24, 32);
+            this.minimizeBtn.Size = new System.Drawing.Size(21, 30);
             this.minimizeBtn.TabIndex = 21;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
@@ -78,9 +86,9 @@
             this.fullBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fullBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.fullBtn.ImageList = this.imageList2;
-            this.fullBtn.Location = new System.Drawing.Point(725, 18);
+            this.fullBtn.Location = new System.Drawing.Point(634, 17);
             this.fullBtn.Name = "fullBtn";
-            this.fullBtn.Size = new System.Drawing.Size(20, 12);
+            this.fullBtn.Size = new System.Drawing.Size(18, 11);
             this.fullBtn.TabIndex = 20;
             this.fullBtn.UseVisualStyleBackColor = true;
             // 
@@ -93,10 +101,10 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.exitBtn.Location = new System.Drawing.Point(748, 9);
+            this.exitBtn.Location = new System.Drawing.Point(654, 8);
             this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(43, 32);
+            this.exitBtn.Size = new System.Drawing.Size(38, 30);
             this.exitBtn.TabIndex = 19;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
@@ -120,26 +128,129 @@
             this.back.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.back.ImageIndex = 1;
             this.back.ImageList = this.backButtonList;
-            this.back.Location = new System.Drawing.Point(13, 13);
+            this.back.Location = new System.Drawing.Point(2, 0);
             this.back.Margin = new System.Windows.Forms.Padding(4);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(48, 48);
             this.back.TabIndex = 22;
             this.back.UseVisualStyleBackColor = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.Controls.Add(this.ComboBoxSort);
+            this.flowLayoutPanel1.Controls.Add(this.LblName);
+            this.flowLayoutPanel1.Controls.Add(this.LblID);
+            this.flowLayoutPanel1.Controls.Add(this.LblLvlAccess);
+            this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 64);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(697, 357);
+            this.flowLayoutPanel1.TabIndex = 23;
+            // 
+            // ComboBoxSort
+            // 
+            this.ComboBoxSort.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.ComboBoxSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxSort.Font = new System.Drawing.Font("Britannic Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBoxSort.ForeColor = System.Drawing.Color.Black;
+            this.ComboBoxSort.FormattingEnabled = true;
+            this.ComboBoxSort.Items.AddRange(new object[] {
+            "A-Z",
+            "Z-A",
+            "User ID"});
+            this.ComboBoxSort.Location = new System.Drawing.Point(3, 3);
+            this.ComboBoxSort.Name = "ComboBoxSort";
+            this.ComboBoxSort.Size = new System.Drawing.Size(70, 23);
+            this.ComboBoxSort.TabIndex = 0;
+            this.ComboBoxSort.Text = "Sort By";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 228F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 32);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(696, 325);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // LblName
+            // 
+            this.LblName.AutoSize = true;
+            this.LblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblName.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblName.Location = new System.Drawing.Point(79, 0);
+            this.LblName.Margin = new System.Windows.Forms.Padding(3, 0, 118, 0);
+            this.LblName.Name = "LblName";
+            this.LblName.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.LblName.Size = new System.Drawing.Size(46, 28);
+            this.LblName.TabIndex = 4;
+            this.LblName.Text = "Name";
+            this.LblName.Click += new System.EventHandler(this.LblName_Click);
+            // 
+            // LblID
+            // 
+            this.LblID.AutoSize = true;
+            this.LblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblID.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblID.Location = new System.Drawing.Point(246, 0);
+            this.LblID.Margin = new System.Windows.Forms.Padding(3, 0, 214, 0);
+            this.LblID.Name = "LblID";
+            this.LblID.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.LblID.Size = new System.Drawing.Size(25, 28);
+            this.LblID.TabIndex = 5;
+            this.LblID.Text = "ID";
+            // 
+            // LblLvlAccess
+            // 
+            this.LblLvlAccess.AutoSize = true;
+            this.LblLvlAccess.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblLvlAccess.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLvlAccess.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblLvlAccess.Location = new System.Drawing.Point(488, 0);
+            this.LblLvlAccess.Name = "LblLvlAccess";
+            this.LblLvlAccess.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.LblLvlAccess.Size = new System.Drawing.Size(38, 28);
+            this.LblLvlAccess.TabIndex = 6;
+            this.LblLvlAccess.Text = "Role";
+            // 
+            // LblAllUsers
+            // 
+            this.LblAllUsers.AutoSize = true;
+            this.LblAllUsers.Font = new System.Drawing.Font("Britannic Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAllUsers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblAllUsers.Location = new System.Drawing.Point(265, 17);
+            this.LblAllUsers.Name = "LblAllUsers";
+            this.LblAllUsers.Size = new System.Drawing.Size(160, 27);
+            this.LblAllUsers.TabIndex = 24;
+            this.LblAllUsers.Text = "View All Users";
+            // 
             // UserViewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 422);
+            this.Controls.Add(this.LblAllUsers);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.back);
             this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
+            this.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserViewForm";
             this.Text = "UserViewForm";
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +266,12 @@
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.ImageList backButtonList;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ComboBox ComboBoxSort;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label LblName;
+        private System.Windows.Forms.Label LblID;
+        private System.Windows.Forms.Label LblLvlAccess;
+        private System.Windows.Forms.Label LblAllUsers;
     }
 }

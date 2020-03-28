@@ -16,5 +16,10 @@ namespace unnamedProject.Forms
         {
             InitializeComponent();
         }
+
+        private void LblName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
