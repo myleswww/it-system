@@ -132,5 +132,16 @@ namespace unnamedProject
         {
 
         }
+
+        private void usersBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var alluser = new Thread(() => Application.Run(new Forms.UserViewForm()));
+            alluser.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
+        }
     }
 }

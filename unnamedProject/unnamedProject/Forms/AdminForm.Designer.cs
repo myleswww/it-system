@@ -140,6 +140,7 @@
             this.usersBtn.TabIndex = 2;
             this.usersBtn.Text = "All Users";
             this.usersBtn.UseVisualStyleBackColor = false;
+            this.usersBtn.Click += new System.EventHandler(this.usersBtn_Click);
             // 
             // problemBtn
             // 
