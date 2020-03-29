@@ -177,6 +177,7 @@
             this.reportBtn.TabIndex = 4;
             this.reportBtn.Text = "Generate Report";
             this.reportBtn.UseVisualStyleBackColor = false;
+            this.reportBtn.Click += new System.EventHandler(this.reportBtn_Click);
             // 
             // settingsBtn
             // 
@@ -271,7 +272,7 @@
             this.exitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.exitBtn.ForeColor = System.Drawing.Color.Fuchsia;
             this.exitBtn.Location = new System.Drawing.Point(1015, 9);
             this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
             this.exitBtn.Name = "exitBtn";
