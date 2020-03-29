@@ -61,7 +61,7 @@
             this.passwordBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordBox.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.passwordBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.passwordBox.ForeColor = System.Drawing.Color.Fuchsia;
             this.passwordBox.Location = new System.Drawing.Point(192, 227);
             this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordBox.Name = "passwordBox";
