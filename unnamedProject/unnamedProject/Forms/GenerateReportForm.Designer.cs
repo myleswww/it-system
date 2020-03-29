@@ -124,8 +124,8 @@
             // 
             this.lblReportText.AutoSize = true;
             this.lblReportText.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportText.ForeColor = System.Drawing.Color.Fuchsia;
-            this.lblReportText.Location = new System.Drawing.Point(170, 99);
+            this.lblReportText.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblReportText.Location = new System.Drawing.Point(269, 130);
             this.lblReportText.Name = "lblReportText";
             this.lblReportText.Size = new System.Drawing.Size(102, 19);
             this.lblReportText.TabIndex = 31;
@@ -135,8 +135,8 @@
             // 
             this.btnUnsolvedTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUnsolvedTicket.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUnsolvedTicket.ForeColor = System.Drawing.Color.Fuchsia;
-            this.btnUnsolvedTicket.Location = new System.Drawing.Point(196, 140);
+            this.btnUnsolvedTicket.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUnsolvedTicket.Location = new System.Drawing.Point(295, 171);
             this.btnUnsolvedTicket.Name = "btnUnsolvedTicket";
             this.btnUnsolvedTicket.Size = new System.Drawing.Size(172, 23);
             this.btnUnsolvedTicket.TabIndex = 32;
@@ -147,8 +147,8 @@
             // 
             this.btnSolvedTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSolvedTickets.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolvedTickets.ForeColor = System.Drawing.Color.Fuchsia;
-            this.btnSolvedTickets.Location = new System.Drawing.Point(196, 184);
+            this.btnSolvedTickets.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSolvedTickets.Location = new System.Drawing.Point(295, 215);
             this.btnSolvedTickets.Name = "btnSolvedTickets";
             this.btnSolvedTickets.Size = new System.Drawing.Size(172, 23);
             this.btnSolvedTickets.TabIndex = 33;
@@ -159,8 +159,8 @@
             // 
             this.btnExistingTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExistingTickets.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExistingTickets.ForeColor = System.Drawing.Color.Fuchsia;
-            this.btnExistingTickets.Location = new System.Drawing.Point(196, 232);
+            this.btnExistingTickets.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExistingTickets.Location = new System.Drawing.Point(295, 263);
             this.btnExistingTickets.Name = "btnExistingTickets";
             this.btnExistingTickets.Size = new System.Drawing.Size(172, 23);
             this.btnExistingTickets.TabIndex = 34;

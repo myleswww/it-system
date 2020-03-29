@@ -13,6 +13,10 @@ namespace unnamedProject
 {
     public partial class ViewExistingProblems : Form
     {
+        public void ViewExistingProblems_Load(object sender, EventArgs e)
+        {
+
+        }
         public ViewExistingProblems()
         {
             InitializeComponent();

@@ -169,14 +169,14 @@ namespace unnamedProject
         private void problemBtn_Click(object sender, EventArgs e)
         {
             // Myles please help me this doesn't work.
-            /*
+            
             this.Hide();
-            var setting = new Thread(() => Application.Run(new Forms.ViewExistingProblems()));
-            setting.Start();
+            var existing = new Thread(() => Application.Run(new ViewExistingProblems()));
+            existing.Start();
 
             Thread th = Thread.CurrentThread;
             th.Abort();
-            this.Close();*/
+            this.Close();
         }
     }
 }

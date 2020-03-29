@@ -1,4 +1,6 @@
-﻿namespace unnamedProject
+﻿using System;
+
+namespace unnamedProject
 {
     partial class ViewExistingProblems
     {
@@ -31,10 +33,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewExistingProblems));
             this.back = new System.Windows.Forms.Button();
+            this.backButtonList = new System.Windows.Forms.ImageList(this.components);
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.fullBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
-            this.backButtonList = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // back
@@ -57,6 +59,13 @@
             this.back.TabIndex = 34;
             this.back.UseVisualStyleBackColor = false;
             this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // backButtonList
+            // 
+            this.backButtonList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("backButtonList.ImageStream")));
+            this.backButtonList.TransparentColor = System.Drawing.Color.Transparent;
+            this.backButtonList.Images.SetKeyName(0, "icons8-rewind-button-round-80.png");
+            this.backButtonList.Images.SetKeyName(1, "backbutton.png");
             // 
             // minimizeBtn
             // 
@@ -108,13 +117,6 @@
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // backButtonList
-            // 
-            this.backButtonList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("backButtonList.ImageStream")));
-            this.backButtonList.TransparentColor = System.Drawing.Color.Transparent;
-            this.backButtonList.Images.SetKeyName(0, "icons8-rewind-button-round-80.png");
-            this.backButtonList.Images.SetKeyName(1, "backbutton.png");
-            // 
             // ViewExistingProblems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -128,10 +130,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewExistingProblems";
             this.Text = "ViewExistingProblems";
+            this.Load += new System.EventHandler(this.ViewExistingProblems_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
 
         #endregion
 
