@@ -13,6 +13,11 @@ namespace unnamedProject.Forms
 {
     public partial class GenerateReportForm : Form
     {
+        public void GenerateReportForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public GenerateReportForm()
         {
             InitializeComponent();
