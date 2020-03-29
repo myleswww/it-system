@@ -61,12 +61,14 @@
             this.passwordBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordBox.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passwordBox.ForeColor = System.Drawing.Color.Fuchsia;
             this.passwordBox.Location = new System.Drawing.Point(192, 227);
             this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.PasswordChar = '*';
+            this.passwordBox.PasswordChar = '•';
             this.passwordBox.Size = new System.Drawing.Size(312, 22);
             this.passwordBox.TabIndex = 2;
+            this.passwordBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passwordBox_KeyPress);
             // 
             // usernameBox
             // 
@@ -145,7 +147,7 @@
             this.exitBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.exitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Font = new System.Drawing.Font("ROG Fonts", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exitBtn.Location = new System.Drawing.Point(657, 9);
             this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -163,7 +165,7 @@
             this.minimizeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.minimizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeBtn.Font = new System.Drawing.Font("ROG Fonts", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.minimizeBtn.Location = new System.Drawing.Point(630, 9);
             this.minimizeBtn.Name = "minimizeBtn";

@@ -67,5 +67,10 @@ namespace unnamedProject
         {
 
         }
+
+        private void passwordBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

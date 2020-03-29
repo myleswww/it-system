@@ -117,6 +117,9 @@
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GenerateReportForm.resx">
+      <DependentUpon>GenerateReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProjectMemberForm.resx">
       <DependentUpon>ProjectMemberForm.cs</DependentUpon>
     </EmbeddedResource>
