@@ -253,6 +253,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserViewForm";
             this.Text = "UserViewForm";
+            this.Load += new System.EventHandler(this.UserViewForm_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

@@ -195,6 +195,7 @@
             this.settingsBtn.TabIndex = 5;
             this.settingsBtn.Text = "Settings";
             this.settingsBtn.UseVisualStyleBackColor = false;
+            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
             // 
             // buttonCollapse
             // 

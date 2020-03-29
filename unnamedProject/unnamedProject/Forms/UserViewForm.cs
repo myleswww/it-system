@@ -55,5 +55,10 @@ namespace unnamedProject.Forms
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void UserViewForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
