@@ -23,7 +23,7 @@ namespace unnamedProject
         //SignIn
         private void button1_Click(object sender, EventArgs e)
         {
-            loginType login = new loginType();
+            dbHandler login = new dbHandler();
             bool DaveTheFriendlyObject = login.checkAndRecieve(usernameBox.Text, passwordBox.Text);
             if (DaveTheFriendlyObject)
             {

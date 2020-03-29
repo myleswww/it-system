@@ -143,5 +143,16 @@ namespace unnamedProject
             th.Abort();
             this.Close();
         }
+
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var setting = new Thread(() => Application.Run(new Forms.UserViewForm()));
+            setting.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
+        }
     }
 }

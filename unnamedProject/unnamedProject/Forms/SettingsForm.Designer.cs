@@ -46,6 +46,7 @@
             this.TxtbxUsername = new System.Windows.Forms.TextBox();
             this.TxtbxPassword = new System.Windows.Forms.TextBox();
             this.LblSettings = new System.Windows.Forms.Label();
+            this.BtnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // imageList1
@@ -86,6 +87,7 @@
             this.back.Size = new System.Drawing.Size(48, 48);
             this.back.TabIndex = 23;
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // minimizeBtn
             // 
@@ -135,6 +137,7 @@
             this.exitBtn.TabIndex = 24;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // BtnEdit
             // 
@@ -147,6 +150,7 @@
             this.BtnEdit.TabIndex = 27;
             this.BtnEdit.Text = "Edit";
             this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // LblEmail
             // 
@@ -187,6 +191,7 @@
             this.TxtbxEmail.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtbxEmail.Location = new System.Drawing.Point(357, 153);
             this.TxtbxEmail.Name = "TxtbxEmail";
+            this.TxtbxEmail.ReadOnly = true;
             this.TxtbxEmail.Size = new System.Drawing.Size(100, 22);
             this.TxtbxEmail.TabIndex = 31;
             // 
@@ -196,17 +201,21 @@
             this.TxtbxUsername.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtbxUsername.Location = new System.Drawing.Point(357, 199);
             this.TxtbxUsername.Name = "TxtbxUsername";
+            this.TxtbxUsername.ReadOnly = true;
             this.TxtbxUsername.Size = new System.Drawing.Size(100, 22);
             this.TxtbxUsername.TabIndex = 32;
             // 
             // TxtbxPassword
             // 
             this.TxtbxPassword.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.TxtbxPassword.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtbxPassword.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtbxPassword.Location = new System.Drawing.Point(357, 248);
             this.TxtbxPassword.Name = "TxtbxPassword";
-            this.TxtbxPassword.Size = new System.Drawing.Size(100, 22);
+            this.TxtbxPassword.PasswordChar = '•';
+            this.TxtbxPassword.ReadOnly = true;
+            this.TxtbxPassword.Size = new System.Drawing.Size(100, 26);
             this.TxtbxPassword.TabIndex = 33;
+            this.TxtbxPassword.Text = "password";
             // 
             // LblSettings
             // 
@@ -219,12 +228,26 @@
             this.LblSettings.TabIndex = 34;
             this.LblSettings.Text = "Settings";
             // 
+            // BtnSave
+            // 
+            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSave.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnSave.Location = new System.Drawing.Point(373, 335);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(75, 28);
+            this.BtnSave.TabIndex = 35;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Visible = false;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.LblSettings);
             this.Controls.Add(this.TxtbxPassword);
             this.Controls.Add(this.TxtbxUsername);
@@ -264,5 +287,6 @@
         private System.Windows.Forms.TextBox TxtbxUsername;
         private System.Windows.Forms.TextBox TxtbxPassword;
         private System.Windows.Forms.Label LblSettings;
+        private System.Windows.Forms.Button BtnSave;
     }
 }
