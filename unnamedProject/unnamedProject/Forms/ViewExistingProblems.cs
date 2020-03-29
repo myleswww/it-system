@@ -9,13 +9,27 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace unnamedProject.Forms
+namespace unnamedProject
 {
-    public partial class GenerateReportForm : Form
+    public partial class ViewExistingProblems : Form
     {
-        public GenerateReportForm()
+        public ViewExistingProblems()
         {
             InitializeComponent();
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            var admin = new Thread(() => Application.Run(new AdminForm()));
+            admin.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
 
         private void fullBtn_Click(object sender, EventArgs e)
@@ -29,6 +43,7 @@ namespace unnamedProject.Forms
                 fullBtn.Height = 12;
                 fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
                 fullBtn.ImageIndex = -1;
+
 
                 //screen scaling
 
@@ -46,24 +61,10 @@ namespace unnamedProject.Forms
             }
         }
 
-        private void minimizeBtn_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
         private void exitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
-        }
-
-        private void back_Click(object sender, EventArgs e)
-        {
-            var admin = new Thread(() => Application.Run(new AdminForm()));
-            admin.Start();
-
-            Thread th = Thread.CurrentThread;
-            th.Abort();
         }
     }
 }

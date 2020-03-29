@@ -79,7 +79,6 @@ namespace unnamedProject
                 fullBtn.ImageIndex = -1;
                 ticketTable.Size = mainPanel.Size;
 
-
                 //screen scaling
 
             }
@@ -148,6 +147,17 @@ namespace unnamedProject
         {
             this.Hide();
             var setting = new Thread(() => Application.Run(new Forms.UserViewForm()));
+            setting.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
+        }
+
+        private void reportBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var setting = new Thread(() => Application.Run(new Forms.GenerateReportForm()));
             setting.Start();
 
             Thread th = Thread.CurrentThread;

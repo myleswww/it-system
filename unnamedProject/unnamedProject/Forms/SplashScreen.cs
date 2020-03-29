@@ -74,5 +74,10 @@ namespace unnamedProject.Forms
             //lblTitle.Font = rogFont;        //set font of label
             
         }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
