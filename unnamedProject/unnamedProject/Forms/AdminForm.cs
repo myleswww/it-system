@@ -24,6 +24,7 @@ namespace unnamedProject
             InitializeComponent();
         }
 
+
         private void logOut_Click(object sender, EventArgs e)
         {                   //load the login form
             this.Hide();
@@ -163,6 +164,19 @@ namespace unnamedProject
             Thread th = Thread.CurrentThread;
             th.Abort();
             this.Close();
+        }
+
+        private void problemBtn_Click(object sender, EventArgs e)
+        {
+            // Myles please help me this doesn't work.
+            /*
+            this.Hide();
+            var setting = new Thread(() => Application.Run(new Forms.ViewExistingProblems()));
+            setting.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();*/
         }
     }
 }

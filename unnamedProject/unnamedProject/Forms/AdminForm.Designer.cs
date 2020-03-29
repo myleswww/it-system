@@ -159,6 +159,7 @@
             this.problemBtn.TabIndex = 3;
             this.problemBtn.Text = "View Existing Problems";
             this.problemBtn.UseVisualStyleBackColor = false;
+            this.problemBtn.Click += new System.EventHandler(this.problemBtn_Click);
             // 
             // reportBtn
             // 
