@@ -59,7 +59,7 @@ namespace unnamedProject
                     error.Text = "Error: Passwords do not match";
                 else
                 {
-                    loginType login = new loginType();
+                    dbHandler login = new dbHandler();
                     login.newUser(username.Text, password.Text, firstName.Text, lastName.Text, email.Text, accessValue);
                     
                     var admin = new Thread(() => Application.Run(new AdminForm()));

@@ -14,7 +14,7 @@ using System.Threading;
 
 namespace unnamedProject
 {
-    class loginType
+    class dbHandler
     {
         SqlConnection sqlcon = new SqlConnection(@"Data Source=nhds2020.database.windows.net;Initial Catalog=NothingHelpDeskSpring2020;User ID=fruit;Password=mangoMaster!");
         public bool checkAndRecieve(string userName, string passWord)

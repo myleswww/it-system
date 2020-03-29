@@ -46,6 +46,7 @@
             this.TxtbxUsername = new System.Windows.Forms.TextBox();
             this.TxtbxPassword = new System.Windows.Forms.TextBox();
             this.LblSettings = new System.Windows.Forms.Label();
+            this.BtnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // imageList1
@@ -218,12 +219,26 @@
             this.LblSettings.TabIndex = 34;
             this.LblSettings.Text = "Settings";
             // 
+            // BtnSave
+            // 
+            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSave.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnSave.Location = new System.Drawing.Point(373, 335);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(75, 28);
+            this.BtnSave.TabIndex = 35;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Visible = false;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.LblSettings);
             this.Controls.Add(this.TxtbxPassword);
             this.Controls.Add(this.TxtbxUsername);
@@ -263,5 +278,6 @@
         private System.Windows.Forms.TextBox TxtbxUsername;
         private System.Windows.Forms.TextBox TxtbxPassword;
         private System.Windows.Forms.Label LblSettings;
+        private System.Windows.Forms.Button BtnSave;
     }
 }
