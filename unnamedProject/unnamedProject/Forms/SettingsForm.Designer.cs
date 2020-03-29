@@ -120,6 +120,7 @@
             this.fullBtn.Size = new System.Drawing.Size(18, 11);
             this.fullBtn.TabIndex = 25;
             this.fullBtn.UseVisualStyleBackColor = true;
+            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
             // 
             // exitBtn
             // 
@@ -215,7 +216,6 @@
             this.TxtbxPassword.ReadOnly = true;
             this.TxtbxPassword.Size = new System.Drawing.Size(100, 26);
             this.TxtbxPassword.TabIndex = 33;
-            this.TxtbxPassword.Text = "password";
             // 
             // LblSettings
             // 
@@ -240,6 +240,7 @@
             this.BtnSave.Text = "Save";
             this.BtnSave.UseVisualStyleBackColor = true;
             this.BtnSave.Visible = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // SettingsForm
             // 
@@ -264,6 +265,7 @@
             this.Name = "SettingsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SettingsForm";
+            this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

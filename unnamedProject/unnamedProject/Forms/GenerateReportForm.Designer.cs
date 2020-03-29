@@ -61,6 +61,7 @@
             // fullBtn
             // 
             this.fullBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.fullBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
             this.fullBtn.FlatAppearance.BorderSize = 2;
             this.fullBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.fullBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
@@ -181,7 +182,9 @@
             this.Controls.Add(this.exitBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GenerateReportForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenerateReportForm";
+            this.Load += new System.EventHandler(this.GenerateReportForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

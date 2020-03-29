@@ -25,7 +25,7 @@ namespace unnamedProject
         }
 
         private void logOut_Click(object sender, EventArgs e)
-        {
+        {                   //load the login form
             this.Hide();
             var logIn = new Thread(() => Application.Run(new LoginForm()));
             logIn.Start();
@@ -37,11 +37,11 @@ namespace unnamedProject
 
         private void register_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Hide(); //load the register form
             var reg = new Thread(() => Application.Run(new register()));
             reg.Start();
 
-            Thread th = Thread.CurrentThread;
+            Thread th = Thread.CurrentThread; //abort the current thread
             th.Abort();
             this.Close();
         }
@@ -147,7 +147,7 @@ namespace unnamedProject
         private void settingsBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var setting = new Thread(() => Application.Run(new Forms.UserViewForm()));
+            var setting = new Thread(() => Application.Run(new Forms.SettingsForm()));
             setting.Start();
 
             Thread th = Thread.CurrentThread;

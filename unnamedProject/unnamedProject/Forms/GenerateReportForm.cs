@@ -56,5 +56,10 @@ namespace unnamedProject.Forms
             this.Close();
             Application.Exit();
         }
+
+        private void GenerateReportForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
