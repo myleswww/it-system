@@ -199,5 +199,10 @@ namespace unnamedProject
         {
             OpenList.Items.Clear();
         }
+
+        private void OpenList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
