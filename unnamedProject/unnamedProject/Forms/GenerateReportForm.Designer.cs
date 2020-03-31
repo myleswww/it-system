@@ -39,6 +39,9 @@
             this.btnUnsolvedTicket = new System.Windows.Forms.Button();
             this.btnSolvedTickets = new System.Windows.Forms.Button();
             this.btnExistingTickets = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // minimizeBtn
@@ -167,6 +170,19 @@
             this.btnExistingTickets.Text = "Existing Tickets";
             this.btnExistingTickets.UseVisualStyleBackColor = true;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.SystemColors.WindowFrame;
+            this.imageList1.Images.SetKeyName(0, "588a6507d06f6719692a2d15.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-restore-down-52.png");
+            // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "icons8-restore-down-52.png");
+            // 
             // GenerateReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,5 +218,8 @@
         private System.Windows.Forms.Button btnUnsolvedTicket;
         private System.Windows.Forms.Button btnSolvedTickets;
         private System.Windows.Forms.Button btnExistingTickets;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList imageList2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
