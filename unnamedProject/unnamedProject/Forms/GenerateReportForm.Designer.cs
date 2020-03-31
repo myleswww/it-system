@@ -42,6 +42,7 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.BtnViewReports = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // minimizeBtn
@@ -141,7 +142,7 @@
             this.btnUnsolvedTicket.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnUnsolvedTicket.Location = new System.Drawing.Point(295, 171);
             this.btnUnsolvedTicket.Name = "btnUnsolvedTicket";
-            this.btnUnsolvedTicket.Size = new System.Drawing.Size(172, 23);
+            this.btnUnsolvedTicket.Size = new System.Drawing.Size(172, 24);
             this.btnUnsolvedTicket.TabIndex = 32;
             this.btnUnsolvedTicket.Text = "Unsolved Tickets";
             this.btnUnsolvedTicket.UseVisualStyleBackColor = true;
@@ -153,7 +154,7 @@
             this.btnSolvedTickets.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSolvedTickets.Location = new System.Drawing.Point(295, 215);
             this.btnSolvedTickets.Name = "btnSolvedTickets";
-            this.btnSolvedTickets.Size = new System.Drawing.Size(172, 23);
+            this.btnSolvedTickets.Size = new System.Drawing.Size(172, 24);
             this.btnSolvedTickets.TabIndex = 33;
             this.btnSolvedTickets.Text = "Solved Tickets";
             this.btnSolvedTickets.UseVisualStyleBackColor = true;
@@ -165,7 +166,7 @@
             this.btnExistingTickets.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnExistingTickets.Location = new System.Drawing.Point(295, 263);
             this.btnExistingTickets.Name = "btnExistingTickets";
-            this.btnExistingTickets.Size = new System.Drawing.Size(172, 23);
+            this.btnExistingTickets.Size = new System.Drawing.Size(172, 24);
             this.btnExistingTickets.TabIndex = 34;
             this.btnExistingTickets.Text = "Existing Tickets";
             this.btnExistingTickets.UseVisualStyleBackColor = true;
@@ -183,12 +184,25 @@
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList2.Images.SetKeyName(0, "icons8-restore-down-52.png");
             // 
+            // BtnViewReports
+            // 
+            this.BtnViewReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnViewReports.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnViewReports.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnViewReports.Location = new System.Drawing.Point(295, 309);
+            this.BtnViewReports.Name = "BtnViewReports";
+            this.BtnViewReports.Size = new System.Drawing.Size(172, 24);
+            this.BtnViewReports.TabIndex = 35;
+            this.BtnViewReports.Text = "View Reports";
+            this.BtnViewReports.UseVisualStyleBackColor = true;
+            // 
             // GenerateReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnViewReports);
             this.Controls.Add(this.btnExistingTickets);
             this.Controls.Add(this.btnSolvedTickets);
             this.Controls.Add(this.btnUnsolvedTicket);
@@ -221,5 +235,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button BtnViewReports;
     }
 }
