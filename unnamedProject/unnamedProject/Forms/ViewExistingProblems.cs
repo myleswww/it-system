@@ -13,18 +13,20 @@ namespace unnamedProject
 {
     public partial class ViewExistingProblems : Form
     {
+        Users current;
         public void ViewExistingProblems_Load(object sender, EventArgs e)
         {
 
         }
-        public ViewExistingProblems()
+        public ViewExistingProblems(Users current)
         {
             InitializeComponent();
+            this.current = current;
         }
 
         private void back_Click(object sender, EventArgs e)
         {
-            var admin = new Thread(() => Application.Run(new AdminForm()));
+            var admin = new Thread(() => Application.Run(new AdminForm(current)));
             admin.Start();
 
             Thread th = Thread.CurrentThread;

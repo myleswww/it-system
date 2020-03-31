@@ -17,9 +17,11 @@ namespace unnamedProject
 {
     public partial class register : Form
     {
-        public register()
+        Users current;
+        public register(Users current)
         {
             InitializeComponent();
+            this.current = current;
         }
 
         private void confirm_TextChanged(object sender, EventArgs e)
@@ -62,7 +64,7 @@ namespace unnamedProject
                     dbHandler login = new dbHandler();
                     login.newUser(username.Text, password.Text, firstName.Text, lastName.Text, email.Text, accessValue);
                     
-                    var admin = new Thread(() => Application.Run(new AdminForm()));
+                    var admin = new Thread(() => Application.Run(new AdminForm(current)));
                     admin.Start();
                     Thread th = Thread.CurrentThread;
                     th.Abort();
@@ -74,7 +76,7 @@ namespace unnamedProject
         private void back_Click(object sender, EventArgs e)
         {
             
-            var admin = new Thread(() => Application.Run(new AdminForm()));
+            var admin = new Thread(() => Application.Run(new AdminForm(current)));
             admin.Start();
             
             Thread th = Thread.CurrentThread;

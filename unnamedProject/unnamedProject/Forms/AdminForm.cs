@@ -18,10 +18,14 @@ namespace unnamedProject
 {
     public partial class AdminForm : Form
     {
-        
-        public AdminForm()
+        private List<Tickets> tickets;
+        private dbHandler dbhadler = new dbHandler();
+        private Users current;
+
+        public AdminForm(Users current)
         {
             InitializeComponent();
+            this.current = current;
         }
 
 
@@ -39,7 +43,7 @@ namespace unnamedProject
         private void register_Click(object sender, EventArgs e)
         {
             this.Hide(); //load the register form
-            var reg = new Thread(() => Application.Run(new register()));
+            var reg = new Thread(() => Application.Run(new register(current)));
             reg.Start();
 
             Thread th = Thread.CurrentThread; //abort the current thread
@@ -128,15 +132,10 @@ namespace unnamedProject
             }
         }
 
-        private void optionPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void usersBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var alluser = new Thread(() => Application.Run(new Forms.UserViewForm()));
+            var alluser = new Thread(() => Application.Run(new Forms.UserViewForm(current)));
             alluser.Start();
 
             Thread th = Thread.CurrentThread;
@@ -147,7 +146,7 @@ namespace unnamedProject
         private void settingsBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var setting = new Thread(() => Application.Run(new Forms.SettingsForm()));
+            var setting = new Thread(() => Application.Run(new Forms.SettingsForm(current)));
             setting.Start();
 
             Thread th = Thread.CurrentThread;
@@ -158,7 +157,7 @@ namespace unnamedProject
         private void reportBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var setting = new Thread(() => Application.Run(new Forms.GenerateReportForm()));
+            var setting = new Thread(() => Application.Run(new Forms.GenerateReportForm(current)));
             setting.Start();
 
             Thread th = Thread.CurrentThread;
@@ -171,12 +170,34 @@ namespace unnamedProject
             // Myles please help me this doesn't work.
             
             this.Hide();
-            var existing = new Thread(() => Application.Run(new ViewExistingProblems()));
+            var existing = new Thread(() => Application.Run(new ViewExistingProblems(current)));
             existing.Start();
 
             Thread th = Thread.CurrentThread;
             th.Abort();
             this.Close();
+        }
+
+        private void openTab_Click(object sender, EventArgs e)
+        {
+            OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb();
+            OpenList.Items.AddRange(tickets.ToArray());
+        }
+
+        private void FAPTab_Click(object sender, EventArgs e)
+        {
+            OpenList.Items.Clear();
+        }
+
+        private void newTab_Click(object sender, EventArgs e)
+        {
+            OpenList.Items.Clear();
+        }
+
+        private void closedTab_Click(object sender, EventArgs e)
+        {
+            OpenList.Items.Clear();
         }
     }
 }

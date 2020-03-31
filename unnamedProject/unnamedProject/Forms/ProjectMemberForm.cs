@@ -17,9 +17,11 @@ namespace unnamedProject.Forms
 {
     public partial class ProjectMemberForm : Form
     {
-        public ProjectMemberForm()
+        Users current;
+        public ProjectMemberForm(Users current)
         {
             InitializeComponent();
+            this.current = current;
         }
 
         private void ProjectMemberForm_Load(object sender, EventArgs e)

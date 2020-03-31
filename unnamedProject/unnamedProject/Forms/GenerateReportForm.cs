@@ -13,14 +13,16 @@ namespace unnamedProject.Forms
 {
     public partial class GenerateReportForm : Form
     {
+        Users current;
         public void GenerateReportForm_Load(object sender, EventArgs e)
         {
 
         }
 
-        public GenerateReportForm()
+        public GenerateReportForm(Users current)
         {
             InitializeComponent();
+            this.current = current;
         }
 
         private void fullBtn_Click(object sender, EventArgs e)
@@ -64,7 +66,7 @@ namespace unnamedProject.Forms
 
         private void back_Click(object sender, EventArgs e)
         {
-            var admin = new Thread(() => Application.Run(new AdminForm()));
+            var admin = new Thread(() => Application.Run(new AdminForm(current)));
             admin.Start();
 
             Thread th = Thread.CurrentThread;

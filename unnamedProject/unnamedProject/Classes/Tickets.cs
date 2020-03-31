@@ -30,5 +30,11 @@ namespace unnamedProject
             Description = description;
             Notes = notes;
         }
+
+        public override string ToString()
+        {
+            return string.Format("Ticket #: {0}, User ID: {1}, Date Accessed {2:f}, Ticket Status {3}, Description: {4}, Notes: {5}",
+                TicketID, UserInfo, DateAccessed, TicketStatus, Description, Notes);
+        }
     }
 }

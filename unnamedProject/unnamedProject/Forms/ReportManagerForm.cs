@@ -17,9 +17,11 @@ namespace unnamedProject.Forms
 {
     public partial class ReportManagerForm : Form
     {
-        public ReportManagerForm()
+        Users current;
+        public ReportManagerForm(Users current)
         {
             InitializeComponent();
+            this.current = current;
         }
 
         private void logOut_Click(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace unnamedProject.Forms
         private void register_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var reg = new Thread(() => Application.Run(new register()));
+            var reg = new Thread(() => Application.Run(new register(current)));
             reg.Start();
             this.Close();
         }
