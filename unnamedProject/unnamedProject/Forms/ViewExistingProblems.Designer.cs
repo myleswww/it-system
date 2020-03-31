@@ -145,6 +145,7 @@ namespace unnamedProject
             this.Controls.Add(this.exitBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewExistingProblems";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewExistingProblems";
             this.Load += new System.EventHandler(this.ViewExistingProblems_Load);
             this.ResumeLayout(false);
