@@ -14,6 +14,21 @@ namespace unnamedProject
 {
     class Tickets
     {
+        public int TicketID { get; set; }
+        public int UserInfo { get; set; }
+        public DateTime DateAccessed { get; set; }
+        public int TicketStatus { get; set; }
+        public string Description { get; set; }
+        public string Notes { get; set; }
 
+        public Tickets(int ticketID, int userInfo, DateTime dateAccessed, int ticketStatus, string description, string notes)
+        {
+            TicketID = ticketID;
+            UserInfo = userInfo;
+            DateAccessed = dateAccessed;
+            TicketStatus = ticketStatus;
+            Description = description;
+            Notes = notes;
+        }
     }
 }

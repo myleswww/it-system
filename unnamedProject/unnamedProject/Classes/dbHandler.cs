@@ -114,5 +114,53 @@ namespace unnamedProject
             sqlcon.Close();
         }
 
+        public List<Tickets> LoadDataFromDb()
+        {
+            //declare a list of Employee objects
+            List<Tickets> tickets;
+
+            tickets = new List<Tickets>(); //instantiate the employees list
+
+            try //error handling
+            {
+
+                Tickets tempticket;
+
+                sqlcon.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("SELECT * FROM tickets", sqlcon);
+
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    int ticketID = (int)reader["ID"];
+                    int userInfo = (int)reader["User_Info_Id"];
+                    DateTime dateAccessed = (DateTime)reader["date_accessed"];
+                    int ticketStatus = (int)reader["ticket_status"];
+                    string description = (string)reader["description"];
+                    string notes = (string)reader["notes"];
+
+                    tempticket = new Tickets(ticketID,userInfo,dateAccessed,ticketStatus,description,notes);
+
+                    tickets.Add(tempticket);
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Something went wrong with loading data from the database!");
+
+            }
+            finally
+            {
+                sqlcon.Close();
+
+            }
+
+            return tickets;
+
+        }
+
     }
 }
