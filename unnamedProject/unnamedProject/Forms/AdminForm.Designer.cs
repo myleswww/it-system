@@ -402,15 +402,18 @@
             // 
             // OpenList
             // 
+            this.OpenList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.OpenList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.OpenList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.OpenList.FormattingEnabled = true;
             this.OpenList.HorizontalScrollbar = true;
             this.OpenList.ItemHeight = 16;
             this.OpenList.Location = new System.Drawing.Point(4, 4);
-            this.OpenList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
             this.OpenList.Name = "OpenList";
-            this.OpenList.Size = new System.Drawing.Size(1043, 420);
+            this.OpenList.Size = new System.Drawing.Size(1043, 436);
             this.OpenList.TabIndex = 0;
             this.OpenList.SelectedIndexChanged += new System.EventHandler(this.OpenList_SelectedIndexChanged);
             // 
@@ -428,7 +431,7 @@
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "+";

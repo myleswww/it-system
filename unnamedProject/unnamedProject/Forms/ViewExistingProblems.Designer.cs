@@ -37,6 +37,8 @@ namespace unnamedProject
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.fullBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
+            this.LstBxProblems = new System.Windows.Forms.ListBox();
+            this.LblProblems = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // back
@@ -117,12 +119,39 @@ namespace unnamedProject
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
+            // LstBxProblems
+            // 
+            this.LstBxProblems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LstBxProblems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LstBxProblems.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LstBxProblems.FormattingEnabled = true;
+            this.LstBxProblems.ItemHeight = 16;
+            this.LstBxProblems.Location = new System.Drawing.Point(12, 68);
+            this.LstBxProblems.Name = "LstBxProblems";
+            this.LstBxProblems.Size = new System.Drawing.Size(779, 372);
+            this.LstBxProblems.TabIndex = 35;
+            // 
+            // LblProblems
+            // 
+            this.LblProblems.AutoSize = true;
+            this.LblProblems.Font = new System.Drawing.Font("Britannic Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProblems.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblProblems.Location = new System.Drawing.Point(275, 18);
+            this.LblProblems.Name = "LblProblems";
+            this.LblProblems.Size = new System.Drawing.Size(236, 31);
+            this.LblProblems.TabIndex = 36;
+            this.LblProblems.Text = "Existing Problems";
+            // 
             // ViewExistingProblems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LblProblems);
+            this.Controls.Add(this.LstBxProblems);
             this.Controls.Add(this.back);
             this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.fullBtn);
@@ -145,5 +174,7 @@ namespace unnamedProject
         private System.Windows.Forms.Button fullBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.ImageList backButtonList;
+        private System.Windows.Forms.ListBox LstBxProblems;
+        private System.Windows.Forms.Label LblProblems;
     }
 }
