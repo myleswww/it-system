@@ -43,8 +43,8 @@
             this.LblName = new System.Windows.Forms.Label();
             this.LblID = new System.Windows.Forms.Label();
             this.LblLvlAccess = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LblAllUsers = new System.Windows.Forms.Label();
+            this.LstBxUser = new System.Windows.Forms.ListBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,7 +146,7 @@
             this.flowLayoutPanel1.Controls.Add(this.LblName);
             this.flowLayoutPanel1.Controls.Add(this.LblID);
             this.flowLayoutPanel1.Controls.Add(this.LblLvlAccess);
-            this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel1);
+            this.flowLayoutPanel1.Controls.Add(this.LstBxUser);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 64);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(697, 357);
@@ -202,6 +202,7 @@
             // 
             this.LblLvlAccess.AutoSize = true;
             this.LblLvlAccess.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.SetFlowBreak(this.LblLvlAccess, true);
             this.LblLvlAccess.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLvlAccess.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LblLvlAccess.Location = new System.Drawing.Point(488, 0);
@@ -210,21 +211,6 @@
             this.LblLvlAccess.Size = new System.Drawing.Size(38, 28);
             this.LblLvlAccess.TabIndex = 6;
             this.LblLvlAccess.Text = "Role";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 231F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 32);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(696, 325);
-            this.tableLayoutPanel1.TabIndex = 3;
             // 
             // LblAllUsers
             // 
@@ -236,6 +222,19 @@
             this.LblAllUsers.Size = new System.Drawing.Size(160, 27);
             this.LblAllUsers.TabIndex = 24;
             this.LblAllUsers.Text = "View All Users";
+            // 
+            // LstBxUser
+            // 
+            this.LstBxUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LstBxUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LstBxUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LstBxUser.FormattingEnabled = true;
+            this.LstBxUser.ItemHeight = 15;
+            this.LstBxUser.Location = new System.Drawing.Point(0, 29);
+            this.LstBxUser.Margin = new System.Windows.Forms.Padding(0);
+            this.LstBxUser.Name = "LstBxUser";
+            this.LstBxUser.Size = new System.Drawing.Size(693, 332);
+            this.LstBxUser.TabIndex = 7;
             // 
             // UserViewForm
             // 
@@ -274,10 +273,10 @@
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ComboBox ComboBoxSort;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.Label LblID;
         private System.Windows.Forms.Label LblLvlAccess;
         private System.Windows.Forms.Label LblAllUsers;
+        private System.Windows.Forms.ListBox LstBxUser;
     }
 }
