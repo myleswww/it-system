@@ -13,14 +13,16 @@ namespace unnamedProject.Forms
 {
     public partial class SettingsForm : Form
     {
-        public SettingsForm()
+        Users current;
+        public SettingsForm(Users current)
         {
             InitializeComponent();
+            this.current = current;
         }
 
         private void back_Click(object sender, EventArgs e)
         {
-            var admin = new Thread(() => Application.Run(new AdminForm()));
+            var admin = new Thread(() => Application.Run(new AdminForm(current)));
             admin.Start();
 
             Thread th = Thread.CurrentThread;

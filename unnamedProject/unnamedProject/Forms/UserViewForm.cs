@@ -13,9 +13,11 @@ namespace unnamedProject.Forms
 {
     public partial class UserViewForm : Form
     {
-        public UserViewForm()
+        Users current;
+        public UserViewForm(Users current)
         {
             InitializeComponent();
+            this.current = current;
         }
 
         private void LblName_Click(object sender, EventArgs e)
@@ -25,7 +27,7 @@ namespace unnamedProject.Forms
 
         private void back_Click(object sender, EventArgs e)
         {
-            var admin = new Thread(() => Application.Run(new AdminForm()));
+            var admin = new Thread(() => Application.Run(new AdminForm(current)));
             admin.Start();
 
             Thread th = Thread.CurrentThread;

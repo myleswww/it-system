@@ -16,6 +16,7 @@ namespace unnamedProject
 {
     class dbHandler
     {      //connection string
+        public Users curretOnlineUser;
         SqlConnection sqlcon = new SqlConnection(@"Data Source=nhds2020.database.windows.net;Initial Catalog=NothingHelpDeskSpring2020;User ID=fruit;Password=mangoMaster!");
         public bool checkAndRecieve(string userName, string passWord)
         {
@@ -27,9 +28,11 @@ namespace unnamedProject
             sda.Fill(dtbl);
             if (dtbl.Rows.Count == 1) //if the row count = 1, it only grabbed one user. 
             {
+                int tep = (int)dtbl.Rows[0]["ID"];
+                curretOnlineUser = LoadUserInfoFromDb(tep);
                 if (dtbl.Rows[0]["levelAccess"].ToString() == "0") //if level access is 0, it's an admin
                 {
-                    var admin = new Thread(() => Application.Run(new AdminForm())); //create var for admin form
+                    var admin = new Thread(() => Application.Run(new AdminForm(curretOnlineUser))); //create var for admin form
                     admin.SetApartmentState(ApartmentState.STA); //set hte apartment state to sta so things like web browsers have functionality
                     admin.Start(); //start the admin form
                     Thread th = Thread.CurrentThread; //current thread
@@ -39,7 +42,7 @@ namespace unnamedProject
                 }
                 else if(dtbl.Rows[0]["levelAccess"].ToString() == "1") //if lvl access = 1, it's a report manager
                 {
-                    var reportManager = new Thread(() => Application.Run(new Forms.ReportManagerForm())); //create var for form
+                    var reportManager = new Thread(() => Application.Run(new Forms.ReportManagerForm(curretOnlineUser))); //create var for form
                     reportManager.SetApartmentState(ApartmentState.STA); //set apartment state
                     reportManager.Start(); //start the form
                     Thread th = Thread.CurrentThread; //current thread
@@ -49,7 +52,7 @@ namespace unnamedProject
                 }
                 else if (dtbl.Rows[0]["levelAccess"].ToString() == "2") //if it is a support team member
                 {
-                    var supportMember = new Thread(() => Application.Run(new Forms.SupportForm())); //new var for form
+                    var supportMember = new Thread(() => Application.Run(new Forms.SupportForm(curretOnlineUser))); //new var for form
                     supportMember.SetApartmentState(ApartmentState.STA); //set apartment state
                     supportMember.Start(); //start the new form
                     Thread th = Thread.CurrentThread; //current thread
@@ -59,7 +62,7 @@ namespace unnamedProject
                 }
                 else if (dtbl.Rows[0]["levelAccess"].ToString() == "3") //this is a project member
                 {
-                    var projectMember = new Thread(() => Application.Run(new Forms.ProjectMemberForm())); //new var
+                    var projectMember = new Thread(() => Application.Run(new Forms.ProjectMemberForm(curretOnlineUser))); //new var
                     projectMember.SetApartmentState(ApartmentState.STA); //apartment state
                     projectMember.Start(); //start form
                     Thread th = Thread.CurrentThread; //current thread
@@ -112,6 +115,78 @@ namespace unnamedProject
             MessageBox.Show("User added!", "User added", MessageBoxButtons.OK);
             sda.Dispose();
             sqlcon.Close();
+        }
+
+        public List<Tickets> LoadTicketsFromDb()
+        {
+            //declare a list of Employee objects
+            List<Tickets> tickets;
+
+            tickets = new List<Tickets>(); //instantiate the employees list
+
+            try //error handling
+            {
+
+                Tickets tempticket;
+
+                sqlcon.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("SELECT * FROM tickets", sqlcon);
+
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    int ticketID = (int)reader["ID"];
+                    int userInfo = (int)reader["User_Info_Id"];
+                    DateTime dateAccessed = (DateTime)reader["date_accessed"];
+                    int ticketStatus = (int)reader["ticket_status"];
+                    string description = (string)reader["description"];
+                    string notes = (string)reader["notes"];
+
+                    tempticket = new Tickets(ticketID,userInfo,dateAccessed,ticketStatus,description,notes);
+
+                    tickets.Add(tempticket);
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Something went wrong with loading data from the database!");
+
+            }
+            finally
+            {
+                sqlcon.Close();
+
+            }
+
+            return tickets;
+
+        }
+
+        public Users LoadUserInfoFromDb(int currentUserID)
+        {
+            string username = null;
+            string fname = null;
+            string lname = null;
+            string email = null;
+            int levelAccess = 3;
+
+                SqlCommand sqlCommand = new SqlCommand("Select * from User_Info Where ID = '" + currentUserID + "'", sqlcon);
+
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    username = (string)reader["Username"];
+                    fname = (string)reader["firstname"];
+                    lname = (string)reader["lastname"];
+                    email = (string)reader["Email"];
+                    levelAccess = (int)reader["levelAccess"];
+                }
+                Users currentUser = new Users(username, fname, lname, email, levelAccess);
+                return currentUser;
         }
 
     }

@@ -51,8 +51,10 @@
             this.newTab = new System.Windows.Forms.Button();
             this.onlineHelpBtn = new System.Windows.Forms.Button();
             this.ticketTable = new System.Windows.Forms.TableLayoutPanel();
+            this.OpenList = new System.Windows.Forms.ListBox();
             this.optionPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            this.ticketTable.SuspendLayout();
             this.SuspendLayout();
             // 
             // logOut
@@ -67,7 +69,7 @@
             this.logOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.logOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.logOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logOut.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.logOut.Location = new System.Drawing.Point(0, 151);
             this.logOut.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
@@ -91,7 +93,7 @@
             this.register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.register.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.register.Location = new System.Drawing.Point(0, 1);
             this.register.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
@@ -121,7 +123,6 @@
             this.optionPanel.Size = new System.Drawing.Size(214, 501);
             this.optionPanel.TabIndex = 2;
             this.optionPanel.Visible = false;
-            this.optionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.optionPanel_Paint);
             // 
             // usersBtn
             // 
@@ -131,7 +132,7 @@
             this.usersBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.usersBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.usersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.usersBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.usersBtn.Location = new System.Drawing.Point(0, 31);
             this.usersBtn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
@@ -150,7 +151,7 @@
             this.problemBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.problemBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.problemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.problemBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.problemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.problemBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.problemBtn.Location = new System.Drawing.Point(0, 61);
             this.problemBtn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
@@ -169,7 +170,7 @@
             this.reportBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.reportBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.reportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reportBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.reportBtn.Location = new System.Drawing.Point(0, 91);
             this.reportBtn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
@@ -188,7 +189,7 @@
             this.settingsBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.settingsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.settingsBtn.Location = new System.Drawing.Point(0, 121);
             this.settingsBtn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
@@ -212,7 +213,8 @@
             this.buttonCollapse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCollapse.ImageIndex = 0;
             this.buttonCollapse.ImageList = this.imageList1;
-            this.buttonCollapse.Location = new System.Drawing.Point(16, 7);
+            this.buttonCollapse.Location = new System.Drawing.Point(16, 8);
+            this.buttonCollapse.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCollapse.Name = "buttonCollapse";
             this.buttonCollapse.Size = new System.Drawing.Size(70, 46);
             this.buttonCollapse.TabIndex = 3;
@@ -235,7 +237,8 @@
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.minimizeBtn.Location = new System.Drawing.Point(962, 7);
+            this.minimizeBtn.Location = new System.Drawing.Point(962, 8);
+            this.minimizeBtn.Margin = new System.Windows.Forms.Padding(2);
             this.minimizeBtn.Name = "minimizeBtn";
             this.minimizeBtn.Size = new System.Drawing.Size(24, 32);
             this.minimizeBtn.TabIndex = 18;
@@ -253,6 +256,7 @@
             this.fullBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.fullBtn.ImageList = this.imageList2;
             this.fullBtn.Location = new System.Drawing.Point(992, 18);
+            this.fullBtn.Margin = new System.Windows.Forms.Padding(2);
             this.fullBtn.Name = "fullBtn";
             this.fullBtn.Size = new System.Drawing.Size(20, 12);
             this.fullBtn.TabIndex = 17;
@@ -277,7 +281,7 @@
             this.exitBtn.Location = new System.Drawing.Point(1015, 9);
             this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(43, 32);
+            this.exitBtn.Size = new System.Drawing.Size(42, 32);
             this.exitBtn.TabIndex = 16;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
@@ -296,8 +300,9 @@
             this.mainPanel.Controls.Add(this.onlineHelpBtn);
             this.mainPanel.Controls.Add(this.ticketTable);
             this.mainPanel.Location = new System.Drawing.Point(1, 61);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1057, 491);
+            this.mainPanel.Size = new System.Drawing.Size(1058, 491);
             this.mainPanel.TabIndex = 19;
             // 
             // openTab
@@ -305,7 +310,7 @@
             this.openTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.openTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.openTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openTab.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.openTab.Location = new System.Drawing.Point(2, 0);
             this.openTab.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
@@ -314,13 +319,14 @@
             this.openTab.TabIndex = 6;
             this.openTab.Text = "Open";
             this.openTab.UseVisualStyleBackColor = true;
+            this.openTab.Click += new System.EventHandler(this.openTab_Click);
             // 
             // closedTab
             // 
             this.closedTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.closedTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.closedTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closedTab.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closedTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closedTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.closedTab.Location = new System.Drawing.Point(77, 0);
             this.closedTab.Margin = new System.Windows.Forms.Padding(0);
@@ -329,13 +335,14 @@
             this.closedTab.TabIndex = 7;
             this.closedTab.Text = "Closed";
             this.closedTab.UseVisualStyleBackColor = true;
+            this.closedTab.Click += new System.EventHandler(this.closedTab_Click);
             // 
             // FAPTab
             // 
             this.FAPTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.FAPTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.FAPTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FAPTab.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FAPTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FAPTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FAPTab.Location = new System.Drawing.Point(152, 0);
             this.FAPTab.Margin = new System.Windows.Forms.Padding(0);
@@ -344,13 +351,14 @@
             this.FAPTab.TabIndex = 8;
             this.FAPTab.Text = "FAP";
             this.FAPTab.UseVisualStyleBackColor = true;
+            this.FAPTab.Click += new System.EventHandler(this.FAPTab_Click);
             // 
             // newTab
             // 
             this.newTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.newTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.newTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newTab.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.newTab.Location = new System.Drawing.Point(227, 0);
             this.newTab.Margin = new System.Windows.Forms.Padding(0);
@@ -359,13 +367,14 @@
             this.newTab.TabIndex = 9;
             this.newTab.Text = "New";
             this.newTab.UseVisualStyleBackColor = true;
+            this.newTab.Click += new System.EventHandler(this.newTab_Click);
             // 
             // onlineHelpBtn
             // 
             this.onlineHelpBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.onlineHelpBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.onlineHelpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.onlineHelpBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onlineHelpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.onlineHelpBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.onlineHelpBtn.Location = new System.Drawing.Point(302, 0);
             this.onlineHelpBtn.Margin = new System.Windows.Forms.Padding(0, 0, 600, 0);
@@ -380,38 +389,56 @@
             this.ticketTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ticketTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ticketTable.ColumnCount = 2;
+            this.ticketTable.ColumnCount = 1;
             this.ticketTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ticketTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ticketTable.Location = new System.Drawing.Point(3, 32);
+            this.ticketTable.Controls.Add(this.OpenList, 0, 0);
+            this.ticketTable.Location = new System.Drawing.Point(2, 31);
+            this.ticketTable.Margin = new System.Windows.Forms.Padding(2);
             this.ticketTable.Name = "ticketTable";
-            this.ticketTable.RowCount = 2;
-            this.ticketTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ticketTable.RowCount = 1;
             this.ticketTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.ticketTable.Size = new System.Drawing.Size(1051, 449);
             this.ticketTable.TabIndex = 11;
+            // 
+            // OpenList
+            // 
+            this.OpenList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OpenList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OpenList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.OpenList.FormattingEnabled = true;
+            this.OpenList.HorizontalScrollbar = true;
+            this.OpenList.ItemHeight = 16;
+            this.OpenList.Location = new System.Drawing.Point(4, 4);
+            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
+            this.OpenList.Name = "OpenList";
+            this.OpenList.Size = new System.Drawing.Size(1043, 436);
+            this.OpenList.TabIndex = 0;
+            this.OpenList.SelectedIndexChanged += new System.EventHandler(this.OpenList_SelectedIndexChanged);
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1068, 554);
+            this.Controls.Add(this.optionPanel);
             this.Controls.Add(this.buttonCollapse);
             this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
-            this.Controls.Add(this.optionPanel);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminForm";
+            this.Text = "+";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.optionPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
+            this.ticketTable.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -439,5 +466,6 @@
         private System.Windows.Forms.Button newTab;
         private System.Windows.Forms.Button onlineHelpBtn;
         private System.Windows.Forms.TableLayoutPanel ticketTable;
+        private System.Windows.Forms.ListBox OpenList;
     }
 }

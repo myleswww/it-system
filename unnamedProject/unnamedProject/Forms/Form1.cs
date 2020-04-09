@@ -28,7 +28,6 @@ namespace unnamedProject
             if (DaveTheFriendlyObject)
             {
                 this.Hide();
-                
                 Thread th = Thread.CurrentThread;
                 th.Abort();
                 this.Close();

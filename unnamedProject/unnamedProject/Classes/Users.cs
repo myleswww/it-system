@@ -12,23 +12,21 @@ using System.Windows.Forms;
 
 namespace unnamedProject
 {
-    class Admin
+    public class Users
     {
+        public string Username { get; set; }
+        public  string Fname { get; set; }
+        public string Lname { get; set; }
+        public string Email { get; set; }
+        public int LevelAccess { get; set; }
 
-    }
-
-    class ReportManager
-    {
-
-    }
-
-    class ITSupport
-    {
-
-    }
-
-    class ProjectMember
-    {
-
+        public Users(string username, string fname, string lname, string email, int levelAccess)
+        {
+            Username = username;
+            Fname = fname;
+            Lname = lname;
+            Email = email;
+            LevelAccess = levelAccess;
+        }
     }
 }

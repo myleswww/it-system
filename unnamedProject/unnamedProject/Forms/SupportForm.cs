@@ -17,9 +17,11 @@ namespace unnamedProject.Forms
 {
     public partial class SupportForm : Form
     {
-        public SupportForm()
+        Users current;
+        public SupportForm(Users current)
         {
             InitializeComponent();
+            this.current = current;
         }
 
         private void SupportForm_Load(object sender, EventArgs e)
