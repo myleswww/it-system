@@ -213,5 +213,14 @@ namespace unnamedProject
         }
 
         //TODO: Make function to update rows in DB
+        public void UpdateUser(Users user)
+        {
+
+        }
+
+        public void UpdateTicket(Tickets ticket)
+        {
+
+        }
     }
 }
