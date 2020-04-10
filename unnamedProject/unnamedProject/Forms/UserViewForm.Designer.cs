@@ -43,8 +43,8 @@
             this.LblName = new System.Windows.Forms.Label();
             this.LblID = new System.Windows.Forms.Label();
             this.LblLvlAccess = new System.Windows.Forms.Label();
-            this.LblAllUsers = new System.Windows.Forms.Label();
             this.LstBxUser = new System.Windows.Forms.ListBox();
+            this.LblAllUsers = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -212,6 +212,20 @@
             this.LblLvlAccess.TabIndex = 6;
             this.LblLvlAccess.Text = "Role";
             // 
+            // LstBxUser
+            // 
+            this.LstBxUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LstBxUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LstBxUser.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LstBxUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LstBxUser.FormattingEnabled = true;
+            this.LstBxUser.ItemHeight = 19;
+            this.LstBxUser.Location = new System.Drawing.Point(0, 29);
+            this.LstBxUser.Margin = new System.Windows.Forms.Padding(0);
+            this.LstBxUser.Name = "LstBxUser";
+            this.LstBxUser.Size = new System.Drawing.Size(693, 325);
+            this.LstBxUser.TabIndex = 7;
+            // 
             // LblAllUsers
             // 
             this.LblAllUsers.AutoSize = true;
@@ -222,19 +236,6 @@
             this.LblAllUsers.Size = new System.Drawing.Size(160, 27);
             this.LblAllUsers.TabIndex = 24;
             this.LblAllUsers.Text = "View All Users";
-            // 
-            // LstBxUser
-            // 
-            this.LstBxUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LstBxUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LstBxUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LstBxUser.FormattingEnabled = true;
-            this.LstBxUser.ItemHeight = 15;
-            this.LstBxUser.Location = new System.Drawing.Point(0, 29);
-            this.LstBxUser.Margin = new System.Windows.Forms.Padding(0);
-            this.LstBxUser.Name = "LstBxUser";
-            this.LstBxUser.Size = new System.Drawing.Size(693, 332);
-            this.LstBxUser.TabIndex = 7;
             // 
             // UserViewForm
             // 

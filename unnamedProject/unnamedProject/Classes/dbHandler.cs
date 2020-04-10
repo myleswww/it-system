@@ -189,5 +189,29 @@ namespace unnamedProject
                 return currentUser;
         }
 
+        public List<Users> LoadAll()
+        {
+            string query = "SELECT Id, Username, firstName, lastName, levelAccess FROM User_Info"; //select id and levelaccess so the admin can update someones access status if needed
+            sqlcon.Open(); //open that connection!
+            SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon); //data adapter
+            DataTable dtbl = new DataTable("Users");
+            sda.Fill(dtbl); //fill the data table!
+            List<Users> users = new List<Users>();
+            users = (from DataRow r in dtbl.Rows //list of users to return
+                     select new Users()
+                     {
+                         Id = (int)r["Id"],
+                         Username = r["Username"].ToString(),
+                         Fname = r["firstName"].ToString(),
+                         Lname = r["lastName"].ToString(),
+                         LevelAccess = (int)r["levelAccess"]
+                     }).ToList(); //this needs to be a list
+            sqlcon.Close(); //don't forget to close the connection
+            return users;
+
+
+        }
+
+        //TODO: Make function to update rows in DB
     }
 }

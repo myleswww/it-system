@@ -14,7 +14,7 @@ namespace unnamedProject
 {
     class Tickets
     {
-        public int TicketID { get; set; }
+        public int TicketID { get; set; } //class members
         public int UserInfo { get; set; }
         public DateTime DateAccessed { get; set; }
         public int TicketStatus { get; set; }
@@ -31,9 +31,9 @@ namespace unnamedProject
             Notes = notes;
         }
 
-        public override string ToString()
+        public override string ToString() //this needs to be formatted better
         {
-            return string.Format("Ticket #: {0}, User ID: {1}, Date Accessed {2:f}, Ticket Status {3}, Description: {4}, Notes: {5}",
+            return string.Format("{0}, {4}, {2:f}",
                 TicketID, UserInfo, DateAccessed, TicketStatus, Description, Notes);
         }
     }
