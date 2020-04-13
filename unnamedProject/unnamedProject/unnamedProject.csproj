@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Notes.cs" />
     <Compile Include="Classes\Tickets.cs" />
     <Compile Include="Classes\Users.cs" />
     <Compile Include="Forms\AdminForm.cs">

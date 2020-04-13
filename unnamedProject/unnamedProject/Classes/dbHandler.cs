@@ -212,13 +212,47 @@ namespace unnamedProject
 
         }
 
-        //TODO: Make function to update rows in DB
         public void UpdateUser(Users user)
         {
+            //Lets update!!!!
+            sqlcon.Open(); //dont forget to open that connection!
+            string update = "UPDATE User_Info SET Id = @id, Username = @username, Password = @password, Email = @email, firstName = @first, lastName = @last, levelAccess = @level WHERE Id = @id"; //update where ID's are equal
+            SqlCommand command = new SqlCommand(update, sqlcon);
+            command.Parameters.AddWithValue("@id", user.Id);
+            command.Parameters.AddWithValue("@username", user.Username);
+            command.Parameters.AddWithValue("@password", user.Password);
+            command.Parameters.AddWithValue("@email", user.Email);
+            command.Parameters.AddWithValue("@first", user.Fname);
+            command.Parameters.AddWithValue("@last", user.Lname);
+            command.Parameters.AddWithValue("@level", user.LevelAccess);
 
+            command.ExecuteNonQuery();
+            sqlcon.Close();
         }
 
         public void UpdateTicket(Tickets ticket)
+        {
+            sqlcon.Open();
+            string update = "UPDATE tickets SET ID = @id, date_accessed = @date, ticket_status = @status, description = @desc WHERE ID = @id";
+            SqlCommand command = new SqlCommand(update, sqlcon);
+            command.Parameters.AddWithValue("@id", ticket.TicketID);
+            command.Parameters.AddWithValue("@date", ticket.DateAccessed);
+            command.Parameters.AddWithValue("@status", ticket.TicketStatus);
+            command.Parameters.AddWithValue("@desc", ticket.Description);
+
+            command.ExecuteNonQuery();
+            sqlcon.Close();
+        }
+
+        //TODO: Function for adding new note to note table.
+        public void AddNote(int ticketId)
+        {
+            sqlcon.Open();
+
+        }
+
+        //TODO: Function for getting notes for a particular ticket
+        public List<Notes> GetNotes(int ticketID)
         {
 
         }
