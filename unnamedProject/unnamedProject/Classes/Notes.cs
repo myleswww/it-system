@@ -14,7 +14,7 @@ namespace unnamedProject
         public DateTime date_written { get; set; }
         public string note_info { get; set; }
 
-        Notes(int id, int userID, int ticketID, DateTime date, string info)
+        public Notes(int id, int userID, int ticketID, DateTime date, string info)
         {
             Id = id;
             User_Info_Id = userID;
@@ -22,7 +22,7 @@ namespace unnamedProject
             date_written = date;
             note_info = info;
         }
-        Notes() //blank constructor
+        public Notes() //blank constructor
         {
 
         }

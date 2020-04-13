@@ -423,11 +423,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1068, 554);
-            this.Controls.Add(this.optionPanel);
             this.Controls.Add(this.buttonCollapse);
             this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
+            this.Controls.Add(this.optionPanel);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
