@@ -66,7 +66,7 @@ namespace unnamedProject.Forms
         }
 
         //TODO: Write function for sorting by alphabetical order, A-Z
-        public List<Users> AphabeticalSort(List<Users> users)
+        /*public List<Users> AphabeticalSort(List<Users> users)
         {
             //sort by alphabetical order
         }
@@ -82,5 +82,6 @@ namespace unnamedProject.Forms
         {
 
         }
+        */
     }
 }

@@ -52,6 +52,8 @@ namespace unnamedProject.Forms
         private void SettingsForm_Load(object sender, EventArgs e)
         {
             //fill in the textboxes with the user's info from the user class.
+            TxtbxEmail.Text = current.Email;
+
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
