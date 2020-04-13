@@ -19,6 +19,7 @@ namespace unnamedProject
         public string Lname { get; set; }
         public string Email { get; set; }
         public int LevelAccess { get; set; }
+        public int Id { get; set; }
 
         public Users(string username, string fname, string lname, string email, int levelAccess)
         {
@@ -27,6 +28,36 @@ namespace unnamedProject
             Lname = lname;
             Email = email;
             LevelAccess = levelAccess;
+        }
+        public Users()
+        {
+
+        }
+
+
+        //TODO: Find a way to format the listbox so that everything aligns with the labels
+        public override string ToString()
+        {
+            return "         " + Fname + "    " + Lname + "         " + Id.ToString() + "         " + GetAccessString(LevelAccess); //return the access name, not just thed integer
+        }
+
+        public string GetAccessString(int level) //returns the name of the role based on the level access integer
+        {
+            string role = ""; //has to be assigned to a value at first
+            switch (level)
+            {
+                case 0: role = "Admin";
+                    break;
+                case 1: role = "Report Manager";
+                    break;
+                case 2: role = "Support Member";
+                    break;
+                case 3: role = "Project Member";
+                    break;
+                case 4: role = "Deactivated";
+                    break;
+            }
+            return role;
         }
     }
 }

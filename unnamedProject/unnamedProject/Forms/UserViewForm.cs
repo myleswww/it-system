@@ -60,6 +60,26 @@ namespace unnamedProject.Forms
 
         private void UserViewForm_Load(object sender, EventArgs e)
         {
+            dbHandler db = new dbHandler();
+            List<Users> us = db.LoadAll();
+            LstBxUser.Items.AddRange(us.ToArray());
+        }
+
+        //TODO: Write function for sorting by alphabetical order, A-Z
+        public List<Users> AphabeticalSort(List<Users> users)
+        {
+            //sort by alphabetical order
+        }
+
+        //TODO: Write function for sorting from Z-A
+        public List<Users> ReverseAlphabetSort(List<Users> users)
+        {
+
+        }
+
+        //TODO: Write function to sort by user ID
+        public List<Users> SortByID(List<Users> users)
+        {
 
         }
     }
