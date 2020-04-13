@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="unnamedProject.dbHandler" Collapsed="true">
+    <Position X="9.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAEAAAAAAICAA=</HashCode>
+      <FileName>Classes\dbHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Program" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Classes\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Tickets" Collapsed="true">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAggAAAEAAAAAAAAAAAAABAAAAAIAAAQAAA=</HashCode>
+      <FileName>Classes\Tickets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Users" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACAAAAAAAQAAAAAAAAEAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Classes\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.AdminForm" Collapsed="true">
+    <Position X="4.25" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAoUAEIGIAIAEAAACARUjLyAQAAAQAIxgFiABAoRA=</HashCode>
+      <FileName>Forms\AdminForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dbhadler" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="unnamedProject.LoginForm" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQBAAABQCEAAAEAAACBAAQCAAQAAAACgEgCgAAAAAA=</HashCode>
+      <FileName>Forms\Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.register" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>BAZAIAUAASBCAAEhHAGAAIECgAwAKgBAighEigAAIAM=</HashCode>
+      <FileName>Forms\RegisterForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.ViewExistingProblems" Collapsed="true">
+    <Position X="7" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAACAAAAEEAACAAAACgIwAAgABAAgAiAAAAAA=</HashCode>
+      <FileName>Forms\ViewExistingProblems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Forms.GenerateReportForm" Collapsed="true">
+    <Position X="7" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAEAACAAABEAAACAAEICgAwAAgQABAgAiAgAAAA=</HashCode>
+      <FileName>Forms\GenerateReportForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Forms.ProjectMemberForm" Collapsed="true">
+    <Position X="4.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAoAAIIGAAAAEAAACAAEgKiAQAAAQAAggEiAAAoRA=</HashCode>
+      <FileName>Forms\ProjectMemberForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Forms.ReportManagerForm" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAIGIAACEAAACQAEiLiAQAAAwACggEiAAAoQA=</HashCode>
+      <FileName>Forms\ReportManagerForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Forms.SettingsForm" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQIAEAAGACAAEAAhCBwEACgAwAAgQAAAgAiAAAAAA=</HashCode>
+      <FileName>Forms\SettingsForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Forms.SplashScreen" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAAAAAACCAQAAAAACCAAACAAAAAAAAACAAAABBAAI=</HashCode>
+      <FileName>Forms\SplashScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Forms.SupportForm" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAoAAAIGAAACEAAACAAEgKigQAAAQAAggEiAAgoRA=</HashCode>
+      <FileName>Forms\SupportForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Forms.UserViewForm" Collapsed="true">
+    <Position X="7" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAACQAAAMAAACAAEACoIwBAgQAQIgAiACAAAA=</HashCode>
+      <FileName>Forms\UserViewForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Forms.ViewTicketForm" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACBAIBAAAACAAEACAIADAgQAEIgAiAAAAAA=</HashCode>
+      <FileName>Forms\ViewTicketForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="unnamedProject.Properties.Settings" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
