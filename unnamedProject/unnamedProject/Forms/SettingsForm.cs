@@ -52,10 +52,15 @@ namespace unnamedProject.Forms
         private void SettingsForm_Load(object sender, EventArgs e)
         {
             //fill in the textboxes with the user's info from the user class.
+            TxtbxEmail.Text = current.Email;
+            TxtbxUsername.Text = current.Username;
+            //Do not include password in the user class because it is not secure
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            dbHandler handler = new dbHandler();
+
             //save the data to the textboxes
             TxtbxEmail.ReadOnly = true;
             TxtbxPassword.ReadOnly = true;
@@ -63,7 +68,16 @@ namespace unnamedProject.Forms
 
             BtnSave.Visible = false;
 
-            //update the database using the user class as a "middleman"
+            //update the database 
+
+            current.Email = TxtbxEmail.Text;
+            current.Username = TxtbxUsername.Text;
+            current.Password = TxtbxPassword.Text;
+
+            handler.UpdateUser(current);
+
+            
+            
         }
 
         private void fullBtn_Click(object sender, EventArgs e)

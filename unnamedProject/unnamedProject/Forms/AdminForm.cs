@@ -182,7 +182,7 @@ namespace unnamedProject
         {
             OpenList.Visible = true;
             OpenList.Items.Clear();
-            tickets = dbhadler.LoadTicketsFromDb();
+            tickets = dbhadler.LoadTicketsFromDb(1);
             OpenList.Items.AddRange(tickets.ToArray());
         }
 
@@ -190,18 +190,24 @@ namespace unnamedProject
         {
             OpenList.Visible = true;
             OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb(2);
+            OpenList.Items.AddRange(tickets.ToArray());
         }
 
         private void newTab_Click(object sender, EventArgs e)
         {
             OpenList.Visible = true;
             OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb(0);
+            OpenList.Items.AddRange(tickets.ToArray());
         }
 
         private void closedTab_Click(object sender, EventArgs e)
         {
             OpenList.Visible = true;
             OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb(3);
+            OpenList.Items.AddRange(tickets.ToArray());
         }
 
         private void OpenList_SelectedIndexChanged(object sender, EventArgs e)

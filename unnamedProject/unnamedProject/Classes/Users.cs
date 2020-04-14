@@ -21,6 +21,8 @@ namespace unnamedProject
         public int LevelAccess { get; set; }
         public int Id { get; set; }
 
+        public string Password { get; set; } //set to protected so that it cannot be accessed by anyone
+
         public Users(string username, string fname, string lname, string email, int levelAccess)
         {
             Username = username;

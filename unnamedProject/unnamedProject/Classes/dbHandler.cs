@@ -117,7 +117,7 @@ namespace unnamedProject
             sqlcon.Close();
         }
 
-        public List<Tickets> LoadTicketsFromDb()
+        public List<Tickets> LoadTicketsFromDb(int status) //loads list of tickets from the db based on what type of ticket we want, 0-3
         {
             //declare a list of Employee objects
             List<Tickets> tickets;
@@ -130,8 +130,15 @@ namespace unnamedProject
                 Tickets tempticket;
 
                 sqlcon.Open();
+                /*
+                 * 0 - new
+                 * 1 - open
+                 * 2 - FAP
+                 * 3 - Closed
+                 */
+                string query = "SELECT * FROM tickets WHERE ticket_status = " + status;
 
-                SqlCommand sqlCommand = new SqlCommand("SELECT * FROM tickets", sqlcon);
+                SqlCommand sqlCommand = new SqlCommand(query, sqlcon);
 
                 SqlDataReader reader = sqlCommand.ExecuteReader();
 
@@ -165,7 +172,7 @@ namespace unnamedProject
 
         }
 
-        public Users LoadUserInfoFromDb(int currentUserID)
+        public Users LoadUserInfoFromDb(int currentUserID) //loads a single users info into a current user object
         {
             string username = null;
             string fname = null;
@@ -189,7 +196,7 @@ namespace unnamedProject
                 return currentUser;
         }
 
-        public List<Users> LoadAll()
+        public List<Users> LoadAll() //loads a list of every single user in the system
         {
             string query = "SELECT Id, Username, firstName, lastName, levelAccess FROM User_Info"; //select id and levelaccess so the admin can update someones access status if needed
             sqlcon.Open(); //open that connection!
@@ -212,15 +219,123 @@ namespace unnamedProject
 
         }
 
-        //TODO: Make function to update rows in DB
         public void UpdateUser(Users user)
+        {
+            //Lets update!!!!
+            sqlcon.Open(); //dont forget to open that connection!
+            string update = "UPDATE User_Info SET Id = @id, Username = @username, Password = @password, Email = @email, firstName = @first, lastName = @last, levelAccess = @level WHERE Id = @id"; //update where ID's are equal
+            SqlCommand command = new SqlCommand(update, sqlcon);
+            command.Parameters.AddWithValue("@id", user.Id);
+            command.Parameters.AddWithValue("@username", user.Username);
+            command.Parameters.AddWithValue("@password", user.Password);
+            command.Parameters.AddWithValue("@email", user.Email);
+            command.Parameters.AddWithValue("@first", user.Fname);
+            command.Parameters.AddWithValue("@last", user.Lname);
+            command.Parameters.AddWithValue("@level", user.LevelAccess);
+
+            command.ExecuteNonQuery();
+            sqlcon.Close();
+        }
+
+        public void UpdateTicket(Tickets ticket) //updates tickets
+        {
+            sqlcon.Open();
+            string update = "UPDATE tickets SET ID = @id, date_accessed = @date, ticket_status = @status, description = @desc WHERE ID = @id";
+            SqlCommand command = new SqlCommand(update, sqlcon);
+            command.Parameters.AddWithValue("@id", ticket.TicketID);
+            command.Parameters.AddWithValue("@date", ticket.DateAccessed);
+            command.Parameters.AddWithValue("@status", ticket.TicketStatus);
+            command.Parameters.AddWithValue("@desc", ticket.Description);
+
+            command.ExecuteNonQuery();
+            sqlcon.Close();
+        }
+
+        //Function for adding new note to note table.
+        public void AddNote(Notes note)
+        {
+            int newID = 0;
+            sqlcon.Open();
+            string query = "SELECT MAX(ID) from notes";
+            SqlCommand command = new SqlCommand(query, sqlcon);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                //did the db return null?
+                if (reader.IsDBNull(0))
+                {
+                    newID = 1;
+                }
+                else
+                {
+                    newID = reader.GetInt32(0);
+                    newID++;
+                }
+            }
+            sqlcon.Close();
+
+            note.Id = newID; //set the id of the note!
+            
+            sqlcon.Open();
+            string insert = "INSERT INTO notes (ID, User_Info_Id, tickets_ticketID, date_writtten, note_info) VALUES (@id, @userID, @ticketID, @date, @info)";
+            command = new SqlCommand(insert, sqlcon);
+            command.Parameters.AddWithValue("@id", note.Id);
+            command.Parameters.AddWithValue("@userID", note.User_Info_Id);
+            command.Parameters.AddWithValue("@ticketID", note.tickets_ticketID);
+            command.Parameters.AddWithValue("@date", note.date_written);
+            command.Parameters.AddWithValue("@info", note.note_info);
+
+            command.ExecuteNonQuery();
+            sqlcon.Close();
+        }
+
+        //Gets list of notes that match a ticket ID
+        public List<Notes> GetNotes(int ticketID)
+        {
+            string query = "SELECT ID, User_Info_Id, tickets_ticketID, date_writtten, note_info FROM notes WHERE User_Info_ID = " + ticketID; //selects all rows that have the matching ticket ID which is a foreign key in the notes table
+            sqlcon.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
+            DataTable dataTable = new DataTable("Notes");
+            sda.Fill(dataTable);
+            List<Notes> noteList = new List<Notes>();
+            noteList = (from DataRow r in dataTable.Rows
+                        select new Notes()
+                        {
+                            Id = (int)r["ID"],
+                            User_Info_Id = (int)r["User_Info_Id"],
+                            tickets_ticketID = (int)r["tickets_ticketID"],
+                            date_written = (DateTime)r["date_writtten"],
+                            note_info = r["note_info"].ToString()
+                        }).ToList();
+            sqlcon.Close();
+            return noteList;
+        }
+        //TODO: Function for adding new report
+        public void AddReport()
         {
 
         }
-
-        public void UpdateTicket(Tickets ticket)
+        //TODO: Function to pull list of reports from database
+        public List<Report> GetReports()
         {
+            string query = "SELECT * FROM reports";
+            sqlcon.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
+            DataTable table = new DataTable("Reports");
+            sda.Fill(table);
+            List<Report> reports = new List<Report>();
+            reports = (from DataRow r in table.Rows
+                       select new Report()
+                       {
+                           ID = (int)r["ID"],
+                           Date = (DateTime)r["date_accessed"],
+                           UserID = (int)r["User_Info_Id"],
+                           Description = r["description"].ToString(),
+                           Type = (int)r["type"]
 
+                       }).ToList();
+            sqlcon.Close();
+            return reports;
         }
     }
 }
