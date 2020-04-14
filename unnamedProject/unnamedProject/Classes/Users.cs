@@ -36,6 +36,19 @@ namespace unnamedProject
 
         }
 
+        public int GetId()
+        {
+            return Id;
+        }
+
+        public string GetLname()
+        {
+            return Lname;
+        }
+        public string GetFname()
+        {
+            return Fname;
+        }
 
         //TODO: Find a way to format the listbox so that everything aligns with the labels
         public override string ToString()
