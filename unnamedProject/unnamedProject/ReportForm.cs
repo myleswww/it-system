@@ -14,21 +14,33 @@ namespace unnamedProject
     {
         Report report { get; set; }
         dbHandler handler;
-
-        public ReportForm(int type)
+        Users current;
+        public ReportForm(int type, Users user)
         {
             InitializeComponent();
-            report = new Report();
+            report = new Report(); // create a new report
             report.Type = type;
+
+            current = user;
         }
 
         private void ReportForm_Load(object sender, EventArgs e)
         {
             handler = new dbHandler();
 
+            report.Date = DateTime.Now;
+            report.UserID = current.Id;
+
             int tickets = getTickets();
-            //int percent = getPercent();
-            //int newTick = getNewTickets();
+            int percent = getPercent();
+            int newTick = getNewTickets(); //calculations
+
+
+            report.Description = tickets.ToString() + ", " + percent.ToString() + ", " + newTick.ToString();
+
+
+            report.ID = handler.AddReport(report); //add the report to the database, while recieving the new id back
+
 
             switch (report.Type)
             {
@@ -47,7 +59,10 @@ namespace unnamedProject
             LblManagerID.Text = report.UserID.ToString();
             LblDateTime.Text = report.Date.ToString();
             LblNum.Text = tickets.ToString();
-           //LblPercent.Text = percent.ToString();
+            LblPercent.Text = percent.ToString();
+            LblNew.Text = newTick.ToString();
+
+            
         }
         
         //TODO: Function to get number of certain kinds of tickets
@@ -56,19 +71,22 @@ namespace unnamedProject
             int count = handler.GetTicketCount(report.Type);
             return count;
         }
-        /*
+        
         //TODO: Function to get percentage of certain kinds of tickets
         public int getPercent()
         {
-            
+            int percent = handler.GetPercent(report.Type);
+            return percent;
         }
 
         //TODO: Function to get the number of new tickets in the last 30 days
         public int getNewTickets()
         {
-
+            DateTime date = DateTime.Now.AddDays(-30);
+            int count = handler.GetTicketCount(date);
+            return count;
         }
-        */
+        
 
     }
 }

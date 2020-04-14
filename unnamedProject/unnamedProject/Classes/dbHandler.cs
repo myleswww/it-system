@@ -311,11 +311,45 @@ namespace unnamedProject
             return noteList;
         }
         //TODO: Function for adding new report
-        public void AddReport()
+        public int AddReport(Report report) //returns the id of the report to be displayed on the form
         {
+            //first select max id and assign it to the report
+            int newID = 0;
+            sqlcon.Open();
+            string query = "SELECT MAX(ID) FROM reports";
+            SqlCommand command = new SqlCommand(query, sqlcon);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                //did the db return null?
+                if (reader.IsDBNull(0))
+                {
+                    newID = 1;
+                }
+                else
+                {
+                    newID = reader.GetInt32(0);
+                    newID++;
+                }
+            }
+            sqlcon.Close();
 
+            report.ID = newID;
+
+            sqlcon.Open();
+            string insert = "INSERT INTO reports (ID, date_accessed, User_Info_Id, description, type) VALUES (@id, @date, @userid, @desc, @type)";
+            command = new SqlCommand(insert, sqlcon);
+            command.Parameters.AddWithValue("@id", report.ID);
+            command.Parameters.AddWithValue("@date", report.Date);
+            command.Parameters.AddWithValue("@userid", report.UserID);
+            command.Parameters.AddWithValue("@desc", report.Description);
+            command.Parameters.AddWithValue("@type", report.Type);
+
+            command.ExecuteNonQuery();
+            sqlcon.Close();
+            return report.ID;
         }
-        //TODO: Function to pull list of reports from database
+        //Function to pull list of reports from database
         public List<Report> GetReports()
         {
             string query = "SELECT * FROM reports";
@@ -355,7 +389,24 @@ namespace unnamedProject
             return count;
             
         }
-        /*public int GetPercent(int type)
+
+        //overloaded get ticket function including date
+        public int GetTicketCount(DateTime date)
+        {
+            int count = 0;
+            string query = "Select COUNT(*) FROM tickets WHERE type = 0 AND date_accessed >= 'date'";
+            sqlcon.Open();
+            SqlCommand command = new SqlCommand(query, sqlcon);
+            SqlDataReader read = command.ExecuteReader();
+
+            while (read.Read())
+            {
+                count++;
+            }
+            sqlcon.Close();
+            return count;
+        }
+        public int GetPercent(int type)
         {
             int count = 0;
             string query = "Select COUNT(*) FROM tickets";
@@ -365,10 +416,17 @@ namespace unnamedProject
 
             while (read.Read())
             {
-
+                count++;
             }
 
+            sqlcon.Close();
+
+            int ticketCount = GetTicketCount(type);
+
+            int percent = ((ticketCount*100 )/ count);
+            return percent;
         }
-        */
+
+        
     }
 }
