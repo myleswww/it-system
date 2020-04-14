@@ -180,6 +180,7 @@ namespace unnamedProject
 
         private void openTab_Click(object sender, EventArgs e)
         {
+            OpenList.Visible = true;
             OpenList.Items.Clear();
             tickets = dbhadler.LoadTicketsFromDb();
             OpenList.Items.AddRange(tickets.ToArray());
@@ -187,22 +188,40 @@ namespace unnamedProject
 
         private void FAPTab_Click(object sender, EventArgs e)
         {
+            OpenList.Visible = true;
             OpenList.Items.Clear();
         }
 
         private void newTab_Click(object sender, EventArgs e)
         {
+            OpenList.Visible = true;
             OpenList.Items.Clear();
         }
 
         private void closedTab_Click(object sender, EventArgs e)
         {
+            OpenList.Visible = true;
             OpenList.Items.Clear();
         }
 
         private void OpenList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            OpenList.Visible = true;
+        }
 
+        private void onlineHelpBtn_Click(object sender, EventArgs e)
+        {
+            OpenList.Visible = false;
+        }
+
+        private void onlineHelpBtn_Click_1(object sender, EventArgs e)
+        {
+            var webbrowser = new Thread(() => Application.Run(new WebBrowserForm(current)));
+            webbrowser.SetApartmentState(ApartmentState.STA);
+            webbrowser.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
         }
     }
 }

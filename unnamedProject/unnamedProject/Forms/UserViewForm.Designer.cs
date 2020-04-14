@@ -160,14 +160,15 @@
             this.ComboBoxSort.ForeColor = System.Drawing.Color.Black;
             this.ComboBoxSort.FormattingEnabled = true;
             this.ComboBoxSort.Items.AddRange(new object[] {
+            "User Id",
             "A-Z",
-            "Z-A",
-            "User ID"});
+            "Z-A"});
             this.ComboBoxSort.Location = new System.Drawing.Point(3, 3);
             this.ComboBoxSort.Name = "ComboBoxSort";
             this.ComboBoxSort.Size = new System.Drawing.Size(70, 23);
             this.ComboBoxSort.TabIndex = 0;
             this.ComboBoxSort.Text = "Sort By";
+            this.ComboBoxSort.SelectedIndexChanged += new System.EventHandler(this.ComboBoxSort_SelectedIndexChanged);
             // 
             // LblName
             // 
