@@ -75,5 +75,30 @@ namespace unnamedProject
             }
             return role;
         }
+
+        //Function to pass a specific user's form back
+        public Form getForm()
+        {
+            Form form;
+            switch (this.LevelAccess)
+            {
+                case 0:
+                    form = new AdminForm(this);
+                    break;
+                case 1:
+                    form = new Forms.ReportManagerForm(this);
+                    break;
+                case 2:
+                    form = new Forms.SupportForm(this);
+                    break;
+                case 3:
+                    form = new Forms.ProjectMemberForm(this);
+                    break;
+                default:
+                    form = new Forms.ProjectMemberForm(this);
+                    break;
+            }
+            return form;
+        }
     }
 }

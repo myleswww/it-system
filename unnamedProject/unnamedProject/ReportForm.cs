@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -99,7 +100,14 @@ namespace unnamedProject
             int count = handler.GetTicketCount(date);
             return count;
         }
-        
 
+        private void back_Click(object sender, EventArgs e)
+        {
+            var report = new Thread(() => Application.Run(new Forms.GenerateReportForm(current)));
+            report.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+        }
     }
 }

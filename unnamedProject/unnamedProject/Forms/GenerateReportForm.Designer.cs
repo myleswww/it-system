@@ -159,6 +159,7 @@
             this.btnSolvedTickets.TabIndex = 33;
             this.btnSolvedTickets.Text = "Solved Tickets";
             this.btnSolvedTickets.UseVisualStyleBackColor = true;
+            this.btnSolvedTickets.Click += new System.EventHandler(this.btnSolvedTickets_Click);
             // 
             // btnExistingTickets
             // 
@@ -171,6 +172,7 @@
             this.btnExistingTickets.TabIndex = 34;
             this.btnExistingTickets.Text = "Existing Tickets";
             this.btnExistingTickets.UseVisualStyleBackColor = true;
+            this.btnExistingTickets.Click += new System.EventHandler(this.btnExistingTickets_Click);
             // 
             // imageList1
             // 
@@ -196,6 +198,7 @@
             this.BtnViewReports.TabIndex = 35;
             this.BtnViewReports.Text = "View Reports";
             this.BtnViewReports.UseVisualStyleBackColor = true;
+            this.BtnViewReports.Click += new System.EventHandler(this.BtnViewReports_Click);
             // 
             // GenerateReportForm
             // 

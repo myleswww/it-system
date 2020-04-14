@@ -66,7 +66,7 @@ namespace unnamedProject.Forms
 
         private void back_Click(object sender, EventArgs e)
         {
-            var admin = new Thread(() => Application.Run(new AdminForm(current)));
+            var admin = new Thread(() => Application.Run(current.getForm()));
             admin.Start();
 
             Thread th = Thread.CurrentThread;
@@ -80,6 +80,29 @@ namespace unnamedProject.Forms
 
             Thread th = Thread.CurrentThread;
             th.Abort();
+        }
+
+        private void btnSolvedTickets_Click(object sender, EventArgs e)
+        {
+            var report = new Thread(() => Application.Run(new ReportForm(1, current)));
+            report.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+        }
+
+        private void btnExistingTickets_Click(object sender, EventArgs e)
+        {
+            var report = new Thread(() => Application.Run(new ReportForm(2, current)));
+            report.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+        }
+
+        private void BtnViewReports_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

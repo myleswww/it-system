@@ -383,7 +383,7 @@ namespace unnamedProject
 
             while (read.Read())
             {
-                count++;
+                count = read.GetInt32(0);
             }
             sqlcon.Close();
             return count;
@@ -399,7 +399,7 @@ namespace unnamedProject
             
             while (read.Read())
             {
-                count++;
+                count = read.GetInt32(0);
             }
             sqlcon.Close();
             return count;
@@ -417,7 +417,7 @@ namespace unnamedProject
 
             while (read.Read())
             {
-                count++;
+                count = read.GetInt32(0);
             }
             sqlcon.Close();
             return count;
@@ -426,25 +426,22 @@ namespace unnamedProject
         {
             int ticketCount;
             int count = 0;
-            string query = "Select COUNT(*) FROM tickets WHERE ticket_status = " + type;
+            string query = "Select COUNT(*) FROM tickets";
             sqlcon.Open();
             SqlCommand command = new SqlCommand(query, sqlcon);
             SqlDataReader read = command.ExecuteReader();
 
             while (read.Read())
             {
-                count++;
+                count = read.GetInt32(0);
             }
 
             sqlcon.Close();
-            if(type == 2)
-            {
-                ticketCount = GetTicketCount();
-            }
+            
             ticketCount = GetTicketCount(type);
 
 
-            int percent = ((ticketCount*100 )/ count);
+            int percent = ((ticketCount*100)/ count);
             return percent;
         }
 

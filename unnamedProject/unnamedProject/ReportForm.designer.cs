@@ -114,6 +114,7 @@
             this.back.Size = new System.Drawing.Size(48, 48);
             this.back.TabIndex = 33;
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // backButtonList
             // 
@@ -179,9 +180,9 @@
             this.LblPercent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LblPercent.Location = new System.Drawing.Point(282, 219);
             this.LblPercent.Name = "LblPercent";
-            this.LblPercent.Size = new System.Drawing.Size(204, 16);
+            this.LblPercent.Size = new System.Drawing.Size(208, 16);
             this.LblPercent.TabIndex = 37;
-            this.LblPercent.Text = "Percent of All Tickets Unsolved:";
+            this.LblPercent.Text = "Percent of All Tickets Unsolved: ";
             // 
             // LblNew
             // 
@@ -191,9 +192,9 @@
             this.LblNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LblNew.Location = new System.Drawing.Point(282, 322);
             this.LblNew.Name = "LblNew";
-            this.LblNew.Size = new System.Drawing.Size(211, 16);
+            this.LblNew.Size = new System.Drawing.Size(215, 16);
             this.LblNew.TabIndex = 38;
-            this.LblNew.Text = "New Tickets in The Last 30 Days:";
+            this.LblNew.Text = "New Tickets in The Last 30 Days: ";
             // 
             // LblNum
             // 
