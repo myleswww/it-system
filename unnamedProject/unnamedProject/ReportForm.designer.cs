@@ -141,7 +141,7 @@
             this.LblReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblReport.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblReport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblReport.Location = new System.Drawing.Point(169, 67);
+            this.LblReport.Location = new System.Drawing.Point(324, 30);
             this.LblReport.Name = "LblReport";
             this.LblReport.Size = new System.Drawing.Size(84, 16);
             this.LblReport.TabIndex = 34;
@@ -153,7 +153,7 @@
             this.LblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblID.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblID.Location = new System.Drawing.Point(306, 67);
+            this.LblID.Location = new System.Drawing.Point(68, 65);
             this.LblID.Name = "LblID";
             this.LblID.Size = new System.Drawing.Size(82, 16);
             this.LblID.TabIndex = 35;
@@ -165,7 +165,7 @@
             this.LblManagerID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblManagerID.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblManagerID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblManagerID.Location = new System.Drawing.Point(468, 67);
+            this.LblManagerID.Location = new System.Drawing.Point(282, 65);
             this.LblManagerID.Name = "LblManagerID";
             this.LblManagerID.Size = new System.Drawing.Size(91, 16);
             this.LblManagerID.TabIndex = 36;
@@ -177,7 +177,7 @@
             this.LblPercent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblPercent.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPercent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblPercent.Location = new System.Drawing.Point(169, 242);
+            this.LblPercent.Location = new System.Drawing.Point(282, 219);
             this.LblPercent.Name = "LblPercent";
             this.LblPercent.Size = new System.Drawing.Size(204, 16);
             this.LblPercent.TabIndex = 37;
@@ -189,7 +189,7 @@
             this.LblNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblNew.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblNew.Location = new System.Drawing.Point(169, 327);
+            this.LblNew.Location = new System.Drawing.Point(282, 322);
             this.LblNew.Name = "LblNew";
             this.LblNew.Size = new System.Drawing.Size(211, 16);
             this.LblNew.TabIndex = 38;
@@ -201,7 +201,7 @@
             this.LblNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblNum.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblNum.Location = new System.Drawing.Point(169, 157);
+            this.LblNum.Location = new System.Drawing.Point(282, 145);
             this.LblNum.Name = "LblNum";
             this.LblNum.Size = new System.Drawing.Size(188, 16);
             this.LblNum.TabIndex = 39;
@@ -213,7 +213,7 @@
             this.LblDateTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblDateTime.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDateTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblDateTime.Location = new System.Drawing.Point(641, 67);
+            this.LblDateTime.Location = new System.Drawing.Point(535, 65);
             this.LblDateTime.Name = "LblDateTime";
             this.LblDateTime.Size = new System.Drawing.Size(41, 32);
             this.LblDateTime.TabIndex = 40;

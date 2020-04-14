@@ -23,13 +23,14 @@ namespace unnamedProject
 
         public string Password { get; set; } //set to protected so that it cannot be accessed by anyone
 
-        public Users(string username, string fname, string lname, string email, int levelAccess)
+        public Users(string username, string fname, string lname, string email, int levelAccess, int id)
         {
             Username = username;
             Fname = fname;
             Lname = lname;
             Email = email;
             LevelAccess = levelAccess;
+            Id = id;
         }
         public Users()
         {

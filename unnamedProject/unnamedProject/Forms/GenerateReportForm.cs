@@ -76,6 +76,10 @@ namespace unnamedProject.Forms
         private void btnUnsolvedTicket_Click(object sender, EventArgs e)
         {
             var report = new Thread(() => Application.Run(new ReportForm(0, current)));
+            report.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
         }
     }
 }

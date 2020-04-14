@@ -192,7 +192,7 @@ namespace unnamedProject
                     email = (string)reader["Email"];
                     levelAccess = (int)reader["levelAccess"];
                 }
-                Users currentUser = new Users(username, fname, lname, email, levelAccess);
+                Users currentUser = new Users(username, fname, lname, email, levelAccess, currentUserID);
                 return currentUser;
         }
 
@@ -373,10 +373,26 @@ namespace unnamedProject
         }
 
         //Function to get count of types of tickets
+        public int GetTicketCount()
+        {
+            int count = 0;
+            string query = "Select COUNT(*) FROM tickets";
+            sqlcon.Open();
+            SqlCommand command = new SqlCommand(query, sqlcon);
+            SqlDataReader read = command.ExecuteReader();
+
+            while (read.Read())
+            {
+                count++;
+            }
+            sqlcon.Close();
+            return count;
+
+        }
         public int GetTicketCount(int type)
         {
             int count = 0;
-            string query = "Select COUNT(*) FROM tickets WHERE type = " + type;
+            string query = "Select COUNT(*) FROM tickets WHERE ticket_status = " + type;
             sqlcon.Open();
             SqlCommand command = new SqlCommand(query, sqlcon);
             SqlDataReader read = command.ExecuteReader();
@@ -394,7 +410,7 @@ namespace unnamedProject
         public int GetTicketCount(DateTime date)
         {
             int count = 0;
-            string query = "Select COUNT(*) FROM tickets WHERE type = 0 AND date_accessed >= 'date'";
+            string query = "Select COUNT(*) FROM tickets WHERE date_accessed >= '" + date.ToString() + "'";
             sqlcon.Open();
             SqlCommand command = new SqlCommand(query, sqlcon);
             SqlDataReader read = command.ExecuteReader();
@@ -408,8 +424,9 @@ namespace unnamedProject
         }
         public int GetPercent(int type)
         {
+            int ticketCount;
             int count = 0;
-            string query = "Select COUNT(*) FROM tickets";
+            string query = "Select COUNT(*) FROM tickets WHERE ticket_status = " + type;
             sqlcon.Open();
             SqlCommand command = new SqlCommand(query, sqlcon);
             SqlDataReader read = command.ExecuteReader();
@@ -420,8 +437,12 @@ namespace unnamedProject
             }
 
             sqlcon.Close();
+            if(type == 2)
+            {
+                ticketCount = GetTicketCount();
+            }
+            ticketCount = GetTicketCount(type);
 
-            int ticketCount = GetTicketCount(type);
 
             int percent = ((ticketCount*100 )/ count);
             return percent;
