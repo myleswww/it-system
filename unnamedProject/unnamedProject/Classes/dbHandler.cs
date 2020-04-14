@@ -15,9 +15,13 @@ using System.Threading;
 namespace unnamedProject
 {
     class dbHandler
-    {      //connection string
+    {   
+        
+        //connection string
         public Users curretOnlineUser;
         SqlConnection sqlcon = new SqlConnection(@"Data Source=nhds2020.database.windows.net;Initial Catalog=NothingHelpDeskSpring2020;User ID=fruit;Password=mangoMaster!");
+       
+        
         public bool checkAndRecieve(string userName, string passWord)
         {
             sqlcon.Open(); //open the connection
@@ -84,6 +88,8 @@ namespace unnamedProject
             }
         }
 
+
+
         public void newUser(string username, string password, string fname, string lname, string email, int levelAccess)
         {//this function adds a new user into the database
             sqlcon.Open(); //open the connection
@@ -117,6 +123,8 @@ namespace unnamedProject
             sqlcon.Close();
         }
 
+
+
         public List<Tickets> LoadTicketsFromDb(int status) //loads list of tickets from the db based on what type of ticket we want, 0-3
         {
             //declare a list of Employee objects
@@ -135,6 +143,7 @@ namespace unnamedProject
                  * 1 - open
                  * 2 - FAP
                  * 3 - Closed
+                 * 4 - Unassigned
                  */
                 string query = "SELECT * FROM tickets WHERE ticket_status = " + status;
 
@@ -172,6 +181,8 @@ namespace unnamedProject
 
         }
 
+
+
         public Users LoadUserInfoFromDb(int currentUserID) //loads a single users info into a current user object
         {
             string username = null;
@@ -196,6 +207,8 @@ namespace unnamedProject
                 return currentUser;
         }
 
+
+
         public List<Users> LoadAll() //loads a list of every single user in the system
         {
             string query = "SELECT Id, Username, firstName, lastName, levelAccess FROM User_Info"; //select id and levelaccess so the admin can update someones access status if needed
@@ -219,6 +232,8 @@ namespace unnamedProject
 
         }
 
+
+
         public void UpdateUser(Users user)
         {
             //Lets update!!!!
@@ -237,6 +252,8 @@ namespace unnamedProject
             sqlcon.Close();
         }
 
+
+
         public void UpdateTicket(Tickets ticket) //updates tickets
         {
             sqlcon.Open();
@@ -250,6 +267,8 @@ namespace unnamedProject
             command.ExecuteNonQuery();
             sqlcon.Close();
         }
+
+
 
         //Function for adding new note to note table.
         public void AddNote(Notes note)
@@ -289,6 +308,8 @@ namespace unnamedProject
             sqlcon.Close();
         }
 
+
+
         //Gets list of notes that match a ticket ID
         public List<Notes> GetNotes(int ticketID)
         {
@@ -310,6 +331,10 @@ namespace unnamedProject
             sqlcon.Close();
             return noteList;
         }
+
+
+
+
         //TODO: Function for adding new report
         public int AddReport(Report report) //returns the id of the report to be displayed on the form
         {
@@ -349,6 +374,8 @@ namespace unnamedProject
             sqlcon.Close();
             return report.ID;
         }
+
+
         //Function to pull list of reports from database
         public List<Report> GetReports()
         {
@@ -372,6 +399,7 @@ namespace unnamedProject
             return reports;
         }
 
+
         //Function to get count of types of tickets
         public int GetTicketCount()
         {
@@ -389,6 +417,8 @@ namespace unnamedProject
             return count;
 
         }
+
+
         public int GetTicketCount(int type)
         {
             int count = 0;
@@ -422,6 +452,8 @@ namespace unnamedProject
             sqlcon.Close();
             return count;
         }
+
+
         public int GetPercent(int type)
         {
             int ticketCount;

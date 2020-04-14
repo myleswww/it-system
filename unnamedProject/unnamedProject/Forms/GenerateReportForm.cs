@@ -102,7 +102,11 @@ namespace unnamedProject.Forms
 
         private void BtnViewReports_Click(object sender, EventArgs e)
         {
+            var reports = new Thread(() => Application.Run(new ViewReportsForm(current)));
+            reports.Start();
 
+            Thread th = Thread.CurrentThread;
+            th.Abort();
         }
     }
 }

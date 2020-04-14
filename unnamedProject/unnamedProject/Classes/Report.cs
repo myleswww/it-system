@@ -28,6 +28,22 @@ namespace unnamedProject
 
         }
 
-        
+        public override string ToString()
+        {
+            string t = "";
+            switch (this.Type)
+            {
+                case 0:
+                    t = "Unsolved";
+                    break;
+                case 1:
+                    t = "Solved";
+                    break;
+                case 2:
+                    t = "Existing";
+                    break;
+            }
+            return "   ID: " + ID + "            Type: " + t + "            Date: " + this.Date.ToString();
+        }
     }
 }

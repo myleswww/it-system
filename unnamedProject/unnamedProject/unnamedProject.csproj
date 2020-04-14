@@ -138,6 +138,12 @@
     <Compile Include="Forms\ReportForm.designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ViewReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewReportsForm.Designer.cs">
+      <DependentUpon>ViewReportsForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewExistingProblems.resx">
       <DependentUpon>ViewExistingProblems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewReportsForm.resx">
+      <DependentUpon>ViewReportsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewTicketForm.resx">
       <DependentUpon>ViewTicketForm.cs</DependentUpon>

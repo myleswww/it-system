@@ -16,7 +16,9 @@ namespace unnamedProject
         Users current;
         public void ViewExistingProblems_Load(object sender, EventArgs e)
         {
-
+            dbHandler handler = new dbHandler();
+            List<Tickets> tickets = handler.LoadTicketsFromDb(4);
+            LstBxProblems.Items.AddRange(tickets.ToArray());
         }
         public ViewExistingProblems(Users current)
         {
@@ -26,7 +28,7 @@ namespace unnamedProject
 
         private void back_Click(object sender, EventArgs e)
         {
-            var admin = new Thread(() => Application.Run(new AdminForm(current)));
+            var admin = new Thread(() => Application.Run(current.getForm()));
             admin.Start();
 
             Thread th = Thread.CurrentThread;
