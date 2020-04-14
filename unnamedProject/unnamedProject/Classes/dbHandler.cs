@@ -310,5 +310,32 @@ namespace unnamedProject
             sqlcon.Close();
             return noteList;
         }
+        //TODO: Function for adding new report
+        public void AddReport()
+        {
+
+        }
+        //TODO: Function to pull list of reports from database
+        public List<Report> GetReports()
+        {
+            string query = "SELECT * FROM reports";
+            sqlcon.Open();
+            SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
+            DataTable table = new DataTable("Reports");
+            sda.Fill(table);
+            List<Report> reports = new List<Report>();
+            reports = (from DataRow r in table.Rows
+                       select new Report()
+                       {
+                           ID = (int)r["ID"],
+                           Date = (DateTime)r["date_accessed"],
+                           UserID = (int)r["User_Info_Id"],
+                           Description = r["description"].ToString(),
+                           Type = (int)r["type"]
+
+                       }).ToList();
+            sqlcon.Close();
+            return reports;
+        }
     }
 }

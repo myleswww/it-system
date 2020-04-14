@@ -1,6 +1,6 @@
-﻿namespace unnamedProject.Forms
+﻿namespace unnamedProject
 {
-    partial class GenerateReportForm
+    partial class ReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenerateReportForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.fullBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
             this.backButtonList = new System.Windows.Forms.ImageList(this.components);
-            this.lblReportText = new System.Windows.Forms.Label();
-            this.btnUnsolvedTicket = new System.Windows.Forms.Button();
-            this.btnSolvedTickets = new System.Windows.Forms.Button();
-            this.btnExistingTickets = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.BtnViewReports = new System.Windows.Forms.Button();
+            this.LblReport = new System.Windows.Forms.Label();
+            this.LblID = new System.Windows.Forms.Label();
+            this.LblManagerID = new System.Windows.Forms.Label();
+            this.LblPercent = new System.Windows.Forms.Label();
+            this.LblNew = new System.Windows.Forms.Label();
+            this.LblNum = new System.Windows.Forms.Label();
+            this.LblDateTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // minimizeBtn
@@ -57,10 +59,9 @@
             this.minimizeBtn.Location = new System.Drawing.Point(707, 8);
             this.minimizeBtn.Name = "minimizeBtn";
             this.minimizeBtn.Size = new System.Drawing.Size(21, 30);
-            this.minimizeBtn.TabIndex = 29;
+            this.minimizeBtn.TabIndex = 32;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
-            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
             // 
             // fullBtn
             // 
@@ -74,9 +75,8 @@
             this.fullBtn.Location = new System.Drawing.Point(733, 18);
             this.fullBtn.Name = "fullBtn";
             this.fullBtn.Size = new System.Drawing.Size(18, 11);
-            this.fullBtn.TabIndex = 28;
+            this.fullBtn.TabIndex = 31;
             this.fullBtn.UseVisualStyleBackColor = true;
-            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
             // 
             // exitBtn
             // 
@@ -91,10 +91,9 @@
             this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(38, 30);
-            this.exitBtn.TabIndex = 27;
+            this.exitBtn.TabIndex = 30;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // back
             // 
@@ -113,9 +112,8 @@
             this.back.Margin = new System.Windows.Forms.Padding(4);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(48, 48);
-            this.back.TabIndex = 30;
+            this.back.TabIndex = 33;
             this.back.UseVisualStyleBackColor = false;
-            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // backButtonList
             // 
@@ -123,54 +121,6 @@
             this.backButtonList.TransparentColor = System.Drawing.Color.Transparent;
             this.backButtonList.Images.SetKeyName(0, "icons8-rewind-button-round-80.png");
             this.backButtonList.Images.SetKeyName(1, "backbutton.png");
-            // 
-            // lblReportText
-            // 
-            this.lblReportText.AutoSize = true;
-            this.lblReportText.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportText.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblReportText.Location = new System.Drawing.Point(269, 130);
-            this.lblReportText.Name = "lblReportText";
-            this.lblReportText.Size = new System.Drawing.Size(102, 19);
-            this.lblReportText.TabIndex = 31;
-            this.lblReportText.Text = "Report Type:";
-            // 
-            // btnUnsolvedTicket
-            // 
-            this.btnUnsolvedTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUnsolvedTicket.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUnsolvedTicket.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUnsolvedTicket.Location = new System.Drawing.Point(295, 171);
-            this.btnUnsolvedTicket.Name = "btnUnsolvedTicket";
-            this.btnUnsolvedTicket.Size = new System.Drawing.Size(172, 24);
-            this.btnUnsolvedTicket.TabIndex = 32;
-            this.btnUnsolvedTicket.Text = "Unsolved Tickets";
-            this.btnUnsolvedTicket.UseVisualStyleBackColor = true;
-            this.btnUnsolvedTicket.Click += new System.EventHandler(this.btnUnsolvedTicket_Click);
-            // 
-            // btnSolvedTickets
-            // 
-            this.btnSolvedTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolvedTickets.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolvedTickets.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSolvedTickets.Location = new System.Drawing.Point(295, 215);
-            this.btnSolvedTickets.Name = "btnSolvedTickets";
-            this.btnSolvedTickets.Size = new System.Drawing.Size(172, 24);
-            this.btnSolvedTickets.TabIndex = 33;
-            this.btnSolvedTickets.Text = "Solved Tickets";
-            this.btnSolvedTickets.UseVisualStyleBackColor = true;
-            // 
-            // btnExistingTickets
-            // 
-            this.btnExistingTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExistingTickets.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExistingTickets.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExistingTickets.Location = new System.Drawing.Point(295, 263);
-            this.btnExistingTickets.Name = "btnExistingTickets";
-            this.btnExistingTickets.Size = new System.Drawing.Size(172, 24);
-            this.btnExistingTickets.TabIndex = 34;
-            this.btnExistingTickets.Text = "Existing Tickets";
-            this.btnExistingTickets.UseVisualStyleBackColor = true;
             // 
             // imageList1
             // 
@@ -185,38 +135,112 @@
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList2.Images.SetKeyName(0, "icons8-restore-down-52.png");
             // 
-            // BtnViewReports
+            // LblReport
             // 
-            this.BtnViewReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnViewReports.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnViewReports.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnViewReports.Location = new System.Drawing.Point(295, 309);
-            this.BtnViewReports.Name = "BtnViewReports";
-            this.BtnViewReports.Size = new System.Drawing.Size(172, 24);
-            this.BtnViewReports.TabIndex = 35;
-            this.BtnViewReports.Text = "View Reports";
-            this.BtnViewReports.UseVisualStyleBackColor = true;
+            this.LblReport.AutoSize = true;
+            this.LblReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblReport.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblReport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblReport.Location = new System.Drawing.Point(169, 67);
+            this.LblReport.Name = "LblReport";
+            this.LblReport.Size = new System.Drawing.Size(84, 16);
+            this.LblReport.TabIndex = 34;
+            this.LblReport.Text = "ReportLabel";
             // 
-            // GenerateReportForm
+            // LblID
+            // 
+            this.LblID.AutoSize = true;
+            this.LblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblID.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblID.Location = new System.Drawing.Point(306, 67);
+            this.LblID.Name = "LblID";
+            this.LblID.Size = new System.Drawing.Size(82, 16);
+            this.LblID.TabIndex = 35;
+            this.LblID.Text = "Report ID #";
+            // 
+            // LblManagerID
+            // 
+            this.LblManagerID.AutoSize = true;
+            this.LblManagerID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblManagerID.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblManagerID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblManagerID.Location = new System.Drawing.Point(468, 67);
+            this.LblManagerID.Name = "LblManagerID";
+            this.LblManagerID.Size = new System.Drawing.Size(91, 16);
+            this.LblManagerID.TabIndex = 36;
+            this.LblManagerID.Text = "Manager ID #";
+            // 
+            // LblPercent
+            // 
+            this.LblPercent.AutoSize = true;
+            this.LblPercent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblPercent.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPercent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblPercent.Location = new System.Drawing.Point(169, 242);
+            this.LblPercent.Name = "LblPercent";
+            this.LblPercent.Size = new System.Drawing.Size(204, 16);
+            this.LblPercent.TabIndex = 37;
+            this.LblPercent.Text = "Percent of All Tickets Unsolved:";
+            // 
+            // LblNew
+            // 
+            this.LblNew.AutoSize = true;
+            this.LblNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblNew.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblNew.Location = new System.Drawing.Point(169, 327);
+            this.LblNew.Name = "LblNew";
+            this.LblNew.Size = new System.Drawing.Size(211, 16);
+            this.LblNew.TabIndex = 38;
+            this.LblNew.Text = "New Tickets in The Last 30 Days:";
+            // 
+            // LblNum
+            // 
+            this.LblNum.AutoSize = true;
+            this.LblNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblNum.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblNum.Location = new System.Drawing.Point(169, 157);
+            this.LblNum.Name = "LblNum";
+            this.LblNum.Size = new System.Drawing.Size(188, 16);
+            this.LblNum.TabIndex = 39;
+            this.LblNum.Text = "Number of Unsolved Tickets: ";
+            // 
+            // LblDateTime
+            // 
+            this.LblDateTime.AutoSize = true;
+            this.LblDateTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblDateTime.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDateTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblDateTime.Location = new System.Drawing.Point(641, 67);
+            this.LblDateTime.Name = "LblDateTime";
+            this.LblDateTime.Size = new System.Drawing.Size(41, 32);
+            this.LblDateTime.TabIndex = 40;
+            this.LblDateTime.Text = "Date:\r\nTime:";
+            // 
+            // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BtnViewReports);
-            this.Controls.Add(this.btnExistingTickets);
-            this.Controls.Add(this.btnSolvedTickets);
-            this.Controls.Add(this.btnUnsolvedTicket);
-            this.Controls.Add(this.lblReportText);
+            this.Controls.Add(this.LblDateTime);
+            this.Controls.Add(this.LblNum);
+            this.Controls.Add(this.LblNew);
+            this.Controls.Add(this.LblPercent);
+            this.Controls.Add(this.LblManagerID);
+            this.Controls.Add(this.LblID);
+            this.Controls.Add(this.LblReport);
             this.Controls.Add(this.back);
             this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GenerateReportForm";
+            this.Name = "ReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GenerateReportForm";
-            this.Load += new System.EventHandler(this.GenerateReportForm_Load);
+            this.Text = "ReportForm";
+            this.Load += new System.EventHandler(this.ReportForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,13 +253,15 @@
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.ImageList backButtonList;
-        private System.Windows.Forms.Label lblReportText;
-        private System.Windows.Forms.Button btnUnsolvedTicket;
-        private System.Windows.Forms.Button btnSolvedTickets;
-        private System.Windows.Forms.Button btnExistingTickets;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button BtnViewReports;
+        private System.Windows.Forms.Label LblReport;
+        private System.Windows.Forms.Label LblID;
+        private System.Windows.Forms.Label LblManagerID;
+        private System.Windows.Forms.Label LblPercent;
+        private System.Windows.Forms.Label LblNew;
+        private System.Windows.Forms.Label LblNum;
+        private System.Windows.Forms.Label LblDateTime;
     }
 }

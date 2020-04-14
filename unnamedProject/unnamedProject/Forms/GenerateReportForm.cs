@@ -72,5 +72,10 @@ namespace unnamedProject.Forms
             Thread th = Thread.CurrentThread;
             th.Abort();
         }
+
+        private void btnUnsolvedTicket_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
