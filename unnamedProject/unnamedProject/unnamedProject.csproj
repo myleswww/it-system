@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Notes.cs" />
     <Compile Include="Classes\Tickets.cs" />
     <Compile Include="Classes\Users.cs" />
     <Compile Include="Forms\AdminForm.cs">
@@ -125,13 +124,12 @@
     <Compile Include="Forms\ViewExistingProblems.Designer.cs">
       <DependentUpon>ViewExistingProblems.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportForm.cs">
+    <Compile Include="Forms\WebBrowserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReportForm.Designer.cs">
-      <DependentUpon>ReportForm.cs</DependentUpon>
+    <Compile Include="Forms\WebBrowserForm.Designer.cs">
+      <DependentUpon>WebBrowserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Report.cs" />
     <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,9 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProjectMemberForm.resx">
       <DependentUpon>ProjectMemberForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReportForm.resx">
-      <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportManagerForm.resx">
       <DependentUpon>ReportManagerForm.cs</DependentUpon>
@@ -169,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewTicketForm.resx">
       <DependentUpon>ViewTicketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WebBrowserForm.resx">
+      <DependentUpon>WebBrowserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

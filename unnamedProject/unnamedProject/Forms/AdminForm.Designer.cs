@@ -383,6 +383,7 @@
             this.onlineHelpBtn.TabIndex = 10;
             this.onlineHelpBtn.Text = "Online Help";
             this.onlineHelpBtn.UseVisualStyleBackColor = true;
+            this.onlineHelpBtn.Click += new System.EventHandler(this.onlineHelpBtn_Click_1);
             // 
             // ticketTable
             // 

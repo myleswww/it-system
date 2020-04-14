@@ -180,6 +180,7 @@ namespace unnamedProject
 
         private void openTab_Click(object sender, EventArgs e)
         {
+            OpenList.Visible = true;
             OpenList.Items.Clear();
             tickets = dbhadler.LoadTicketsFromDb(1);
             OpenList.Items.AddRange(tickets.ToArray());
@@ -187,6 +188,7 @@ namespace unnamedProject
 
         private void FAPTab_Click(object sender, EventArgs e)
         {
+            OpenList.Visible = true;
             OpenList.Items.Clear();
             tickets = dbhadler.LoadTicketsFromDb(2);
             OpenList.Items.AddRange(tickets.ToArray());
@@ -194,6 +196,7 @@ namespace unnamedProject
 
         private void newTab_Click(object sender, EventArgs e)
         {
+            OpenList.Visible = true;
             OpenList.Items.Clear();
             tickets = dbhadler.LoadTicketsFromDb(0);
             OpenList.Items.AddRange(tickets.ToArray());
@@ -201,6 +204,7 @@ namespace unnamedProject
 
         private void closedTab_Click(object sender, EventArgs e)
         {
+            OpenList.Visible = true;
             OpenList.Items.Clear();
             tickets = dbhadler.LoadTicketsFromDb(3);
             OpenList.Items.AddRange(tickets.ToArray());
@@ -208,7 +212,22 @@ namespace unnamedProject
 
         private void OpenList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            OpenList.Visible = true;
+        }
 
+        private void onlineHelpBtn_Click(object sender, EventArgs e)
+        {
+            OpenList.Visible = false;
+        }
+
+        private void onlineHelpBtn_Click_1(object sender, EventArgs e)
+        {
+            var webbrowser = new Thread(() => Application.Run(new WebBrowserForm(current)));
+            webbrowser.SetApartmentState(ApartmentState.STA);
+            webbrowser.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
         }
     }
 }
