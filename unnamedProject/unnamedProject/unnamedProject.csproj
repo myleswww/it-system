@@ -132,10 +132,10 @@
       <DependentUpon>WebBrowserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Report.cs" />
-    <Compile Include="ReportForm.cs">
+    <Compile Include="Forms\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportForm.designer.cs">
+    <Compile Include="Forms\ReportForm.designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\AdminForm.resx">
@@ -189,7 +189,7 @@
     <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportForm.resx">
+    <EmbeddedResource Include="Forms\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />

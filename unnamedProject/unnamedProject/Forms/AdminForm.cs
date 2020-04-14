@@ -108,9 +108,13 @@ namespace unnamedProject
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            
+            LblHello.Text += current.Fname + "!";
+            OpenList.Visible = true;
+            OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb(1);
+            OpenList.Items.AddRange(tickets.ToArray());
             //WindowState = FormWindowState.Maximized;
-            if(this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
+            if (this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
             {
                 //maximize button image is set to the png image
                 fullBtn.ImageIndex = 0;
@@ -167,7 +171,7 @@ namespace unnamedProject
 
         private void problemBtn_Click(object sender, EventArgs e)
         {
-            // Myles please help me this doesn't work.
+            
             
             this.Hide();
             var existing = new Thread(() => Application.Run(new ViewExistingProblems(current)));

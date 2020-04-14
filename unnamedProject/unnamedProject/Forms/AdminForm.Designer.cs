@@ -52,6 +52,7 @@
             this.onlineHelpBtn = new System.Windows.Forms.Button();
             this.ticketTable = new System.Windows.Forms.TableLayoutPanel();
             this.OpenList = new System.Windows.Forms.ListBox();
+            this.LblHello = new System.Windows.Forms.Label();
             this.optionPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.ticketTable.SuspendLayout();
@@ -418,12 +419,24 @@
             this.OpenList.TabIndex = 0;
             this.OpenList.SelectedIndexChanged += new System.EventHandler(this.OpenList_SelectedIndexChanged);
             // 
+            // LblHello
+            // 
+            this.LblHello.AutoSize = true;
+            this.LblHello.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHello.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblHello.Location = new System.Drawing.Point(411, 18);
+            this.LblHello.Name = "LblHello";
+            this.LblHello.Size = new System.Drawing.Size(60, 22);
+            this.LblHello.TabIndex = 20;
+            this.LblHello.Text = "Hello ";
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1068, 554);
+            this.Controls.Add(this.LblHello);
             this.Controls.Add(this.buttonCollapse);
             this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.fullBtn);
@@ -440,6 +453,7 @@
             this.mainPanel.ResumeLayout(false);
             this.ticketTable.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -467,5 +481,6 @@
         private System.Windows.Forms.Button onlineHelpBtn;
         private System.Windows.Forms.TableLayoutPanel ticketTable;
         private System.Windows.Forms.ListBox OpenList;
+        private System.Windows.Forms.Label LblHello;
     }
 }
