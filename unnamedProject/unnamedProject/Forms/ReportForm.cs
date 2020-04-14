@@ -27,8 +27,8 @@ namespace unnamedProject
             handler = new dbHandler();
 
             int tickets = getTickets();
-            int percent = getPercent();
-            int newTick = getNewTickets();
+            //int percent = getPercent();
+            //int newTick = getNewTickets();
 
             switch (report.Type)
             {
@@ -47,15 +47,16 @@ namespace unnamedProject
             LblManagerID.Text = report.UserID.ToString();
             LblDateTime.Text = report.Date.ToString();
             LblNum.Text = tickets.ToString();
-            LblPercent.Text = percent.ToString();
+           //LblPercent.Text = percent.ToString();
         }
-        /*
+        
         //TODO: Function to get number of certain kinds of tickets
         public int getTickets()
         {
-
+            int count = handler.GetTicketCount(report.Type);
+            return count;
         }
-
+        /*
         //TODO: Function to get percentage of certain kinds of tickets
         public int getPercent()
         {

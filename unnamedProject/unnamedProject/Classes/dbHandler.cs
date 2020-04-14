@@ -337,5 +337,38 @@ namespace unnamedProject
             sqlcon.Close();
             return reports;
         }
+
+        //Function to get count of types of tickets
+        public int GetTicketCount(int type)
+        {
+            int count = 0;
+            string query = "Select COUNT(*) FROM tickets WHERE type = " + type;
+            sqlcon.Open();
+            SqlCommand command = new SqlCommand(query, sqlcon);
+            SqlDataReader read = command.ExecuteReader();
+            
+            while (read.Read())
+            {
+                count++;
+            }
+            sqlcon.Close();
+            return count;
+            
+        }
+        /*public int GetPercent(int type)
+        {
+            int count = 0;
+            string query = "Select COUNT(*) FROM tickets";
+            sqlcon.Open();
+            SqlCommand command = new SqlCommand(query, sqlcon);
+            SqlDataReader read = command.ExecuteReader();
+
+            while (read.Read())
+            {
+
+            }
+
+        }
+        */
     }
 }
