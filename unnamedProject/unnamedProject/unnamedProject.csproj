@@ -49,10 +49,10 @@
   <ItemGroup>
     <Compile Include="Classes\Tickets.cs" />
     <Compile Include="Classes\Users.cs" />
-    <Compile Include="Forms\AdminForm.cs">
+    <Compile Include="Forms\User Forms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForm.Designer.cs">
+    <Compile Include="Forms\User Forms\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form1.cs">
@@ -69,16 +69,16 @@
     <Compile Include="Forms\GenerateReportForm.Designer.cs">
       <DependentUpon>GenerateReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ProjectMemberForm.cs">
+    <Compile Include="Forms\User Forms\ProjectMemberForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ProjectMemberForm.Designer.cs">
+    <Compile Include="Forms\User Forms\ProjectMemberForm.Designer.cs">
       <DependentUpon>ProjectMemberForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportManagerForm.cs">
+    <Compile Include="Forms\User Forms\ReportManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReportManagerForm.Designer.cs">
+    <Compile Include="Forms\User Forms\ReportManagerForm.Designer.cs">
       <DependentUpon>ReportManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SettingsForm.cs">
@@ -93,10 +93,10 @@
     <Compile Include="Forms\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SupportForm.cs">
+    <Compile Include="Forms\User Forms\SupportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SupportForm.Designer.cs">
+    <Compile Include="Forms\User Forms\SupportForm.Designer.cs">
       <DependentUpon>SupportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserViewForm.cs">
@@ -144,7 +144,7 @@
     <Compile Include="Forms\ViewReportsForm.Designer.cs">
       <DependentUpon>ViewReportsForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\AdminForm.resx">
+    <EmbeddedResource Include="Forms\User Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
@@ -155,10 +155,10 @@
       <DependentUpon>GenerateReportForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ProjectMemberForm.resx">
+    <EmbeddedResource Include="Forms\User Forms\ProjectMemberForm.resx">
       <DependentUpon>ProjectMemberForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReportManagerForm.resx">
+    <EmbeddedResource Include="Forms\User Forms\ReportManagerForm.resx">
       <DependentUpon>ReportManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SettingsForm.resx">
@@ -167,7 +167,7 @@
     <EmbeddedResource Include="Forms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SupportForm.resx">
+    <EmbeddedResource Include="Forms\User Forms\SupportForm.resx">
       <DependentUpon>SupportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserViewForm.resx">

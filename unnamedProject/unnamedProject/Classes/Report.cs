@@ -31,7 +31,7 @@ namespace unnamedProject
         public override string ToString()
         {
             string t = "";
-            switch (this.Type)
+            switch (this.Type) //depending on the type, this will return the string containing the report type
             {
                 case 0:
                     t = "Unsolved";
