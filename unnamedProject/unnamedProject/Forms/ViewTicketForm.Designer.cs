@@ -39,15 +39,18 @@
             this.back = new System.Windows.Forms.Button();
             this.backButtonList = new System.Windows.Forms.ImageList(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.LblTicket = new System.Windows.Forms.Label();
             this.LblID = new System.Windows.Forms.Label();
-            this.TxtBxName = new System.Windows.Forms.TextBox();
             this.LblName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.TxtBxName = new System.Windows.Forms.TextBox();
+            this.lblDescription = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.webBrowserViewTicket = new System.Windows.Forms.WebBrowser();
+            this.lblContact = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // minimizeBtn
@@ -141,31 +144,19 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.LblTicket);
             this.flowLayoutPanel1.Controls.Add(this.LblID);
             this.flowLayoutPanel1.Controls.Add(this.LblName);
             this.flowLayoutPanel1.Controls.Add(this.TxtBxName);
-            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Controls.Add(this.lblDescription);
             this.flowLayoutPanel1.Controls.Add(this.textBox1);
+            this.flowLayoutPanel1.Controls.Add(this.lblContact);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 68);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 370);
             this.flowLayoutPanel1.TabIndex = 32;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(269, 68);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(250, 370);
-            this.flowLayoutPanel2.TabIndex = 33;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(525, 68);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(250, 370);
-            this.flowLayoutPanel3.TabIndex = 34;
             // 
             // LblTicket
             // 
@@ -194,6 +185,19 @@
             this.LblID.TabIndex = 1;
             this.LblID.Text = "ID";
             // 
+            // LblName
+            // 
+            this.LblName.AutoSize = true;
+            this.LblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flowLayoutPanel1.SetFlowBreak(this.LblName, true);
+            this.LblName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblName.Location = new System.Drawing.Point(3, 19);
+            this.LblName.Name = "LblName";
+            this.LblName.Size = new System.Drawing.Size(47, 19);
+            this.LblName.TabIndex = 3;
+            this.LblName.Text = "Name";
+            // 
             // TxtBxName
             // 
             this.TxtBxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -208,34 +212,66 @@
             this.TxtBxName.TabIndex = 2;
             this.TxtBxName.Text = "Name";
             // 
-            // LblName
+            // lblDescription
             // 
-            this.LblName.AutoSize = true;
-            this.LblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LblName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flowLayoutPanel1.SetFlowBreak(this.LblName, true);
-            this.LblName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblName.Location = new System.Drawing.Point(3, 19);
-            this.LblName.Name = "LblName";
-            this.LblName.Size = new System.Drawing.Size(47, 19);
-            this.LblName.TabIndex = 3;
-            this.LblName.Text = "Name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flowLayoutPanel1.SetFlowBreak(this.lblDescription, true);
+            this.lblDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDescription.Location = new System.Drawing.Point(3, 63);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(81, 19);
+            this.lblDescription.TabIndex = 4;
+            this.lblDescription.Text = "Description";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(55, 66);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.flowLayoutPanel1.SetFlowBreak(this.textBox1, true);
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox1.Location = new System.Drawing.Point(3, 94);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 5;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.webBrowserViewTicket);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(269, 68);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(250, 370);
+            this.flowLayoutPanel2.TabIndex = 33;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(525, 68);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(250, 370);
+            this.flowLayoutPanel3.TabIndex = 34;
+            // 
+            // webBrowserViewTicket
+            // 
+            this.webBrowserViewTicket.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.webBrowserViewTicket.Location = new System.Drawing.Point(3, 3);
+            this.webBrowserViewTicket.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowserViewTicket.Name = "webBrowserViewTicket";
+            this.webBrowserViewTicket.Size = new System.Drawing.Size(250, 20);
+            this.webBrowserViewTicket.TabIndex = 0;
+            // 
+            // lblContact
+            // 
+            this.lblContact.AutoSize = true;
+            this.lblContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContact.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblContact.Location = new System.Drawing.Point(3, 119);
+            this.lblContact.Name = "lblContact";
+            this.lblContact.Size = new System.Drawing.Size(58, 19);
+            this.lblContact.TabIndex = 7;
+            this.lblContact.Text = "Contact";
             // 
             // ViewTicketForm
             // 
@@ -255,6 +291,7 @@
             this.Text = "ViewTicketForm";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,7 +314,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.TextBox TxtBxName;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.WebBrowser webBrowserViewTicket;
+        private System.Windows.Forms.Label lblContact;
     }
 }
