@@ -43,10 +43,12 @@
             this.FAPTab = new System.Windows.Forms.Button();
             this.newTab = new System.Windows.Forms.Button();
             this.onlineHelpBtn = new System.Windows.Forms.Button();
-            this.ticketTable = new System.Windows.Forms.TableLayoutPanel();
             this.logOut = new System.Windows.Forms.Button();
             this.settingsBtn = new System.Windows.Forms.Button();
             this.optionPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnViewProbs = new System.Windows.Forms.Button();
+            this.btnSubmitTicket = new System.Windows.Forms.Button();
+            this.OpenList = new System.Windows.Forms.ListBox();
             this.mainPanel.SuspendLayout();
             this.optionPanel.SuspendLayout();
             this.SuspendLayout();
@@ -146,7 +148,7 @@
             this.mainPanel.Controls.Add(this.FAPTab);
             this.mainPanel.Controls.Add(this.newTab);
             this.mainPanel.Controls.Add(this.onlineHelpBtn);
-            this.mainPanel.Controls.Add(this.ticketTable);
+            this.mainPanel.Controls.Add(this.OpenList);
             this.mainPanel.Location = new System.Drawing.Point(1, 61);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1057, 491);
@@ -166,6 +168,7 @@
             this.openTab.TabIndex = 6;
             this.openTab.Text = "Open";
             this.openTab.UseVisualStyleBackColor = true;
+            this.openTab.Click += new System.EventHandler(this.openTab_Click);
             // 
             // closedTab
             // 
@@ -181,6 +184,7 @@
             this.closedTab.TabIndex = 7;
             this.closedTab.Text = "Closed";
             this.closedTab.UseVisualStyleBackColor = true;
+            this.closedTab.Click += new System.EventHandler(this.closedTab_Click);
             // 
             // FAPTab
             // 
@@ -196,6 +200,7 @@
             this.FAPTab.TabIndex = 8;
             this.FAPTab.Text = "FAP";
             this.FAPTab.UseVisualStyleBackColor = true;
+            this.FAPTab.Click += new System.EventHandler(this.FAPTab_Click);
             // 
             // newTab
             // 
@@ -211,6 +216,7 @@
             this.newTab.TabIndex = 9;
             this.newTab.Text = "New";
             this.newTab.UseVisualStyleBackColor = true;
+            this.newTab.Click += new System.EventHandler(this.newTab_Click);
             // 
             // onlineHelpBtn
             // 
@@ -226,22 +232,7 @@
             this.onlineHelpBtn.TabIndex = 10;
             this.onlineHelpBtn.Text = "Online Help";
             this.onlineHelpBtn.UseVisualStyleBackColor = true;
-            // 
-            // ticketTable
-            // 
-            this.ticketTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ticketTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ticketTable.ColumnCount = 2;
-            this.ticketTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ticketTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ticketTable.Location = new System.Drawing.Point(3, 32);
-            this.ticketTable.Name = "ticketTable";
-            this.ticketTable.RowCount = 2;
-            this.ticketTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ticketTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ticketTable.Size = new System.Drawing.Size(1051, 449);
-            this.ticketTable.TabIndex = 11;
+            this.onlineHelpBtn.Click += new System.EventHandler(this.onlineHelpBtn_Click);
             // 
             // logOut
             // 
@@ -257,7 +248,7 @@
             this.logOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOut.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.logOut.Location = new System.Drawing.Point(0, 31);
+            this.logOut.Location = new System.Drawing.Point(0, 91);
             this.logOut.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.logOut.Name = "logOut";
             this.logOut.Size = new System.Drawing.Size(214, 28);
@@ -276,13 +267,14 @@
             this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.settingsBtn.Location = new System.Drawing.Point(0, 1);
+            this.settingsBtn.Location = new System.Drawing.Point(0, 61);
             this.settingsBtn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.settingsBtn.Name = "settingsBtn";
             this.settingsBtn.Size = new System.Drawing.Size(214, 28);
             this.settingsBtn.TabIndex = 5;
             this.settingsBtn.Text = "Settings";
             this.settingsBtn.UseVisualStyleBackColor = false;
+            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
             // 
             // optionPanel
             // 
@@ -291,6 +283,8 @@
             this.optionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(188)))), ((int)(((byte)(94)))));
             this.optionPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.optionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.optionPanel.Controls.Add(this.btnSubmitTicket);
+            this.optionPanel.Controls.Add(this.btnViewProbs);
             this.optionPanel.Controls.Add(this.settingsBtn);
             this.optionPanel.Controls.Add(this.logOut);
             this.optionPanel.Location = new System.Drawing.Point(1, 59);
@@ -299,6 +293,58 @@
             this.optionPanel.Size = new System.Drawing.Size(214, 501);
             this.optionPanel.TabIndex = 23;
             this.optionPanel.Visible = false;
+            // 
+            // btnViewProbs
+            // 
+            this.btnViewProbs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnViewProbs.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnViewProbs.FlatAppearance.BorderSize = 0;
+            this.btnViewProbs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnViewProbs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewProbs.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewProbs.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnViewProbs.Location = new System.Drawing.Point(0, 31);
+            this.btnViewProbs.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnViewProbs.Name = "btnViewProbs";
+            this.btnViewProbs.Size = new System.Drawing.Size(214, 28);
+            this.btnViewProbs.TabIndex = 6;
+            this.btnViewProbs.Text = "View Existing Problems";
+            this.btnViewProbs.UseVisualStyleBackColor = false;
+            this.btnViewProbs.Click += new System.EventHandler(this.btnViewProbs_Click);
+            // 
+            // btnSubmitTicket
+            // 
+            this.btnSubmitTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSubmitTicket.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSubmitTicket.FlatAppearance.BorderSize = 0;
+            this.btnSubmitTicket.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.btnSubmitTicket.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnSubmitTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmitTicket.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmitTicket.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSubmitTicket.Location = new System.Drawing.Point(0, 1);
+            this.btnSubmitTicket.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnSubmitTicket.Name = "btnSubmitTicket";
+            this.btnSubmitTicket.Size = new System.Drawing.Size(214, 28);
+            this.btnSubmitTicket.TabIndex = 7;
+            this.btnSubmitTicket.Text = "Submit New Ticket";
+            this.btnSubmitTicket.UseVisualStyleBackColor = false;
+            this.btnSubmitTicket.Click += new System.EventHandler(this.btnSubmitTicket_Click);
+            // 
+            // OpenList
+            // 
+            this.OpenList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OpenList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OpenList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.OpenList.FormattingEnabled = true;
+            this.OpenList.HorizontalScrollbar = true;
+            this.OpenList.ItemHeight = 16;
+            this.OpenList.Location = new System.Drawing.Point(4, 33);
+            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
+            this.OpenList.Name = "OpenList";
+            this.OpenList.Size = new System.Drawing.Size(1043, 436);
+            this.OpenList.TabIndex = 11;
             // 
             // ProjectMemberForm
             // 
@@ -338,9 +384,11 @@
         private System.Windows.Forms.Button FAPTab;
         private System.Windows.Forms.Button newTab;
         private System.Windows.Forms.Button onlineHelpBtn;
-        private System.Windows.Forms.TableLayoutPanel ticketTable;
         private System.Windows.Forms.Button logOut;
         private System.Windows.Forms.Button settingsBtn;
         private System.Windows.Forms.FlowLayoutPanel optionPanel;
+        private System.Windows.Forms.Button btnViewProbs;
+        private System.Windows.Forms.Button btnSubmitTicket;
+        private System.Windows.Forms.ListBox OpenList;
     }
 }

@@ -172,7 +172,6 @@ namespace unnamedProject
         private void problemBtn_Click(object sender, EventArgs e)
         {
             
-            
             this.Hide();
             var existing = new Thread(() => Application.Run(new ViewExistingProblems(current)));
             existing.Start();
@@ -210,7 +209,7 @@ namespace unnamedProject
         {
             OpenList.Visible = true;
             OpenList.Items.Clear();
-            tickets = dbhadler.LoadTicketsFromDb(3);
+            tickets = dbhadler.LoadTicketsFromDb(4);
             OpenList.Items.AddRange(tickets.ToArray());
         }
 
@@ -230,8 +229,6 @@ namespace unnamedProject
             webbrowser.SetApartmentState(ApartmentState.STA);
             webbrowser.Start();
 
-            Thread th = Thread.CurrentThread;
-            th.Abort();
         }
     }
 }

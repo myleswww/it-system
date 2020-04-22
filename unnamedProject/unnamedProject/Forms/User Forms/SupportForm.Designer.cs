@@ -43,10 +43,10 @@
             this.FAPTab = new System.Windows.Forms.Button();
             this.newTab = new System.Windows.Forms.Button();
             this.onlineHelpBtn = new System.Windows.Forms.Button();
-            this.ticketTable = new System.Windows.Forms.TableLayoutPanel();
             this.optionPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.settingsBtn = new System.Windows.Forms.Button();
             this.logOut = new System.Windows.Forms.Button();
+            this.OpenList = new System.Windows.Forms.ListBox();
             this.mainPanel.SuspendLayout();
             this.optionPanel.SuspendLayout();
             this.SuspendLayout();
@@ -145,7 +145,7 @@
             this.mainPanel.Controls.Add(this.FAPTab);
             this.mainPanel.Controls.Add(this.newTab);
             this.mainPanel.Controls.Add(this.onlineHelpBtn);
-            this.mainPanel.Controls.Add(this.ticketTable);
+            this.mainPanel.Controls.Add(this.OpenList);
             this.mainPanel.Location = new System.Drawing.Point(5, 64);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1063, 498);
@@ -165,6 +165,7 @@
             this.openTab.TabIndex = 6;
             this.openTab.Text = "Open";
             this.openTab.UseVisualStyleBackColor = true;
+            this.openTab.Click += new System.EventHandler(this.openTab_Click);
             // 
             // closedTab
             // 
@@ -180,6 +181,7 @@
             this.closedTab.TabIndex = 7;
             this.closedTab.Text = "Closed";
             this.closedTab.UseVisualStyleBackColor = true;
+            this.closedTab.Click += new System.EventHandler(this.closedTab_Click);
             // 
             // FAPTab
             // 
@@ -195,6 +197,7 @@
             this.FAPTab.TabIndex = 8;
             this.FAPTab.Text = "FAP";
             this.FAPTab.UseVisualStyleBackColor = true;
+            this.FAPTab.Click += new System.EventHandler(this.FAPTab_Click);
             // 
             // newTab
             // 
@@ -210,6 +213,7 @@
             this.newTab.TabIndex = 9;
             this.newTab.Text = "New";
             this.newTab.UseVisualStyleBackColor = true;
+            this.newTab.Click += new System.EventHandler(this.newTab_Click);
             // 
             // onlineHelpBtn
             // 
@@ -225,22 +229,7 @@
             this.onlineHelpBtn.TabIndex = 10;
             this.onlineHelpBtn.Text = "Online Help";
             this.onlineHelpBtn.UseVisualStyleBackColor = true;
-            // 
-            // ticketTable
-            // 
-            this.ticketTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ticketTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ticketTable.ColumnCount = 2;
-            this.ticketTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ticketTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ticketTable.Location = new System.Drawing.Point(3, 32);
-            this.ticketTable.Name = "ticketTable";
-            this.ticketTable.RowCount = 2;
-            this.ticketTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ticketTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ticketTable.Size = new System.Drawing.Size(1065, 466);
-            this.ticketTable.TabIndex = 11;
+            this.onlineHelpBtn.Click += new System.EventHandler(this.onlineHelpBtn_Click);
             // 
             // optionPanel
             // 
@@ -275,6 +264,7 @@
             this.settingsBtn.TabIndex = 5;
             this.settingsBtn.Text = "Settings";
             this.settingsBtn.UseVisualStyleBackColor = false;
+            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
             // 
             // logOut
             // 
@@ -298,6 +288,21 @@
             this.logOut.Text = "Log Out";
             this.logOut.UseVisualStyleBackColor = false;
             this.logOut.Click += new System.EventHandler(this.logOut_Click_1);
+            // 
+            // OpenList
+            // 
+            this.OpenList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OpenList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OpenList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.OpenList.FormattingEnabled = true;
+            this.OpenList.HorizontalScrollbar = true;
+            this.OpenList.ItemHeight = 16;
+            this.OpenList.Location = new System.Drawing.Point(4, 33);
+            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
+            this.OpenList.Name = "OpenList";
+            this.OpenList.Size = new System.Drawing.Size(1043, 436);
+            this.OpenList.TabIndex = 11;
             // 
             // SupportForm
             // 
@@ -337,9 +342,9 @@
         private System.Windows.Forms.Button FAPTab;
         private System.Windows.Forms.Button newTab;
         private System.Windows.Forms.Button onlineHelpBtn;
-        private System.Windows.Forms.TableLayoutPanel ticketTable;
         private System.Windows.Forms.FlowLayoutPanel optionPanel;
         private System.Windows.Forms.Button settingsBtn;
         private System.Windows.Forms.Button logOut;
+        private System.Windows.Forms.ListBox OpenList;
     }
 }

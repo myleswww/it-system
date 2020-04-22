@@ -61,15 +61,5 @@ namespace unnamedProject
         {
             WindowState = FormWindowState.Minimized;
         }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
     }
 }
