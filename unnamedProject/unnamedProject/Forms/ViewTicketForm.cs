@@ -16,5 +16,10 @@ namespace unnamedProject.Forms
         {
             InitializeComponent();
         }
+
+        private void ViewTicketForm_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
