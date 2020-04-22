@@ -51,10 +51,10 @@
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.minimizeBtn.Location = new System.Drawing.Point(696, 8);
+            this.minimizeBtn.Location = new System.Drawing.Point(522, 6);
             this.minimizeBtn.Margin = new System.Windows.Forms.Padding(2);
             this.minimizeBtn.Name = "minimizeBtn";
-            this.minimizeBtn.Size = new System.Drawing.Size(24, 32);
+            this.minimizeBtn.Size = new System.Drawing.Size(18, 26);
             this.minimizeBtn.TabIndex = 21;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
@@ -67,10 +67,10 @@
             this.fullBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.fullBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fullBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.fullBtn.Location = new System.Drawing.Point(726, 18);
+            this.fullBtn.Location = new System.Drawing.Point(544, 15);
             this.fullBtn.Margin = new System.Windows.Forms.Padding(2);
             this.fullBtn.Name = "fullBtn";
-            this.fullBtn.Size = new System.Drawing.Size(20, 12);
+            this.fullBtn.Size = new System.Drawing.Size(15, 10);
             this.fullBtn.TabIndex = 20;
             this.fullBtn.UseVisualStyleBackColor = true;
             // 
@@ -83,13 +83,14 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.exitBtn.Location = new System.Drawing.Point(749, 9);
+            this.exitBtn.Location = new System.Drawing.Point(562, 7);
             this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(42, 32);
+            this.exitBtn.Size = new System.Drawing.Size(32, 26);
             this.exitBtn.TabIndex = 19;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // imageList1
             // 
@@ -117,8 +118,7 @@
             this.back.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.back.ImageKey = "backbutton.png";
             this.back.ImageList = this.backButtonList;
-            this.back.Location = new System.Drawing.Point(13, 13);
-            this.back.Margin = new System.Windows.Forms.Padding(4);
+            this.back.Location = new System.Drawing.Point(10, 11);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(48, 48);
             this.back.TabIndex = 34;
@@ -137,9 +137,10 @@
             this.LblReports.AutoSize = true;
             this.LblReports.Font = new System.Drawing.Font("Britannic Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblReports.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblReports.Location = new System.Drawing.Point(326, 21);
+            this.LblReports.Location = new System.Drawing.Point(244, 17);
+            this.LblReports.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblReports.Name = "LblReports";
-            this.LblReports.Size = new System.Drawing.Size(128, 27);
+            this.LblReports.Size = new System.Drawing.Size(100, 21);
             this.LblReports.TabIndex = 35;
             this.LblReports.Text = "All Reports";
             // 
@@ -148,18 +149,18 @@
             this.LstBxReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.LstBxReports.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LstBxReports.FormattingEnabled = true;
-            this.LstBxReports.ItemHeight = 16;
-            this.LstBxReports.Location = new System.Drawing.Point(12, 68);
+            this.LstBxReports.Location = new System.Drawing.Point(9, 55);
+            this.LstBxReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LstBxReports.Name = "LstBxReports";
-            this.LstBxReports.Size = new System.Drawing.Size(779, 372);
+            this.LstBxReports.Size = new System.Drawing.Size(585, 303);
             this.LstBxReports.TabIndex = 36;
             // 
             // ViewReportsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.LstBxReports);
             this.Controls.Add(this.LblReports);
             this.Controls.Add(this.back);
@@ -167,6 +168,7 @@
             this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ViewReportsForm";
             this.Text = "ViewReportsForm";
             this.Load += new System.EventHandler(this.ViewReportsForm_Load);

@@ -17,6 +17,8 @@ namespace unnamedProject.Forms
 {
     public partial class ReportManagerForm : Form
     {
+        private List<Tickets> tickets;
+        private dbHandler dbhadler = new dbHandler();
         Users current;
         public ReportManagerForm(Users current)
         {
@@ -141,6 +143,62 @@ namespace unnamedProject.Forms
             Thread th = Thread.CurrentThread;
             th.Abort();
             this.Close();
+        }
+
+        private void problemBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var existing = new Thread(() => Application.Run(new ViewExistingProblems(current)));
+            existing.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
+        }
+
+        private void reportBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var setting = new Thread(() => Application.Run(new Forms.GenerateReportForm(current)));
+            setting.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
+        }
+
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var setting = new Thread(() => Application.Run(new Forms.SettingsForm(current)));
+            setting.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
+        }
+        private void openTab_Click(object sender, EventArgs e)
+        {
+            OpenList.Visible = true;
+            OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb(1);
+            OpenList.Items.AddRange(tickets.ToArray());
+        }
+
+        private void closedTab_Click(object sender, EventArgs e)
+        {
+            OpenList.Visible = true;
+            OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb(4);
+            OpenList.Items.AddRange(tickets.ToArray());
+        }
+
+        private void FAPTab_Click(object sender, EventArgs e)
+        {
+            OpenList.Visible = true;
+            OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb(3);
+            OpenList.Items.AddRange(tickets.ToArray());
         }
     }
 }
