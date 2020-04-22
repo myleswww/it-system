@@ -63,7 +63,19 @@ namespace unnamedProject
                 {
                     dbHandler login = new dbHandler();
                     login.newUser(username.Text, password.Text, firstName.Text, lastName.Text, email.Text, accessValue);
-                    
+
+                    //send email
+                    string subject = "Welcome to the Untitled Team family, " + firstName.Text;
+                    string body =String.Format("<p> You have been added to the Untitled Team team, welcome! <br>" +
+                                   "Here is your new username and password! <br>" +
+                                   "Username: {0} <br>" +
+                                   "Password: {1} <br>" +
+                                   "If you wish to change it you can do so in the Account Prefrences tab in the program. <p>"
+                                   , username.Text, password.Text);
+
+                    EmailSend send = new EmailSend(email.Text, subject, body);
+
+
                     var admin = new Thread(() => Application.Run(new AdminForm(current)));
                     admin.Start();
                     Thread th = Thread.CurrentThread;
