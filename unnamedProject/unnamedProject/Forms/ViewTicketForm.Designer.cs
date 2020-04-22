@@ -465,6 +465,7 @@
             this.Controls.Add(this.exitBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewTicketForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewTicketForm";
             this.Load += new System.EventHandler(this.ViewTicketForm_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
