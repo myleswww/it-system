@@ -160,8 +160,9 @@ namespace unnamedProject
                     int ticketStatus = (int)reader["ticket_status"];
                     string description = (string)reader["description"];
                     string notes = (string)reader["notes"];
+                    int assigned = (int)reader["Assigned"];
 
-                    tempticket = new Tickets(ticketID,userInfo,dateAccessed,ticketStatus,description,notes);
+                    tempticket = new Tickets(ticketID,userInfo,dateAccessed,ticketStatus,description,notes,assigned);
 
                     tickets.Add(tempticket);
                 }
@@ -191,6 +192,9 @@ namespace unnamedProject
             string email = null;
             int levelAccess = 3;
 
+            sqlcon.Close();
+            sqlcon.Open();
+
                 SqlCommand sqlCommand = new SqlCommand("Select * from User_Info Where ID = '" + currentUserID + "'", sqlcon);
 
                 SqlDataReader reader = sqlCommand.ExecuteReader();
@@ -204,6 +208,7 @@ namespace unnamedProject
                     levelAccess = (int)reader["levelAccess"];
                 }
                 Users currentUser = new Users(username, fname, lname, email, levelAccess, currentUserID);
+                sqlcon.Close();
                 return currentUser;
         }
 

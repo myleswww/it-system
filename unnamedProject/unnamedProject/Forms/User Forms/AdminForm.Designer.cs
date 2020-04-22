@@ -420,12 +420,12 @@
             // LblHello
             // 
             this.LblHello.AutoSize = true;
-            this.LblHello.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHello.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblHello.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LblHello.Location = new System.Drawing.Point(329, 14);
             this.LblHello.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblHello.Name = "LblHello";
-            this.LblHello.Size = new System.Drawing.Size(49, 17);
+            this.LblHello.Size = new System.Drawing.Size(49, 20);
             this.LblHello.TabIndex = 20;
             this.LblHello.Text = "Hello ";
             // 

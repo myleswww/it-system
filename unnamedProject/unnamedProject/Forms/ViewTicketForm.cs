@@ -12,10 +12,12 @@ namespace unnamedProject.Forms
 {
     public partial class ViewTicketForm : Form
     {
-        dbHandler handler;
+        dbHandler handler = new dbHandler();
         Users current;
         Tickets ticket;
         Users contact;
+        List<Notes> notes;
+
         public ViewTicketForm(Users cur, Tickets tick)
         {
             InitializeComponent();
@@ -26,14 +28,15 @@ namespace unnamedProject.Forms
 
         private void ViewTicketForm_Load(object sender, EventArgs e)
         {
-            txtBxDescription.Text = ticket.Description;
+            richTextBox1.Text = ticket.Description;
             lblContact.Text = "Contact: " + contact.Username;
             label2.Text = ticket.DateAccessed.ToString();
-        }
-
-        private void txtBxDescription_TextChanged(object sender, EventArgs e)
-        {
-
+            if(ticket.Assigned != -1)
+                l.Text = ticket.Assigned.ToString();
+            else
+                l.Text = "unassigned";
+            notes = handler.GetNotes(ticket.TicketID);
+            listBox1.Items.AddRange(notes.ToArray());
         }
 
         private void lblContact_Click(object sender, EventArgs e)
@@ -47,6 +50,16 @@ namespace unnamedProject.Forms
         }
 
         private void l_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
