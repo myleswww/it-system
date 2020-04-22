@@ -17,6 +17,8 @@ namespace unnamedProject.Forms
 {
     public partial class ProjectMemberForm : Form
     {
+        private List<Tickets> tickets;
+        private dbHandler dbhadler = new dbHandler();
         Users current;
         public ProjectMemberForm(Users current)
         {
@@ -26,6 +28,8 @@ namespace unnamedProject.Forms
 
         private void ProjectMemberForm_Load(object sender, EventArgs e)
         {
+            tickets = dbhadler.LoadTicketsFromDb(1);
+            OpenList.Items.AddRange(tickets.ToArray());
             //WindowState = FormWindowState.Maximized;
             if (this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
             {
@@ -65,7 +69,7 @@ namespace unnamedProject.Forms
                 fullBtn.Height = 12;
                 fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
                 fullBtn.ImageIndex = -1;
-                ticketTable.Size = mainPanel.Size;
+                //ticketTable.Size = mainPanel.Size;
 
 
                 //screen scaling
@@ -78,7 +82,7 @@ namespace unnamedProject.Forms
                 fullBtn.FlatAppearance.BorderSize = 0;
                 fullBtn.Width = 15;
                 fullBtn.Height = 15;
-                ticketTable.Size = mainPanel.Size;
+                //ticketTable.Size = mainPanel.Size;
 
                 //screen scaling
 
@@ -112,6 +116,72 @@ namespace unnamedProject.Forms
             Thread th = Thread.CurrentThread;
             th.Abort();
             this.Close();
+        }
+
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var setting = new Thread(() => Application.Run(new Forms.SettingsForm(current)));
+            setting.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
+        }
+
+        private void btnViewProbs_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var existing = new Thread(() => Application.Run(new ViewExistingProblems(current)));
+            existing.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
+        }
+
+        private void btnSubmitTicket_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openTab_Click(object sender, EventArgs e)
+        {
+            OpenList.Visible = true;
+            OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb(1);
+            OpenList.Items.AddRange(tickets.ToArray());
+        }
+
+        private void closedTab_Click(object sender, EventArgs e)
+        {
+            OpenList.Visible = true;
+            OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb(3);
+            OpenList.Items.AddRange(tickets.ToArray());
+        }
+
+        private void FAPTab_Click(object sender, EventArgs e)
+        {
+            OpenList.Visible = true;
+            OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb(2);
+            OpenList.Items.AddRange(tickets.ToArray());
+        }
+
+        private void newTab_Click(object sender, EventArgs e)
+        {
+            OpenList.Visible = true;
+            OpenList.Items.Clear();
+            tickets = dbhadler.LoadTicketsFromDb(0);
+            OpenList.Items.AddRange(tickets.ToArray());
+        }
+
+        private void onlineHelpBtn_Click(object sender, EventArgs e)
+        {
+            var webbrowser = new Thread(() => Application.Run(new WebBrowserForm(current)));
+            webbrowser.SetApartmentState(ApartmentState.STA);
+            webbrowser.Start();
         }
     }
 }

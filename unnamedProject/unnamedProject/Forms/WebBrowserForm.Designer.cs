@@ -189,7 +189,11 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WebBrowserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WebBrowserForm";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WebBrowserForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WebBrowserForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.WebBrowserForm_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -15,6 +15,8 @@ namespace unnamedProject
     {
         Users current;
         string defaultURL = "www.butler.edu";
+        private bool mouseDown;
+        private Point lastLocation;
         public WebBrowserForm(Users current)
         {
             InitializeComponent();
@@ -48,8 +50,7 @@ namespace unnamedProject
 
         private void back_Click(object sender, EventArgs e)
         {
-            var admin = new Thread(() => Application.Run(new AdminForm(current)));
-            admin.Start();
+
 
             Thread th = Thread.CurrentThread;
             th.Abort();
@@ -58,6 +59,28 @@ namespace unnamedProject
         private void btnGo_Click(object sender, EventArgs e)
         {
             wbrDisplay.Navigate(txtURL.Text);
+        }
+
+        private void WebBrowserForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void WebBrowserForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void WebBrowserForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
         }
     }
 }

@@ -230,8 +230,6 @@ namespace unnamedProject
             webbrowser.SetApartmentState(ApartmentState.STA);
             webbrowser.Start();
 
-            Thread th = Thread.CurrentThread;
-            th.Abort();
         }
     }
 }
