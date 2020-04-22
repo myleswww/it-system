@@ -61,6 +61,7 @@
             this.lblAddNotes = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnEmail = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -271,6 +272,7 @@
             this.flowLayoutPanel3.Controls.Add(this.lblAddNotes);
             this.flowLayoutPanel3.Controls.Add(this.textBox1);
             this.flowLayoutPanel3.Controls.Add(this.btnSave);
+            this.flowLayoutPanel3.Controls.Add(this.btnEmail);
             this.flowLayoutPanel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(525, 68);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
@@ -428,12 +430,23 @@
             // btnSave
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flowLayoutPanel3.SetFlowBreak(this.btnSave, true);
             this.btnSave.Location = new System.Drawing.Point(3, 110);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 28);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnEmail
+            // 
+            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmail.Location = new System.Drawing.Point(3, 148);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Size = new System.Drawing.Size(121, 32);
+            this.btnEmail.TabIndex = 5;
+            this.btnEmail.Text = "Send Email";
+            this.btnEmail.UseVisualStyleBackColor = true;
             // 
             // ViewTicketForm
             // 
@@ -496,5 +509,6 @@
         private System.Windows.Forms.Label lblAddNotes;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnEmail;
     }
 }
