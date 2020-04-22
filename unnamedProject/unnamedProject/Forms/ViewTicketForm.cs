@@ -18,5 +18,10 @@ namespace unnamedProject.Forms
             InitializeComponent();
             current = cur;
         }
+
+        private void ViewTicketForm_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

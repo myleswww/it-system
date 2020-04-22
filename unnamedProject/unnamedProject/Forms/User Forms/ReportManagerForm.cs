@@ -83,7 +83,7 @@ namespace unnamedProject.Forms
                 fullBtn.FlatAppearance.BorderSize = 0;
                 fullBtn.Width = 15;
                 fullBtn.Height = 15;
-                //screen scaling
+                //screenscaling
 
             }
         }

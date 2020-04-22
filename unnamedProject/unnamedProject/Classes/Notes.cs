@@ -27,6 +27,9 @@ namespace unnamedProject
 
         }
 
-
+        public override string ToString()
+        {
+            return note_info + "   " + date_written;
+        }
     }
 }
