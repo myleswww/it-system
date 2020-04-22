@@ -21,6 +21,7 @@ namespace unnamedProject
         public string Description { get; set; }
         public string Notes { get; set; }
         public int Assigned { get; set; }
+        public int Priority { get; set; }
 
         public Tickets(int ticketID, int userInfo, DateTime dateAccessed, int ticketStatus, string description, string notes, int assigned)
         {

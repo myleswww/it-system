@@ -12,9 +12,14 @@ namespace unnamedProject
 {
     public partial class CreateTicketForm : Form
     {
-        public CreateTicketForm()
+        public CreateTicketForm(Users curr)
         {
             InitializeComponent();
+        }
+
+        private void CreateTicketForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

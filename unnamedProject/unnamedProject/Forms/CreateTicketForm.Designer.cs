@@ -214,6 +214,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateTicketForm";
             this.Text = "CreateTicketForm";
+            this.Load += new System.EventHandler(this.CreateTicketForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

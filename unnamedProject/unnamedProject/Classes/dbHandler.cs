@@ -335,10 +335,53 @@ namespace unnamedProject
             return noteList;
         }
 
+        public void AddTicket(Tickets ticket)
+        {
+            //do max id 
+            int newID = 0;
+            sqlcon.Open();
+            string query = "SELECT MAX(ID) FROM tickets";
+            SqlCommand command = new SqlCommand(query, sqlcon);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader.IsDBNull(0)) //does the table have anything in it?
+                {
+                    newID = 1;
+
+                }
+                else
+                {
+                    newID = reader.GetInt32(0);
+                    newID++;
+                }
+            }
+            sqlcon.Close();
+
+            ticket.TicketID = newID;
 
 
 
-        //TODO: Function for adding new report
+            sqlcon.Open();
+
+            string insert = "INSERT INTO tickets (ID, User_Info_Id, date_accessed, ticket_status, description, priority, assigned) VALUES (@id, @userid, @date, @status, @desc, @priority, @assigned)";
+            command = new SqlCommand(insert, sqlcon);
+            command.Parameters.AddWithValue("@id", ticket.TicketID);
+            command.Parameters.AddWithValue("@userid", ticket.UserInfo);
+            command.Parameters.AddWithValue("@date", ticket.DateAccessed);
+            command.Parameters.AddWithValue("@status", ticket.TicketStatus);
+            command.Parameters.AddWithValue("@desc", ticket.Description);
+            command.Parameters.AddWithValue("@priority", ticket.Priority);
+            command.Parameters.AddWithValue("@assigned", ticket.Assigned);
+
+            command.ExecuteNonQuery();
+
+            sqlcon.Close();
+
+        }
+
+
+        //Function for adding new report
         public int AddReport(Report report) //returns the id of the report to be displayed on the form
         {
             //first select max id and assign it to the report
@@ -457,7 +500,7 @@ namespace unnamedProject
         }
 
 
-        public int GetPercent(int type)
+        public int GetPercent(int type) //this function counts all of the tickets and then does math on them using other functions to return to the reports area
         {
             int ticketCount;
             int count = 0;
