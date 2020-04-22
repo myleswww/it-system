@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace unnamedProject
 {
-    class Report
+     public class Report
     {
         public int Type { get; set; }
         public int ID { get; set; }

@@ -24,7 +24,7 @@ namespace unnamedProject
         { 
             dbHandler handler = new dbHandler();
             List<Report> reports = handler.GetReports();
-            LstBxReports.Items.AddRange(reports.ToArray());
+            LstBxReports.Items.AddRange(mergeSort(reports.ToArray(),0,reports.Count()-1,0));
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -40,6 +40,51 @@ namespace unnamedProject
         {
             this.Close();
             Application.Exit();
+        }
+
+        public Report[] merge(Report[] a, int first, int middle, int last, int orderType)
+        {
+            StringComparer comparer = StringComparer.OrdinalIgnoreCase;
+            int i = first;
+            int j = middle + 1;
+            int index = first;
+            Report aUser; 
+            Report bUser;
+            Report[] c = new Report[a.Count()];
+
+            while (i <= middle && j <= last)
+            {
+                aUser = a[i];
+                bUser = a[j];
+                if (orderType == 0)
+                {
+                    if (aUser.ID > bUser.ID)
+                        c[index++] = a[i++];
+                    else
+                        c[index++] = a[j++];
+                }
+            }
+            if (i > middle)
+                while (j <= last)
+                    c[index++] = a[j++];
+            else
+                while (i <= middle)
+                    c[index++] = a[i++];
+            for (int k = first; k < index; k++)
+                a[k] = c[k];
+            return a;
+        }
+
+        public Report[] mergeSort(Report[] usersArray, int first, int last, int orderType)
+        {
+            if (first < last)
+            {
+                int middle = (first + last) / 2;
+                mergeSort(usersArray, first, middle, orderType);
+                mergeSort(usersArray, (middle + 1), last, orderType);
+                merge(usersArray, first, middle, last, orderType);
+            }
+            return usersArray;
         }
     }
 }
