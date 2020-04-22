@@ -20,8 +20,9 @@ namespace unnamedProject
         public int TicketStatus { get; set; }
         public string Description { get; set; }
         public string Notes { get; set; }
+        public int Assigned { get; set; }
 
-        public Tickets(int ticketID, int userInfo, DateTime dateAccessed, int ticketStatus, string description, string notes)
+        public Tickets(int ticketID, int userInfo, DateTime dateAccessed, int ticketStatus, string description, string notes, int assigned)
         {
             TicketID = ticketID;
             UserInfo = userInfo;
@@ -29,6 +30,7 @@ namespace unnamedProject
             TicketStatus = ticketStatus;
             Description = description;
             Notes = notes;
+            Assigned = assigned;
         }
 
         public override string ToString() //this needs to be formatted better
