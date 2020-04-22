@@ -45,23 +45,23 @@
             this.TxtBxName = new System.Windows.Forms.TextBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtBxDescription = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.webBrowserViewTicket = new System.Windows.Forms.WebBrowser();
             this.lblContact = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.l = new System.Windows.Forms.Label();
-            this.lblOnline = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.lblEdit = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.webBrowserViewTicket = new System.Windows.Forms.WebBrowser();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblAssigned = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblAddNotes = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEmail = new System.Windows.Forms.Button();
+            this.lblOnline = new System.Windows.Forms.Label();
+            this.lblEdit = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -255,41 +255,6 @@
             this.txtBxDescription.Size = new System.Drawing.Size(100, 22);
             this.txtBxDescription.TabIndex = 5;
             // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel2.Controls.Add(this.webBrowserViewTicket);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(269, 68);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(250, 370);
-            this.flowLayoutPanel2.TabIndex = 33;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel3.Controls.Add(this.lblAssigned);
-            this.flowLayoutPanel3.Controls.Add(this.comboBox1);
-            this.flowLayoutPanel3.Controls.Add(this.lblAddNotes);
-            this.flowLayoutPanel3.Controls.Add(this.textBox1);
-            this.flowLayoutPanel3.Controls.Add(this.btnSave);
-            this.flowLayoutPanel3.Controls.Add(this.btnEmail);
-            this.flowLayoutPanel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(525, 68);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(250, 370);
-            this.flowLayoutPanel3.TabIndex = 34;
-            // 
-            // webBrowserViewTicket
-            // 
-            this.webBrowserViewTicket.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowserViewTicket.Location = new System.Drawing.Point(3, 3);
-            this.webBrowserViewTicket.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowserViewTicket.Name = "webBrowserViewTicket";
-            this.webBrowserViewTicket.Size = new System.Drawing.Size(250, 20);
-            this.webBrowserViewTicket.TabIndex = 0;
-            // 
             // lblContact
             // 
             this.lblContact.AutoSize = true;
@@ -353,17 +318,6 @@
             this.l.TabIndex = 11;
             this.l.Text = "user";
             // 
-            // lblOnline
-            // 
-            this.lblOnline.AutoSize = true;
-            this.lblOnline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblOnline.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblOnline.Location = new System.Drawing.Point(269, 49);
-            this.lblOnline.Name = "lblOnline";
-            this.lblOnline.Size = new System.Drawing.Size(84, 19);
-            this.lblOnline.TabIndex = 35;
-            this.lblOnline.Text = "Online Help";
-            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -375,16 +329,40 @@
             this.listBox1.Size = new System.Drawing.Size(234, 84);
             this.listBox1.TabIndex = 12;
             // 
-            // lblEdit
+            // flowLayoutPanel2
             // 
-            this.lblEdit.AutoSize = true;
-            this.lblEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEdit.Location = new System.Drawing.Point(525, 49);
-            this.lblEdit.Name = "lblEdit";
-            this.lblEdit.Size = new System.Drawing.Size(76, 19);
-            this.lblEdit.TabIndex = 36;
-            this.lblEdit.Text = "Edit Ticket";
+            this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel2.Controls.Add(this.webBrowserViewTicket);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(269, 68);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(250, 370);
+            this.flowLayoutPanel2.TabIndex = 33;
+            // 
+            // webBrowserViewTicket
+            // 
+            this.webBrowserViewTicket.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.webBrowserViewTicket.Location = new System.Drawing.Point(3, 3);
+            this.webBrowserViewTicket.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowserViewTicket.Name = "webBrowserViewTicket";
+            this.webBrowserViewTicket.Size = new System.Drawing.Size(250, 20);
+            this.webBrowserViewTicket.TabIndex = 0;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel3.Controls.Add(this.lblAssigned);
+            this.flowLayoutPanel3.Controls.Add(this.comboBox1);
+            this.flowLayoutPanel3.Controls.Add(this.lblAddNotes);
+            this.flowLayoutPanel3.Controls.Add(this.textBox1);
+            this.flowLayoutPanel3.Controls.Add(this.btnSave);
+            this.flowLayoutPanel3.Controls.Add(this.btnEmail);
+            this.flowLayoutPanel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(525, 68);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(250, 370);
+            this.flowLayoutPanel3.TabIndex = 34;
             // 
             // lblAssigned
             // 
@@ -448,6 +426,28 @@
             this.btnEmail.Text = "Send Email";
             this.btnEmail.UseVisualStyleBackColor = true;
             // 
+            // lblOnline
+            // 
+            this.lblOnline.AutoSize = true;
+            this.lblOnline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblOnline.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblOnline.Location = new System.Drawing.Point(269, 49);
+            this.lblOnline.Name = "lblOnline";
+            this.lblOnline.Size = new System.Drawing.Size(84, 19);
+            this.lblOnline.TabIndex = 35;
+            this.lblOnline.Text = "Online Help";
+            // 
+            // lblEdit
+            // 
+            this.lblEdit.AutoSize = true;
+            this.lblEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblEdit.Location = new System.Drawing.Point(525, 49);
+            this.lblEdit.Name = "lblEdit";
+            this.lblEdit.Size = new System.Drawing.Size(76, 19);
+            this.lblEdit.TabIndex = 36;
+            this.lblEdit.Text = "Edit Ticket";
+            // 
             // ViewTicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -465,6 +465,7 @@
             this.Controls.Add(this.exitBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewTicketForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewTicketForm";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
