@@ -221,6 +221,7 @@ namespace unnamedProject
             this.Hide();
 
             var form = new Thread(() => Application.Run(new Forms.ViewTicketForm(current, selectedTicket)));
+            form.A
             form.Start();
             Thread th = Thread.CurrentThread;
             th.Abort();

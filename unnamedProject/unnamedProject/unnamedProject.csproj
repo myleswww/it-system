@@ -50,6 +50,12 @@
     <Compile Include="Classes\EmailSend.cs" />
     <Compile Include="Classes\Tickets.cs" />
     <Compile Include="Classes\Users.cs" />
+    <Compile Include="Forms\CreateTicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateTicketForm.Designer.cs">
+      <DependentUpon>CreateTicketForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\User Forms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <Compile Include="Forms\ViewReportsForm.Designer.cs">
       <DependentUpon>ViewReportsForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\CreateTicketForm.resx">
+      <DependentUpon>CreateTicketForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\User Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
