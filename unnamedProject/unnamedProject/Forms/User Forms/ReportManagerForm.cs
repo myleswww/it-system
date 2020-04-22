@@ -200,5 +200,19 @@ namespace unnamedProject.Forms
             tickets = dbhadler.LoadTicketsFromDb(3);
             OpenList.Items.AddRange(tickets.ToArray());
         }
+
+        private void OpenList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OpenList.Visible = true;
+
+            Tickets selectedTicket = tickets[OpenList.SelectedIndex];
+            this.Hide();
+
+            var form = new Thread(() => Application.Run(new Forms.ViewTicketForm(current, selectedTicket)));
+            form.Start();
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
+        }
     }
 }

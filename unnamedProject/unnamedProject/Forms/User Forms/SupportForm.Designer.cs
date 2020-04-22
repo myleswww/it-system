@@ -43,10 +43,10 @@
             this.FAPTab = new System.Windows.Forms.Button();
             this.newTab = new System.Windows.Forms.Button();
             this.onlineHelpBtn = new System.Windows.Forms.Button();
+            this.OpenList = new System.Windows.Forms.ListBox();
             this.optionPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.settingsBtn = new System.Windows.Forms.Button();
             this.logOut = new System.Windows.Forms.Button();
-            this.OpenList = new System.Windows.Forms.ListBox();
             this.mainPanel.SuspendLayout();
             this.optionPanel.SuspendLayout();
             this.SuspendLayout();
@@ -231,6 +231,22 @@
             this.onlineHelpBtn.UseVisualStyleBackColor = true;
             this.onlineHelpBtn.Click += new System.EventHandler(this.onlineHelpBtn_Click);
             // 
+            // OpenList
+            // 
+            this.OpenList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OpenList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OpenList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.OpenList.FormattingEnabled = true;
+            this.OpenList.HorizontalScrollbar = true;
+            this.OpenList.ItemHeight = 16;
+            this.OpenList.Location = new System.Drawing.Point(4, 33);
+            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
+            this.OpenList.Name = "OpenList";
+            this.OpenList.Size = new System.Drawing.Size(1043, 436);
+            this.OpenList.TabIndex = 11;
+            this.OpenList.SelectedIndexChanged += new System.EventHandler(this.OpenList_SelectedIndexChanged);
+            // 
             // optionPanel
             // 
             this.optionPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -288,21 +304,6 @@
             this.logOut.Text = "Log Out";
             this.logOut.UseVisualStyleBackColor = false;
             this.logOut.Click += new System.EventHandler(this.logOut_Click_1);
-            // 
-            // OpenList
-            // 
-            this.OpenList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OpenList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.OpenList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.OpenList.FormattingEnabled = true;
-            this.OpenList.HorizontalScrollbar = true;
-            this.OpenList.ItemHeight = 16;
-            this.OpenList.Location = new System.Drawing.Point(4, 33);
-            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
-            this.OpenList.Name = "OpenList";
-            this.OpenList.Size = new System.Drawing.Size(1043, 436);
-            this.OpenList.TabIndex = 11;
             // 
             // SupportForm
             // 

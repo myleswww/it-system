@@ -13,7 +13,7 @@ namespace unnamedProject.Forms
     public partial class ViewTicketForm : Form
     {
         Users current;
-        public ViewTicketForm(Users cur)
+        public ViewTicketForm(Users cur, Tickets tick)
         {
             InitializeComponent();
             current = cur;

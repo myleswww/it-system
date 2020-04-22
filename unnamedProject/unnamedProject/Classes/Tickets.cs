@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace unnamedProject
 {
-    class Tickets
+    public class Tickets
     {
         public int TicketID { get; set; } //class members
         public int UserInfo { get; set; }
