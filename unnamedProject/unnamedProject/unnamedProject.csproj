@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\EmailSend.cs" />
     <Compile Include="Classes\Tickets.cs" />
     <Compile Include="Classes\Users.cs" />
     <Compile Include="Forms\User Forms\AdminForm.cs">
