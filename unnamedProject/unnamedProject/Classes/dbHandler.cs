@@ -262,12 +262,13 @@ namespace unnamedProject
         public void UpdateTicket(Tickets ticket) //updates tickets
         {
             sqlcon.Open();
-            string update = "UPDATE tickets SET ID = @id, date_accessed = @date, ticket_status = @status, description = @desc WHERE ID = @id";
+            string update = "UPDATE tickets SET ID = @id, date_accessed = @date, ticket_status = @status, description = @desc, assigned = @ass WHERE ID = @id";
             SqlCommand command = new SqlCommand(update, sqlcon);
             command.Parameters.AddWithValue("@id", ticket.TicketID);
             command.Parameters.AddWithValue("@date", ticket.DateAccessed);
             command.Parameters.AddWithValue("@status", ticket.TicketStatus);
             command.Parameters.AddWithValue("@desc", ticket.Description);
+            command.Parameters.AddWithValue("@ass", ticket.Assigned);
 
             command.ExecuteNonQuery();
             sqlcon.Close();
@@ -297,13 +298,11 @@ namespace unnamedProject
                 }
             }
             sqlcon.Close();
-
-            note.Id = newID; //set the id of the note!
             
             sqlcon.Open();
             string insert = "INSERT INTO notes (ID, User_Info_Id, tickets_ticketID, date_writtten, note_info) VALUES (@id, @userID, @ticketID, @date, @info)";
             command = new SqlCommand(insert, sqlcon);
-            command.Parameters.AddWithValue("@id", note.Id);
+            command.Parameters.AddWithValue("@id", newID);
             command.Parameters.AddWithValue("@userID", note.User_Info_Id);
             command.Parameters.AddWithValue("@ticketID", note.tickets_ticketID);
             command.Parameters.AddWithValue("@date", note.date_written);
@@ -318,7 +317,7 @@ namespace unnamedProject
         //Gets list of notes that match a ticket ID
         public List<Notes> GetNotes(int ticketID)
         {
-            string query = "SELECT ID, User_Info_Id, tickets_ticketID, date_writtten, note_info FROM notes WHERE User_Info_ID = " + ticketID; //selects all rows that have the matching ticket ID which is a foreign key in the notes table
+            string query = "SELECT User_Info_Id, tickets_ticketID, date_writtten, note_info FROM notes WHERE tickets_ticketID = " + ticketID; //selects all rows that have the matching ticket ID which is a foreign key in the notes table
             sqlcon.Open();
             SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
             DataTable dataTable = new DataTable("Notes");
@@ -327,7 +326,6 @@ namespace unnamedProject
             noteList = (from DataRow r in dataTable.Rows
                         select new Notes()
                         {
-                            Id = (int)r["ID"],
                             User_Info_Id = (int)r["User_Info_Id"],
                             tickets_ticketID = (int)r["tickets_ticketID"],
                             date_written = (DateTime)r["date_writtten"],

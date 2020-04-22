@@ -52,11 +52,11 @@
             this.lblAssigned = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblAddNotes = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEmail = new System.Windows.Forms.Button();
             this.lblEdit = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -219,7 +219,7 @@
             this.lblContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel1.SetFlowBreak(this.lblContact, true);
             this.lblContact.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblContact.Location = new System.Drawing.Point(2, 75);
+            this.lblContact.Location = new System.Drawing.Point(2, 60);
             this.lblContact.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(46, 15);
@@ -233,7 +233,7 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.SetFlowBreak(this.label1, true);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(2, 90);
+            this.label1.Location = new System.Drawing.Point(2, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 15);
@@ -247,7 +247,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel1.SetFlowBreak(this.label2, true);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(2, 105);
+            this.label2.Location = new System.Drawing.Point(2, 90);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 15);
@@ -262,7 +262,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel1.SetFlowBreak(this.label3, true);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(2, 120);
+            this.label3.Location = new System.Drawing.Point(2, 105);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 15);
@@ -275,7 +275,7 @@
             this.l.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.SetFlowBreak(this.l, true);
             this.l.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.l.Location = new System.Drawing.Point(2, 135);
+            this.l.Location = new System.Drawing.Point(2, 120);
             this.l.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.l.Name = "l";
             this.l.Size = new System.Drawing.Size(29, 15);
@@ -288,10 +288,11 @@
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(2, 210);
+            this.listBox1.HorizontalScrollbar = true;
+            this.listBox1.Location = new System.Drawing.Point(2, 137);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(176, 69);
+            this.listBox1.Size = new System.Drawing.Size(223, 147);
             this.listBox1.TabIndex = 12;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -301,7 +302,7 @@
             this.flowLayoutPanel3.Controls.Add(this.lblAssigned);
             this.flowLayoutPanel3.Controls.Add(this.comboBox1);
             this.flowLayoutPanel3.Controls.Add(this.lblAddNotes);
-            this.flowLayoutPanel3.Controls.Add(this.textBox1);
+            this.flowLayoutPanel3.Controls.Add(this.richTextBox2);
             this.flowLayoutPanel3.Controls.Add(this.btnSave);
             this.flowLayoutPanel3.Controls.Add(this.btnEmail);
             this.flowLayoutPanel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -321,9 +322,10 @@
             this.lblAssigned.Location = new System.Drawing.Point(2, 0);
             this.lblAssigned.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAssigned.Name = "lblAssigned";
-            this.lblAssigned.Size = new System.Drawing.Size(68, 15);
+            this.lblAssigned.Size = new System.Drawing.Size(108, 15);
             this.lblAssigned.TabIndex = 0;
-            this.lblAssigned.Text = "Assigned To";
+            this.lblAssigned.Text = "Change Assigned To";
+            this.lblAssigned.Click += new System.EventHandler(this.lblAssigned_Click);
             // 
             // comboBox1
             // 
@@ -334,6 +336,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lblAddNotes
             // 
@@ -347,37 +350,30 @@
             this.lblAddNotes.TabIndex = 2;
             this.lblAddNotes.Text = "Add Notes";
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(2, 76);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 20);
-            this.textBox1.TabIndex = 3;
-            // 
             // btnSave
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel3.SetFlowBreak(this.btnSave, true);
-            this.btnSave.Location = new System.Drawing.Point(192, 76);
+            this.btnSave.Location = new System.Drawing.Point(2, 227);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(56, 23);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEmail
             // 
             this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmail.Location = new System.Drawing.Point(2, 103);
+            this.btnEmail.Location = new System.Drawing.Point(2, 257);
             this.btnEmail.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmail.Name = "btnEmail";
             this.btnEmail.Size = new System.Drawing.Size(91, 26);
             this.btnEmail.TabIndex = 5;
             this.btnEmail.Text = "Send Email";
             this.btnEmail.UseVisualStyleBackColor = true;
+            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
             // 
             // lblEdit
             // 
@@ -394,11 +390,21 @@
             // richTextBox1
             // 
             this.flowLayoutPanel1.SetFlowBreak(this.richTextBox1, true);
-            this.richTextBox1.Location = new System.Drawing.Point(3, 48);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 33);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(100, 24);
+            this.richTextBox1.Size = new System.Drawing.Size(222, 24);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
+            // 
+            // richTextBox2
+            // 
+            this.flowLayoutPanel3.SetFlowBreak(this.richTextBox2, true);
+            this.richTextBox2.Location = new System.Drawing.Point(3, 66);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(297, 156);
+            this.richTextBox2.TabIndex = 6;
+            this.richTextBox2.Text = "";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // ViewTicketForm
             // 
@@ -453,9 +459,9 @@
         private System.Windows.Forms.Label lblAssigned;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblAddNotes;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEmail;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }
