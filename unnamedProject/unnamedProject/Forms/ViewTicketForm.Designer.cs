@@ -60,7 +60,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblAddNotes = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -270,7 +270,7 @@
             this.flowLayoutPanel3.Controls.Add(this.comboBox1);
             this.flowLayoutPanel3.Controls.Add(this.lblAddNotes);
             this.flowLayoutPanel3.Controls.Add(this.textBox1);
-            this.flowLayoutPanel3.Controls.Add(this.button1);
+            this.flowLayoutPanel3.Controls.Add(this.btnSave);
             this.flowLayoutPanel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(525, 68);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
@@ -425,15 +425,15 @@
             this.textBox1.Size = new System.Drawing.Size(246, 22);
             this.textBox1.TabIndex = 3;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Location = new System.Drawing.Point(3, 110);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 28);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // ViewTicketForm
             // 
@@ -495,6 +495,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblAddNotes;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
     }
 }
