@@ -220,7 +220,7 @@ namespace unnamedProject
             Tickets selectedTicket = tickets[OpenList.SelectedIndex];
             this.Hide();
 
-            var form = new Thread(() => Application.Run(new Forms.ViewTicketForm()));
+            var form = new Thread(() => Application.Run(new Forms.ViewTicketForm(current)));
             form.Start();
             Thread th = Thread.CurrentThread;
             th.Abort();

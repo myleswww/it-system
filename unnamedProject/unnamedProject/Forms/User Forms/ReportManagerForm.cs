@@ -73,6 +73,9 @@ namespace unnamedProject.Forms
                 fullBtn.Height = 12;
                 fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
                 fullBtn.ImageIndex = -1;
+                ticketTable.Size = mainPanel.Size;
+
+
                 //screen scaling
 
             }
@@ -83,6 +86,8 @@ namespace unnamedProject.Forms
                 fullBtn.FlatAppearance.BorderSize = 0;
                 fullBtn.Width = 15;
                 fullBtn.Height = 15;
+                ticketTable.Size = mainPanel.Size;
+
                 //screen scaling
 
             }
