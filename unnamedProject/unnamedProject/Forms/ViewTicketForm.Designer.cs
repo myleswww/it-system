@@ -381,7 +381,7 @@
             // 
             this.flowLayoutPanel3.SetFlowBreak(this.comboBox1, true);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 33);
+            this.comboBox1.Location = new System.Drawing.Point(3, 34);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 1;
@@ -391,7 +391,7 @@
             this.lblAddNotes.AutoSize = true;
             this.flowLayoutPanel3.SetFlowBreak(this.lblAddNotes, true);
             this.lblAddNotes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAddNotes.Location = new System.Drawing.Point(3, 60);
+            this.lblAddNotes.Location = new System.Drawing.Point(3, 62);
             this.lblAddNotes.Name = "lblAddNotes";
             this.lblAddNotes.Size = new System.Drawing.Size(74, 17);
             this.lblAddNotes.TabIndex = 2;
@@ -400,7 +400,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(3, 80);
+            this.textBox1.Location = new System.Drawing.Point(3, 82);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(246, 22);
             this.textBox1.TabIndex = 3;
@@ -409,7 +409,7 @@
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel3.SetFlowBreak(this.btnSave, true);
-            this.btnSave.Location = new System.Drawing.Point(3, 108);
+            this.btnSave.Location = new System.Drawing.Point(3, 110);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 28);
             this.btnSave.TabIndex = 4;
@@ -419,7 +419,7 @@
             // btnEmail
             // 
             this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmail.Location = new System.Drawing.Point(3, 146);
+            this.btnEmail.Location = new System.Drawing.Point(3, 148);
             this.btnEmail.Name = "btnEmail";
             this.btnEmail.Size = new System.Drawing.Size(121, 32);
             this.btnEmail.TabIndex = 5;

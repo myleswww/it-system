@@ -233,7 +233,7 @@
             this.OpenList.HorizontalScrollbar = true;
             this.OpenList.ItemHeight = 16;
             this.OpenList.Location = new System.Drawing.Point(536, 4);
-            this.OpenList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
             this.OpenList.Name = "OpenList";
             this.OpenList.Size = new System.Drawing.Size(525, 212);
             this.OpenList.TabIndex = 1;

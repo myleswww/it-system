@@ -43,12 +43,12 @@
             this.FAPTab = new System.Windows.Forms.Button();
             this.newTab = new System.Windows.Forms.Button();
             this.onlineHelpBtn = new System.Windows.Forms.Button();
+            this.OpenList = new System.Windows.Forms.ListBox();
             this.logOut = new System.Windows.Forms.Button();
             this.settingsBtn = new System.Windows.Forms.Button();
             this.optionPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnViewProbs = new System.Windows.Forms.Button();
             this.btnSubmitTicket = new System.Windows.Forms.Button();
-            this.OpenList = new System.Windows.Forms.ListBox();
+            this.btnViewProbs = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.optionPanel.SuspendLayout();
             this.SuspendLayout();
@@ -234,6 +234,22 @@
             this.onlineHelpBtn.UseVisualStyleBackColor = true;
             this.onlineHelpBtn.Click += new System.EventHandler(this.onlineHelpBtn_Click);
             // 
+            // OpenList
+            // 
+            this.OpenList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OpenList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OpenList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.OpenList.FormattingEnabled = true;
+            this.OpenList.HorizontalScrollbar = true;
+            this.OpenList.ItemHeight = 16;
+            this.OpenList.Location = new System.Drawing.Point(4, 33);
+            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
+            this.OpenList.Name = "OpenList";
+            this.OpenList.Size = new System.Drawing.Size(1043, 436);
+            this.OpenList.TabIndex = 11;
+            this.OpenList.SelectedIndexChanged += new System.EventHandler(this.OpenList_SelectedIndexChanged);
+            // 
             // logOut
             // 
             this.logOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -294,24 +310,6 @@
             this.optionPanel.TabIndex = 23;
             this.optionPanel.Visible = false;
             // 
-            // btnViewProbs
-            // 
-            this.btnViewProbs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnViewProbs.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnViewProbs.FlatAppearance.BorderSize = 0;
-            this.btnViewProbs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnViewProbs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewProbs.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewProbs.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnViewProbs.Location = new System.Drawing.Point(0, 31);
-            this.btnViewProbs.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.btnViewProbs.Name = "btnViewProbs";
-            this.btnViewProbs.Size = new System.Drawing.Size(214, 28);
-            this.btnViewProbs.TabIndex = 6;
-            this.btnViewProbs.Text = "View Existing Problems";
-            this.btnViewProbs.UseVisualStyleBackColor = false;
-            this.btnViewProbs.Click += new System.EventHandler(this.btnViewProbs_Click);
-            // 
             // btnSubmitTicket
             // 
             this.btnSubmitTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -331,20 +329,23 @@
             this.btnSubmitTicket.UseVisualStyleBackColor = false;
             this.btnSubmitTicket.Click += new System.EventHandler(this.btnSubmitTicket_Click);
             // 
-            // OpenList
+            // btnViewProbs
             // 
-            this.OpenList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OpenList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.OpenList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.OpenList.FormattingEnabled = true;
-            this.OpenList.HorizontalScrollbar = true;
-            this.OpenList.ItemHeight = 16;
-            this.OpenList.Location = new System.Drawing.Point(4, 33);
-            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
-            this.OpenList.Name = "OpenList";
-            this.OpenList.Size = new System.Drawing.Size(1043, 436);
-            this.OpenList.TabIndex = 11;
+            this.btnViewProbs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnViewProbs.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnViewProbs.FlatAppearance.BorderSize = 0;
+            this.btnViewProbs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnViewProbs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewProbs.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewProbs.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnViewProbs.Location = new System.Drawing.Point(0, 31);
+            this.btnViewProbs.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnViewProbs.Name = "btnViewProbs";
+            this.btnViewProbs.Size = new System.Drawing.Size(214, 28);
+            this.btnViewProbs.TabIndex = 6;
+            this.btnViewProbs.Text = "View Existing Problems";
+            this.btnViewProbs.UseVisualStyleBackColor = false;
+            this.btnViewProbs.Click += new System.EventHandler(this.btnViewProbs_Click);
             // 
             // ProjectMemberForm
             // 
