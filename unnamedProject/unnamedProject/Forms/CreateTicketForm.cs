@@ -12,14 +12,24 @@ namespace unnamedProject
 {
     public partial class CreateTicketForm : Form
     {
+
+        Users current = new Users();
+        dbHandler handler = new dbHandler();
         public CreateTicketForm(Users curr)
         {
             InitializeComponent();
+            current = curr;
         }
 
         private void CreateTicketForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            Tickets newTick = new Tickets(current.GetId(), DateTime.Now, (4), txtbxDesc.Text, (-1));
+            handler.AddTicket(newTick);
         }
     }
 }

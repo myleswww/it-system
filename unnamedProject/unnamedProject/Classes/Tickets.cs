@@ -19,25 +19,32 @@ namespace unnamedProject
         public DateTime DateAccessed { get; set; }
         public int TicketStatus { get; set; }
         public string Description { get; set; }
-        public string Notes { get; set; }
         public int Assigned { get; set; }
         public int Priority { get; set; }
 
-        public Tickets(int ticketID, int userInfo, DateTime dateAccessed, int ticketStatus, string description, string notes, int assigned)
+        public Tickets(int userInfo, DateTime dateAccessed, int ticketStatus, string description, int assigned)
         {
-            TicketID = ticketID;
             UserInfo = userInfo;
             DateAccessed = dateAccessed;
             TicketStatus = ticketStatus;
             Description = description;
-            Notes = notes;
+            Assigned = assigned;
+        }
+
+        public Tickets(int ID, int userInfo, DateTime dateAccessed, int ticketStatus, string description, int assigned)
+        {
+            TicketID = ID;
+            UserInfo = userInfo;
+            DateAccessed = dateAccessed;
+            TicketStatus = ticketStatus;
+            Description = description;
             Assigned = assigned;
         }
 
         public override string ToString() //this needs to be formatted better
         {
             return string.Format("{0}, {4}, {2:f}",
-                TicketID, UserInfo, DateAccessed, TicketStatus, Description, Notes);
+                TicketID, UserInfo, DateAccessed, TicketStatus, Description);
         }
     }
 }

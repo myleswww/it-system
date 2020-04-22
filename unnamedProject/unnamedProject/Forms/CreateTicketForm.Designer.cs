@@ -34,7 +34,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtbxSubject = new System.Windows.Forms.TextBox();
-            this.txtbxDescription = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
@@ -44,6 +43,7 @@
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.fullBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
+            this.txtbxDesc = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // lblSubmit
@@ -73,7 +73,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDescription.Location = new System.Drawing.Point(258, 224);
+            this.lblDescription.Location = new System.Drawing.Point(258, 229);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(81, 16);
             this.lblDescription.TabIndex = 2;
@@ -88,25 +88,18 @@
             this.txtbxSubject.Size = new System.Drawing.Size(100, 22);
             this.txtbxSubject.TabIndex = 3;
             // 
-            // txtbxDescription
-            // 
-            this.txtbxDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtbxDescription.Location = new System.Drawing.Point(345, 218);
-            this.txtbxDescription.Name = "txtbxDescription";
-            this.txtbxDescription.Size = new System.Drawing.Size(100, 22);
-            this.txtbxDescription.TabIndex = 4;
-            // 
             // btnSubmit
             // 
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSubmit.Location = new System.Drawing.Point(356, 257);
+            this.btnSubmit.Location = new System.Drawing.Point(355, 337);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 27);
             this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // imageList1
             // 
@@ -195,18 +188,29 @@
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
             // 
+            // txtbxDesc
+            // 
+            this.txtbxDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtbxDesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbxDesc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtbxDesc.Location = new System.Drawing.Point(345, 225);
+            this.txtbxDesc.Name = "txtbxDesc";
+            this.txtbxDesc.Size = new System.Drawing.Size(100, 96);
+            this.txtbxDesc.TabIndex = 27;
+            this.txtbxDesc.Text = "";
+            // 
             // CreateTicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtbxDesc);
             this.Controls.Add(this.back);
             this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.txtbxDescription);
             this.Controls.Add(this.txtbxSubject);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblTitle);
@@ -226,7 +230,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.TextBox txtbxSubject;
-        private System.Windows.Forms.TextBox txtbxDescription;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
@@ -236,5 +239,6 @@
         private System.Windows.Forms.Button minimizeBtn;
         private System.Windows.Forms.Button fullBtn;
         private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.RichTextBox txtbxDesc;
     }
 }

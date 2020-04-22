@@ -162,7 +162,7 @@ namespace unnamedProject
                     string notes = (string)reader["notes"];
                     int assigned = (int)reader["Assigned"];
 
-                    tempticket = new Tickets(ticketID,userInfo,dateAccessed,ticketStatus,description,notes,assigned);
+                    tempticket = new Tickets(ticketID,userInfo,dateAccessed,ticketStatus,description,assigned);
 
                     tickets.Add(tempticket);
                 }
@@ -337,46 +337,59 @@ namespace unnamedProject
 
         public void AddTicket(Tickets ticket)
         {
-            //do max id 
-            int newID = 0;
-            sqlcon.Open();
-            string query = "SELECT MAX(ID) FROM tickets";
-            SqlCommand command = new SqlCommand(query, sqlcon);
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            
+            try
             {
-                if (reader.IsDBNull(0)) //does the table have anything in it?
+                //do max id 
+                int newID = 0;
+                sqlcon.Open();
+                string query = "SELECT MAX(ID) FROM tickets";
+                SqlCommand command = new SqlCommand(query, sqlcon);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    newID = 1;
+                    if (reader.IsDBNull(0)) //does the table have anything in it?
+                    {
+                        newID = 1;
 
+                    }
+                    else
+                    {
+                        newID = reader.GetInt32(0);
+                        newID++;
+                    }
                 }
-                else
-                {
-                    newID = reader.GetInt32(0);
-                    newID++;
-                }
+                sqlcon.Close();
+
+                ticket.TicketID = newID;
+
+
+
+                sqlcon.Open();
+
+                string insert = "INSERT INTO tickets (ID, User_Info_Id, date_accessed, ticket_status, description, priority, assigned) VALUES (@id, @userid, @date, @status, @desc, @priority, @assigned)";
+                command = new SqlCommand(insert, sqlcon);
+                command.Parameters.AddWithValue("@id", ticket.TicketID);
+                command.Parameters.AddWithValue("@userid", ticket.UserInfo);
+                command.Parameters.AddWithValue("@date", ticket.DateAccessed);
+                command.Parameters.AddWithValue("@status", ticket.TicketStatus);
+                command.Parameters.AddWithValue("@desc", ticket.Description);
+                command.Parameters.AddWithValue("@priority", ticket.Priority);
+                command.Parameters.AddWithValue("@assigned", ticket.Assigned);
+
+                command.ExecuteNonQuery();
+
+                sqlcon.Close();
             }
-            sqlcon.Close();
-
-            ticket.TicketID = newID;
-
-
-
-            sqlcon.Open();
-
-            string insert = "INSERT INTO tickets (ID, User_Info_Id, date_accessed, ticket_status, description, priority, assigned) VALUES (@id, @userid, @date, @status, @desc, @priority, @assigned)";
-            command = new SqlCommand(insert, sqlcon);
-            command.Parameters.AddWithValue("@id", ticket.TicketID);
-            command.Parameters.AddWithValue("@userid", ticket.UserInfo);
-            command.Parameters.AddWithValue("@date", ticket.DateAccessed);
-            command.Parameters.AddWithValue("@status", ticket.TicketStatus);
-            command.Parameters.AddWithValue("@desc", ticket.Description);
-            command.Parameters.AddWithValue("@priority", ticket.Priority);
-            command.Parameters.AddWithValue("@assigned", ticket.Assigned);
-
-            command.ExecuteNonQuery();
-
-            sqlcon.Close();
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong!");
+            }
+            finally
+            {
+                MessageBox.Show("Ticket submitted successfully!");
+            }
+            
 
         }
 

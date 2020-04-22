@@ -77,7 +77,7 @@
             this.logOut.Name = "logOut";
             this.logOut.Size = new System.Drawing.Size(214, 28);
             this.logOut.TabIndex = 0;
-            this.logOut.Text = "Log Out";
+            this.logOut.Text = "Sign Out";
             this.logOut.UseVisualStyleBackColor = false;
             this.logOut.Click += new System.EventHandler(this.logOut_Click);
             // 
@@ -197,7 +197,7 @@
             this.settingsBtn.Name = "settingsBtn";
             this.settingsBtn.Size = new System.Drawing.Size(214, 28);
             this.settingsBtn.TabIndex = 5;
-            this.settingsBtn.Text = "Settings";
+            this.settingsBtn.Text = "Account Preferences";
             this.settingsBtn.UseVisualStyleBackColor = false;
             this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
             // 
@@ -413,7 +413,7 @@
             this.OpenList.HorizontalScrollbar = true;
             this.OpenList.ItemHeight = 16;
             this.OpenList.Location = new System.Drawing.Point(4, 4);
-            this.OpenList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
             this.OpenList.Name = "OpenList";
             this.OpenList.Size = new System.Drawing.Size(1043, 436);
             this.OpenList.TabIndex = 0;
@@ -446,7 +446,7 @@
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.AdminForm_Load);

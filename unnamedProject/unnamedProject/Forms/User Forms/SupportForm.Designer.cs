@@ -47,6 +47,7 @@
             this.optionPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.settingsBtn = new System.Windows.Forms.Button();
             this.logOut = new System.Windows.Forms.Button();
+            this.LblHello = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.optionPanel.SuspendLayout();
             this.SuspendLayout();
@@ -278,7 +279,7 @@
             this.settingsBtn.Name = "settingsBtn";
             this.settingsBtn.Size = new System.Drawing.Size(214, 28);
             this.settingsBtn.TabIndex = 5;
-            this.settingsBtn.Text = "Settings";
+            this.settingsBtn.Text = "Account Preferences";
             this.settingsBtn.UseVisualStyleBackColor = false;
             this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
             // 
@@ -301,9 +302,21 @@
             this.logOut.Name = "logOut";
             this.logOut.Size = new System.Drawing.Size(214, 28);
             this.logOut.TabIndex = 0;
-            this.logOut.Text = "Log Out";
+            this.logOut.Text = "Sign Out";
             this.logOut.UseVisualStyleBackColor = false;
             this.logOut.Click += new System.EventHandler(this.logOut_Click_1);
+            // 
+            // LblHello
+            // 
+            this.LblHello.AutoSize = true;
+            this.LblHello.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHello.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblHello.Location = new System.Drawing.Point(413, 17);
+            this.LblHello.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblHello.Name = "LblHello";
+            this.LblHello.Size = new System.Drawing.Size(60, 22);
+            this.LblHello.TabIndex = 24;
+            this.LblHello.Text = "Hello ";
             // 
             // SupportForm
             // 
@@ -311,6 +324,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.LblHello);
             this.Controls.Add(this.optionPanel);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.minimizeBtn);
@@ -325,6 +339,7 @@
             this.mainPanel.ResumeLayout(false);
             this.optionPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -347,5 +362,6 @@
         private System.Windows.Forms.Button settingsBtn;
         private System.Windows.Forms.Button logOut;
         private System.Windows.Forms.ListBox OpenList;
+        private System.Windows.Forms.Label LblHello;
     }
 }
