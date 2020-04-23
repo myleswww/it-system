@@ -144,7 +144,13 @@ namespace unnamedProject.Forms
 
         private void LstBxUser_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Users selectedUser = us[LstBxUser.SelectedIndex];
+            var form = new Thread(() => Application.Run(new EditUserForm(selectedUser, current)));
 
+            
+            form.Start();
+
+            
         }
     }
 }

@@ -53,6 +53,7 @@
             this.ticketTable = new System.Windows.Forms.TableLayoutPanel();
             this.OpenList = new System.Windows.Forms.ListBox();
             this.LblHello = new System.Windows.Forms.Label();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.optionPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.ticketTable.SuspendLayout();
@@ -70,9 +71,9 @@
             this.logOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.logOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.logOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOut.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.logOut.Location = new System.Drawing.Point(0, 151);
+            this.logOut.Location = new System.Drawing.Point(0, 181);
             this.logOut.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.logOut.Name = "logOut";
             this.logOut.Size = new System.Drawing.Size(214, 28);
@@ -94,7 +95,7 @@
             this.register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.register.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.register.Location = new System.Drawing.Point(0, 1);
             this.register.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
@@ -115,6 +116,7 @@
             this.optionPanel.Controls.Add(this.register);
             this.optionPanel.Controls.Add(this.usersBtn);
             this.optionPanel.Controls.Add(this.problemBtn);
+            this.optionPanel.Controls.Add(this.btnSubmit);
             this.optionPanel.Controls.Add(this.reportBtn);
             this.optionPanel.Controls.Add(this.settingsBtn);
             this.optionPanel.Controls.Add(this.logOut);
@@ -133,7 +135,7 @@
             this.usersBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.usersBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.usersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.usersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usersBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.usersBtn.Location = new System.Drawing.Point(0, 31);
             this.usersBtn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
@@ -152,7 +154,7 @@
             this.problemBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.problemBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.problemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.problemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.problemBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.problemBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.problemBtn.Location = new System.Drawing.Point(0, 61);
             this.problemBtn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
@@ -171,9 +173,9 @@
             this.reportBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.reportBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.reportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reportBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.reportBtn.Location = new System.Drawing.Point(0, 91);
+            this.reportBtn.Location = new System.Drawing.Point(0, 121);
             this.reportBtn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.reportBtn.Name = "reportBtn";
             this.reportBtn.Size = new System.Drawing.Size(214, 28);
@@ -190,9 +192,9 @@
             this.settingsBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.settingsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.settingsBtn.Location = new System.Drawing.Point(0, 121);
+            this.settingsBtn.Location = new System.Drawing.Point(0, 151);
             this.settingsBtn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.settingsBtn.Name = "settingsBtn";
             this.settingsBtn.Size = new System.Drawing.Size(214, 28);
@@ -359,7 +361,7 @@
             this.newTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.newTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.newTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newTab.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newTab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.newTab.Location = new System.Drawing.Point(227, 0);
             this.newTab.Margin = new System.Windows.Forms.Padding(0);
@@ -375,7 +377,7 @@
             this.onlineHelpBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.onlineHelpBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.onlineHelpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.onlineHelpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onlineHelpBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.onlineHelpBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.onlineHelpBtn.Location = new System.Drawing.Point(302, 0);
             this.onlineHelpBtn.Margin = new System.Windows.Forms.Padding(0, 0, 600, 0);
@@ -413,7 +415,7 @@
             this.OpenList.HorizontalScrollbar = true;
             this.OpenList.ItemHeight = 16;
             this.OpenList.Location = new System.Drawing.Point(4, 4);
-            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
+            this.OpenList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OpenList.Name = "OpenList";
             this.OpenList.Size = new System.Drawing.Size(1043, 436);
             this.OpenList.TabIndex = 0;
@@ -431,6 +433,22 @@
             this.LblHello.TabIndex = 20;
             this.LblHello.Text = "Hello ";
             // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSubmit.Location = new System.Drawing.Point(0, 91);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(214, 28);
+            this.btnSubmit.TabIndex = 6;
+            this.btnSubmit.Text = "Submit New Ticket";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -444,9 +462,10 @@
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.optionPanel);
             this.Controls.Add(this.mainPanel);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.AdminForm_Load);
@@ -483,5 +502,6 @@
         private System.Windows.Forms.TableLayoutPanel ticketTable;
         private System.Windows.Forms.ListBox OpenList;
         private System.Windows.Forms.Label LblHello;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }

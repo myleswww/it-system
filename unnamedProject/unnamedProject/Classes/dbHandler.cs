@@ -257,6 +257,18 @@ namespace unnamedProject
             sqlcon.Close();
         }
 
+        public void UpdateLevel(Users user)
+        {
+            sqlcon.Open(); //dont forget to open that connection!
+            string update = "UPDATE User_Info SET Id = @id, levelAccess = @level WHERE Id = @id"; //update where ID's are equal
+            SqlCommand command = new SqlCommand(update, sqlcon);
+            command.Parameters.AddWithValue("@id", user.Id);
+            command.Parameters.AddWithValue("@level", user.LevelAccess);
+
+            command.ExecuteNonQuery();
+            sqlcon.Close();
+        }
+
 
 
         public void UpdateTicket(Tickets ticket) //updates tickets
@@ -338,8 +350,7 @@ namespace unnamedProject
         public void AddTicket(Tickets ticket)
         {
             
-            try
-            {
+            
                 //do max id 
                 int newID = 0;
                 sqlcon.Open();
@@ -367,29 +378,20 @@ namespace unnamedProject
 
                 sqlcon.Open();
 
-                string insert = "INSERT INTO tickets (ID, User_Info_Id, date_accessed, ticket_status, description, priority, assigned) VALUES (@id, @userid, @date, @status, @desc, @priority, @assigned)";
+                string insert = "INSERT INTO tickets (ID, User_Info_Id, date_accessed, ticket_status, description, notes, priority, assigned) VALUES (@id, @userid, @date, @status, @desc, @notes, @priority, @assigned)";
                 command = new SqlCommand(insert, sqlcon);
                 command.Parameters.AddWithValue("@id", ticket.TicketID);
                 command.Parameters.AddWithValue("@userid", ticket.UserInfo);
                 command.Parameters.AddWithValue("@date", ticket.DateAccessed);
                 command.Parameters.AddWithValue("@status", ticket.TicketStatus);
                 command.Parameters.AddWithValue("@desc", ticket.Description);
+            command.Parameters.AddWithValue("@notes", "note");
                 command.Parameters.AddWithValue("@priority", ticket.Priority);
                 command.Parameters.AddWithValue("@assigned", ticket.Assigned);
 
                 command.ExecuteNonQuery();
 
                 sqlcon.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Something went wrong!");
-            }
-            finally
-            {
-                MessageBox.Show("Ticket submitted successfully!");
-            }
-            
 
         }
 

@@ -28,6 +28,7 @@ namespace unnamedProject.Forms
 
         private void ProjectMemberForm_Load(object sender, EventArgs e)
         {
+            LblHello.Text += current.Fname + "!";
             tickets = dbhadler.LoadTicketsFromDb(1);
             OpenList.Items.AddRange(tickets.ToArray());
             //WindowState = FormWindowState.Maximized;
@@ -142,11 +143,28 @@ namespace unnamedProject.Forms
 
         private void btnSubmitTicket_Click(object sender, EventArgs e)
         {
+            var form = new Thread(() => Application.Run(new CreateTicketForm(current)));
 
+            form.Start();
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
         }
 
         private void openTab_Click(object sender, EventArgs e)
         {
+            FAPTab.BackColor = Color.FromArgb(64, 64, 64);
+            FAPTab.ForeColor = SystemColors.ControlLightLight;
+
+            newTab.BackColor = Color.FromArgb(64, 64, 64);
+            newTab.ForeColor = SystemColors.ControlLightLight;
+
+            closedTab.BackColor = Color.FromArgb(64, 64, 64);
+            closedTab.ForeColor = SystemColors.ControlLightLight;
+
+            openTab.BackColor = Color.FromArgb(240, 188, 94);
+            openTab.ForeColor = Color.Black;
+
             OpenList.Visible = true;
             OpenList.Items.Clear();
             tickets = dbhadler.LoadTicketsFromDb(1);
@@ -155,6 +173,18 @@ namespace unnamedProject.Forms
 
         private void closedTab_Click(object sender, EventArgs e)
         {
+            openTab.BackColor = Color.FromArgb(64, 64, 64);
+            openTab.ForeColor = SystemColors.ControlLightLight;
+
+            FAPTab.BackColor = Color.FromArgb(64, 64, 64);
+            FAPTab.ForeColor = SystemColors.ControlLightLight;
+
+            newTab.BackColor = Color.FromArgb(64, 64, 64);
+            newTab.ForeColor = SystemColors.ControlLightLight;
+
+            closedTab.BackColor = Color.FromArgb(240, 188, 94);
+            closedTab.ForeColor = Color.Black;
+
             OpenList.Visible = true;
             OpenList.Items.Clear();
             tickets = dbhadler.LoadTicketsFromDb(3);
@@ -163,6 +193,18 @@ namespace unnamedProject.Forms
 
         private void FAPTab_Click(object sender, EventArgs e)
         {
+            newTab.BackColor = Color.FromArgb(64, 64, 64);
+            newTab.ForeColor = SystemColors.ControlLightLight;
+
+            closedTab.BackColor = Color.FromArgb(64, 64, 64);
+            closedTab.ForeColor = SystemColors.ControlLightLight;
+
+            openTab.BackColor = Color.FromArgb(64, 64, 64);
+            openTab.ForeColor = SystemColors.ControlLightLight;
+
+            FAPTab.BackColor = Color.FromArgb(240, 188, 94);
+            FAPTab.ForeColor = Color.Black;
+
             OpenList.Visible = true;
             OpenList.Items.Clear();
             tickets = dbhadler.LoadTicketsFromDb(2);
@@ -171,6 +213,18 @@ namespace unnamedProject.Forms
 
         private void newTab_Click(object sender, EventArgs e)
         {
+            closedTab.BackColor = Color.FromArgb(64, 64, 64);
+            closedTab.ForeColor = SystemColors.ControlLightLight;
+
+            openTab.BackColor = Color.FromArgb(64, 64, 64);
+            openTab.ForeColor = SystemColors.ControlLightLight;
+
+            FAPTab.BackColor = Color.FromArgb(64, 64, 64);
+            FAPTab.ForeColor = SystemColors.ControlLightLight;
+
+            newTab.BackColor = Color.FromArgb(240, 188, 94);
+            newTab.ForeColor = Color.Black;
+
             OpenList.Visible = true;
             OpenList.Items.Clear();
             tickets = dbhadler.LoadTicketsFromDb(0);
@@ -186,9 +240,12 @@ namespace unnamedProject.Forms
 
         private void OpenList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OpenList.Visible = true;
+            try
+            {
+                OpenList.Visible = true;
 
-            Tickets selectedTicket = tickets[OpenList.SelectedIndex];
+                Tickets selectedTicket = tickets[OpenList.SelectedIndex];
+
             this.Hide();
 
             var form = new Thread(() => Application.Run(new Forms.ViewTicketForm(current, selectedTicket)));
@@ -196,6 +253,8 @@ namespace unnamedProject.Forms
             Thread th = Thread.CurrentThread;
             th.Abort();
             this.Close();
+            }
+            catch { }
         }
     }
 }

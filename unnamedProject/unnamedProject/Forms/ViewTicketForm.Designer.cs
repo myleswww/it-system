@@ -50,8 +50,13 @@
             this.l = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblAssigned = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.lblAddNotes = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -308,8 +313,13 @@
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel3.Controls.Add(this.label4);
             this.flowLayoutPanel3.Controls.Add(this.lblAssigned);
+            this.flowLayoutPanel3.Controls.Add(this.label5);
+            this.flowLayoutPanel3.Controls.Add(this.label6);
             this.flowLayoutPanel3.Controls.Add(this.comboBox1);
+            this.flowLayoutPanel3.Controls.Add(this.checkBox1);
+            this.flowLayoutPanel3.Controls.Add(this.checkBox2);
             this.flowLayoutPanel3.Controls.Add(this.lblAddNotes);
             this.flowLayoutPanel3.Controls.Add(this.richTextBox2);
             this.flowLayoutPanel3.Controls.Add(this.btnSave);
@@ -321,36 +331,100 @@
             this.flowLayoutPanel3.Size = new System.Drawing.Size(324, 301);
             this.flowLayoutPanel3.TabIndex = 34;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flowLayoutPanel3.SetFlowBreak(this.label4, true);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(2, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 15);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Change Ticket Properties";
+            // 
             // lblAssigned
             // 
             this.lblAssigned.AutoSize = true;
             this.lblAssigned.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAssigned.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flowLayoutPanel3.SetFlowBreak(this.lblAssigned, true);
             this.lblAssigned.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAssigned.Location = new System.Drawing.Point(2, 0);
-            this.lblAssigned.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAssigned.Location = new System.Drawing.Point(2, 15);
+            this.lblAssigned.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
             this.lblAssigned.Name = "lblAssigned";
-            this.lblAssigned.Size = new System.Drawing.Size(108, 15);
+            this.lblAssigned.Padding = new System.Windows.Forms.Padding(0, 0, 56, 0);
+            this.lblAssigned.Size = new System.Drawing.Size(122, 15);
             this.lblAssigned.TabIndex = 0;
-            this.lblAssigned.Text = "Change Assigned To";
+            this.lblAssigned.Text = "Assignment:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(126, 15);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
+            this.label5.Size = new System.Drawing.Size(92, 15);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Status:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flowLayoutPanel3.SetFlowBreak(this.label6, true);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(222, 15);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 15);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Move To FAP:";
             // 
             // comboBox1
             // 
-            this.flowLayoutPanel3.SetFlowBreak(this.comboBox1, true);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(2, 27);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(2, 32);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 15, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 1;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(109, 33);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Padding = new System.Windows.Forms.Padding(20, 2, 15, 0);
+            this.checkBox1.Size = new System.Drawing.Size(93, 19);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "Closed";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(205, 33);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Padding = new System.Windows.Forms.Padding(20, 2, 20, 0);
+            this.checkBox2.Size = new System.Drawing.Size(86, 19);
+            this.checkBox2.TabIndex = 11;
+            this.checkBox2.Text = "FAP";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // lblAddNotes
             // 
             this.lblAddNotes.AutoSize = true;
             this.flowLayoutPanel3.SetFlowBreak(this.lblAddNotes, true);
             this.lblAddNotes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAddNotes.Location = new System.Drawing.Point(2, 50);
+            this.lblAddNotes.Location = new System.Drawing.Point(2, 55);
             this.lblAddNotes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddNotes.Name = "lblAddNotes";
             this.lblAddNotes.Size = new System.Drawing.Size(57, 13);
@@ -360,7 +434,7 @@
             // richTextBox2
             // 
             this.flowLayoutPanel3.SetFlowBreak(this.richTextBox2, true);
-            this.richTextBox2.Location = new System.Drawing.Point(3, 66);
+            this.richTextBox2.Location = new System.Drawing.Point(3, 71);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(297, 156);
             this.richTextBox2.TabIndex = 6;
@@ -370,7 +444,7 @@
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel3.SetFlowBreak(this.btnSave, true);
-            this.btnSave.Location = new System.Drawing.Point(2, 227);
+            this.btnSave.Location = new System.Drawing.Point(2, 232);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(56, 23);
@@ -382,7 +456,7 @@
             // btnEmail
             // 
             this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmail.Location = new System.Drawing.Point(2, 257);
+            this.btnEmail.Location = new System.Drawing.Point(2, 262);
             this.btnEmail.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmail.Name = "btnEmail";
             this.btnEmail.Size = new System.Drawing.Size(91, 26);
@@ -460,5 +534,10 @@
         private System.Windows.Forms.Button btnEmail;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
