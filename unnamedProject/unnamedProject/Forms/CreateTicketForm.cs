@@ -29,8 +29,9 @@ namespace unnamedProject
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Tickets newTick = new Tickets(current.GetId(), DateTime.Now, (4), txtbxDesc.Text, (-1));
+            Tickets newTick = new Tickets(current.GetId(), DateTime.Now, (4), txtbxSubject.Text, (-1));
             handler.AddTicket(newTick);
+            Notes note = new Notes(current.Id, newTick.TicketID, DateTime.Now, txtbxDesc.Text);
         }
 
         private void back_Click(object sender, EventArgs e)
