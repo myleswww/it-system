@@ -50,11 +50,11 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Britannic Bold", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTitle.Location = new System.Drawing.Point(94, 236);
+            this.lblTitle.Location = new System.Drawing.Point(36, 236);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(604, 111);
+            this.lblTitle.Size = new System.Drawing.Size(653, 111);
             this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "IT Help Desk";
+            this.lblTitle.Text = "ScrumForce™";
             this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // SplashScreen

@@ -92,11 +92,13 @@ namespace unnamedProject.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (ticket.TicketStatus == 1)
+            lblMessage.Visible = false;
+
+            if (ticket.TicketStatus == 1 || ticket.TicketStatus == 0)
             {
                 if (current.Id == assignedMember.Id)
                 {
-                    if (richTextBox2.Text != "")
+                    if (richTextBox2.Text != "" && richTextBox1.Text != "")
                     {
                         Notes newnote = new Notes(current.Id, ticket.TicketID, DateTime.Now, richTextBox2.Text);
                         handler.AddNote(newnote);
@@ -104,12 +106,16 @@ namespace unnamedProject.Forms
                         listBox1.Items.Clear();
                         notes = handler.GetNotes(ticket.TicketID);
                         listBox1.Items.AddRange(notes.ToArray());
-                    }
-                    if (richTextBox1.Text != "")
-                    {
+
                         ticket.Description = richTextBox1.Text;
                         handler.UpdateTicket(ticket);
                     }
+                    else if(richTextBox2.Text == "" || richTextBox1.Text == "")
+                    {
+                        lblMessage.Visible = true;
+                        lblMessage.Text = "You may not leave the description or notes blank.";
+                    }
+                    
                     if(checkBox1.Checked == true)
                     {
                         ticket.TicketStatus = 3;
@@ -169,16 +175,22 @@ namespace unnamedProject.Forms
 
         private void btnEmail_Click(object sender, EventArgs e)
         {
+            lblMessage.Visible = false;
             if (ticket.TicketStatus != 2 && richTextBox2.Text != "")
             {
                 string subject = "Your Ticket has been updated!";
                 string body = String.Format("<p> Your Ticket has been updated! <br>" +
                                "Ticket ID: {0} <br>" +
                                "Description: {1} <br>" +
-                               "{3} <p>"
+                               "{2} <p>"
                                , ticket.TicketID, ticket.Description, richTextBox2.Text);
 
                 EmailSend send = new EmailSend(contact.Email, subject, body);
+                int passed = send.SendEmail();
+                if(passed != 1)
+                {
+                    lblMessage.Text = "Please enter a valid email!";
+                }
             }
         }
 

@@ -31,35 +31,7 @@ namespace unnamedProject
             th.Abort();
         }
 
-        private void fullBtn_Click(object sender, EventArgs e)
-        {
-            if (this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
-            {
-
-                WindowState = FormWindowState.Normal; //All of this is for the button itself
-                fullBtn.FlatAppearance.BorderSize = 1;
-                fullBtn.Width = 15;
-                fullBtn.Height = 12;
-                fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
-                fullBtn.ImageIndex = -1;
-               // ticketTable.Size = mainPanel.Size;
-
-                //screen scaling
-
-            }
-            else
-            {
-                WindowState = FormWindowState.Maximized;
-                fullBtn.ImageIndex = 0;
-                fullBtn.FlatAppearance.BorderSize = 0;
-                fullBtn.Width = 15;
-                fullBtn.Height = 15;
-               // ticketTable.Size = mainPanel.Size;
-
-                //screen scaling
-
-            }
-        }
+       
 
         private void minimizeBtn_Click(object sender, EventArgs e)
         {

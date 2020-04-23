@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
             this.minimizeBtn = new System.Windows.Forms.Button();
-            this.fullBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
             this.backButtonList = new System.Windows.Forms.ImageList(this.components);
@@ -56,29 +55,13 @@
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.minimizeBtn.Location = new System.Drawing.Point(707, 8);
+            this.minimizeBtn.Location = new System.Drawing.Point(729, 9);
             this.minimizeBtn.Name = "minimizeBtn";
             this.minimizeBtn.Size = new System.Drawing.Size(21, 30);
             this.minimizeBtn.TabIndex = 32;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
             this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
-            // 
-            // fullBtn
-            // 
-            this.fullBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.fullBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.fullBtn.FlatAppearance.BorderSize = 2;
-            this.fullBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.fullBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.fullBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fullBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.fullBtn.Location = new System.Drawing.Point(733, 18);
-            this.fullBtn.Name = "fullBtn";
-            this.fullBtn.Size = new System.Drawing.Size(18, 11);
-            this.fullBtn.TabIndex = 31;
-            this.fullBtn.UseVisualStyleBackColor = true;
-            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
             // 
             // exitBtn
             // 
@@ -237,7 +220,6 @@
             this.Controls.Add(this.LblReport);
             this.Controls.Add(this.back);
             this.Controls.Add(this.minimizeBtn);
-            this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReportForm";
@@ -252,7 +234,6 @@
         #endregion
 
         private System.Windows.Forms.Button minimizeBtn;
-        private System.Windows.Forms.Button fullBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.ImageList backButtonList;

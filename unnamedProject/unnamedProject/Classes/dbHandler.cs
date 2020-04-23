@@ -16,6 +16,16 @@ namespace unnamedProject
 {
     class dbHandler
     {   
+
+        /*
+         * 0 - Admin
+         * 1 - Report Manager
+         * 2 - Support Member
+         * 3 - Project Member
+         * 4 - Deactivated
+         * 
+         */
+
         
         //connection string
         public Users curretOnlineUser;

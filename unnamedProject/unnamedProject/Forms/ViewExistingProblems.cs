@@ -52,7 +52,7 @@ namespace unnamedProject
                 fullBtn.Height = 12;
                 fullBtn.FlatAppearance.BorderColor = SystemColors.ControlLightLight;
                 fullBtn.ImageIndex = -1;
-
+                LstBxProblems.Width = this.Width;
 
                 //screen scaling
 

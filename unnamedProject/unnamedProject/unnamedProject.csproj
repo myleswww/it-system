@@ -50,10 +50,10 @@
     <Compile Include="Classes\EmailSend.cs" />
     <Compile Include="Classes\Tickets.cs" />
     <Compile Include="Classes\Users.cs" />
-    <Compile Include="EditUserForm.cs">
+    <Compile Include="Forms\EditUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditUserForm.Designer.cs">
+    <Compile Include="Forms\EditUserForm.Designer.cs">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CreateTicketForm.cs">
@@ -163,7 +163,7 @@
     <Compile Include="Forms\ViewReportForm.Designer.cs">
       <DependentUpon>ViewReportForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EditUserForm.resx">
+    <EmbeddedResource Include="Forms\EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateTicketForm.resx">

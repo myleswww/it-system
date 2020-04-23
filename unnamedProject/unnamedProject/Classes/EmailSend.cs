@@ -28,10 +28,10 @@ namespace unnamedProject
             subject = psubject;
             body = pbody;
 
-            SendEmail();
+            
         }
 
-        private void SendEmail()
+        public int SendEmail()
         {
             using (MailMessage mail = new MailMessage())
             {
@@ -49,11 +49,13 @@ namespace unnamedProject
                         smtp.EnableSsl = enableSSL;
                         smtp.Send(mail);
                     }
+                    return 1;
                 }
                 catch (Exception)
                 {
                     //error
                 }
+                return 0;
             }
         }
     }

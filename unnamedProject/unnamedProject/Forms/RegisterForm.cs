@@ -74,6 +74,11 @@ namespace unnamedProject
                                    , username.Text, password.Text);
 
                     EmailSend send = new EmailSend(email.Text, subject, body);
+                    int passed = send.SendEmail();
+                    if (passed != 1)
+                    {
+                        error.Text = "Please enter a valid email!";
+                    }
 
 
                     var admin = new Thread(() => Application.Run(new AdminForm(current)));

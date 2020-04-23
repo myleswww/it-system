@@ -40,7 +40,6 @@
             this.back = new System.Windows.Forms.Button();
             this.backButtonList = new System.Windows.Forms.ImageList(this.components);
             this.minimizeBtn = new System.Windows.Forms.Button();
-            this.fullBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
@@ -176,22 +175,6 @@
             this.minimizeBtn.UseVisualStyleBackColor = true;
             this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
             // 
-            // fullBtn
-            // 
-            this.fullBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.fullBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.fullBtn.FlatAppearance.BorderSize = 2;
-            this.fullBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.fullBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.fullBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fullBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.fullBtn.Location = new System.Drawing.Point(728, 13);
-            this.fullBtn.Name = "fullBtn";
-            this.fullBtn.Size = new System.Drawing.Size(18, 11);
-            this.fullBtn.TabIndex = 42;
-            this.fullBtn.UseVisualStyleBackColor = true;
-            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
-            // 
             // exitBtn
             // 
             this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -237,7 +220,6 @@
             this.Controls.Add(this.LblReport);
             this.Controls.Add(this.back);
             this.Controls.Add(this.minimizeBtn);
-            this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewReportForm";
@@ -260,7 +242,6 @@
         private System.Windows.Forms.Label LblReport;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button minimizeBtn;
-        private System.Windows.Forms.Button fullBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.ImageList backButtonList;
         private System.Windows.Forms.ImageList imageList1;

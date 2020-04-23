@@ -41,7 +41,6 @@
             this.backButtonList = new System.Windows.Forms.ImageList(this.components);
             this.back = new System.Windows.Forms.Button();
             this.minimizeBtn = new System.Windows.Forms.Button();
-            this.fullBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.txtbxDesc = new System.Windows.Forms.RichTextBox();
             this.errorMsg = new System.Windows.Forms.Label();
@@ -94,9 +93,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -157,29 +154,13 @@
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.minimizeBtn.Location = new System.Drawing.Point(707, 8);
+            this.minimizeBtn.Location = new System.Drawing.Point(729, 7);
             this.minimizeBtn.Name = "minimizeBtn";
             this.minimizeBtn.Size = new System.Drawing.Size(21, 30);
             this.minimizeBtn.TabIndex = 25;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
             this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
-            // 
-            // fullBtn
-            // 
-            this.fullBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.fullBtn.FlatAppearance.BorderSize = 2;
-            this.fullBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.fullBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.fullBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fullBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.fullBtn.ImageList = this.imageList2;
-            this.fullBtn.Location = new System.Drawing.Point(733, 18);
-            this.fullBtn.Name = "fullBtn";
-            this.fullBtn.Size = new System.Drawing.Size(18, 11);
-            this.fullBtn.TabIndex = 24;
-            this.fullBtn.UseVisualStyleBackColor = true;
-            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
             // 
             // exitBtn
             // 
@@ -197,6 +178,7 @@
             this.exitBtn.TabIndex = 23;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // txtbxDesc
             // 
@@ -237,7 +219,6 @@
             this.Controls.Add(this.txtbxDesc);
             this.Controls.Add(this.back);
             this.Controls.Add(this.minimizeBtn);
-            this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtbxSubject);
@@ -267,7 +248,6 @@
         private System.Windows.Forms.ImageList backButtonList;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button minimizeBtn;
-        private System.Windows.Forms.Button fullBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.RichTextBox txtbxDesc;
         private System.Windows.Forms.Label errorMsg;

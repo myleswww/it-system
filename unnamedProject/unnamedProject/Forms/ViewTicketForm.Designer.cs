@@ -38,7 +38,6 @@
             this.back = new System.Windows.Forms.Button();
             this.backButtonList = new System.Windows.Forms.ImageList(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.LblTicket = new System.Windows.Forms.Label();
             this.LblID = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -48,6 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.l = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.LblTicket = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.lblAssigned = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEmail = new System.Windows.Forms.Button();
             this.lblEdit = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -129,7 +129,7 @@
             this.back.ImageKey = "backbutton.png";
             this.back.ImageList = this.backButtonList;
             this.back.Location = new System.Drawing.Point(13, 14);
-            this.back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.back.Margin = new System.Windows.Forms.Padding(4);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(64, 59);
             this.back.TabIndex = 31;
@@ -161,21 +161,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(325, 370);
             this.flowLayoutPanel1.TabIndex = 32;
-            // 
-            // LblTicket
-            // 
-            this.LblTicket.AutoSize = true;
-            this.LblTicket.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LblTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LblTicket.Font = new System.Drawing.Font("Britannic Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTicket.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblTicket.Location = new System.Drawing.Point(315, 18);
-            this.LblTicket.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.LblTicket.Name = "LblTicket";
-            this.LblTicket.Size = new System.Drawing.Size(131, 23);
-            this.LblTicket.TabIndex = 0;
-            this.LblTicket.Text = "Current Ticket";
-            this.LblTicket.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblID
             // 
@@ -209,7 +194,7 @@
             // 
             this.flowLayoutPanel1.SetFlowBreak(this.richTextBox1, true);
             this.richTextBox1.Location = new System.Drawing.Point(4, 40);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(295, 29);
             this.richTextBox1.TabIndex = 13;
@@ -297,6 +282,21 @@
             this.listBox1.Size = new System.Drawing.Size(296, 169);
             this.listBox1.TabIndex = 12;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // LblTicket
+            // 
+            this.LblTicket.AutoSize = true;
+            this.LblTicket.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblTicket.Font = new System.Drawing.Font("Britannic Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTicket.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblTicket.Location = new System.Drawing.Point(315, 18);
+            this.LblTicket.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.LblTicket.Name = "LblTicket";
+            this.LblTicket.Size = new System.Drawing.Size(131, 23);
+            this.LblTicket.TabIndex = 0;
+            this.LblTicket.Text = "Current Ticket";
+            this.LblTicket.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel3
             // 
@@ -403,7 +403,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.Location = new System.Drawing.Point(267, 40);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Padding = new System.Windows.Forms.Padding(27, 2, 27, 0);
             this.checkBox2.Size = new System.Drawing.Size(107, 22);
@@ -427,7 +427,7 @@
             // 
             this.flowLayoutPanel3.SetFlowBreak(this.richTextBox2, true);
             this.richTextBox2.Location = new System.Drawing.Point(4, 86);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(395, 191);
             this.richTextBox2.TabIndex = 6;
@@ -472,14 +472,17 @@
             this.lblEdit.TabIndex = 36;
             this.lblEdit.Text = "Edit Ticket";
             // 
-            // label7
+            // lblMessage
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(345, 48);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "label7";
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.Red;
+            this.lblMessage.Location = new System.Drawing.Point(84, 48);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(48, 16);
+            this.lblMessage.TabIndex = 37;
+            this.lblMessage.Text = "label7";
+            this.lblMessage.Visible = false;
             // 
             // ViewTicketForm
             // 
@@ -487,7 +490,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.LblTicket);
             this.Controls.Add(this.lblEdit);
             this.Controls.Add(this.flowLayoutPanel3);
@@ -543,6 +546,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblMessage;
     }
 }
