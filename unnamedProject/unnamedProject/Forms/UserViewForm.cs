@@ -141,5 +141,10 @@ namespace unnamedProject.Forms
             sortHelp(us, ComboBoxSort.SelectedIndex);
 
         }
+
+        private void LstBxUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

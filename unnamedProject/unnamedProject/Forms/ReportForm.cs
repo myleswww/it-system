@@ -65,7 +65,7 @@ namespace unnamedProject
                     break;
             }
 
-            report.Description = tickets.ToString() + ", " + percent.ToString() + ", " + newTick.ToString();
+            report.Description = (tickets.ToString() + "," + percent.ToString() + "," + newTick.ToString());
 
 
             report.ID = handler.AddReport(report); //add the report to the database, while recieving the new id back

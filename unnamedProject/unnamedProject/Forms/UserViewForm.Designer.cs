@@ -231,6 +231,7 @@
             this.LstBxUser.Name = "LstBxUser";
             this.LstBxUser.Size = new System.Drawing.Size(693, 325);
             this.LstBxUser.TabIndex = 7;
+            this.LstBxUser.SelectedIndexChanged += new System.EventHandler(this.LstBxUser_SelectedIndexChanged);
             // 
             // LblAllUsers
             // 
