@@ -14,7 +14,6 @@ namespace unnamedProject
     public partial class ViewReportForm : Form
     {
         Report report { get; set; }
-        dbHandler handler;
         Users current;
         public ViewReportForm(Users cur, Report rep)
         {

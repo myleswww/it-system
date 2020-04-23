@@ -220,8 +220,9 @@ namespace unnamedProject.Forms
 
         private void OpenList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
             OpenList.Visible = true;
-
             Tickets selectedTicket = tickets[OpenList.SelectedIndex];
             this.Hide();
 
@@ -230,6 +231,8 @@ namespace unnamedProject.Forms
             Thread th = Thread.CurrentThread;
             th.Abort();
             this.Close();
+            }
+            catch { }
         }
     }
 }

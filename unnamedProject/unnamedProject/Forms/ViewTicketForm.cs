@@ -28,7 +28,7 @@ namespace unnamedProject.Forms
             current = cur;
             ticket = tick;
             contact = handler.LoadUserInfoFromDb(tick.UserInfo);
-            if (ticket.Assigned != -1)
+            if (ticket.TicketStatus != 4)
                 assignedMember = handler.LoadUserInfoFromDb(tick.Assigned);
         }
 
@@ -43,7 +43,7 @@ namespace unnamedProject.Forms
             {
                 comboBox1.Items.Add(user.Id);
             }
-            if (ticket.Assigned != -1)
+            if (ticket.TicketStatus != 4)
             {
                 l.Text = assignedMember.Username;
                 assignedIndex = comboBox1.Items.IndexOf(assignedMember.Id);
@@ -52,15 +52,46 @@ namespace unnamedProject.Forms
             else
             {
                 l.Text = "unassigned";
-                assignedIndex = -1;
             }
             notes = handler.GetNotes(ticket.TicketID);
             listBox1.Items.AddRange(notes.ToArray());
+
+            if(ticket.TicketStatus == 3)
+            {
+                checkBox2.Enabled = true;
+                if (current.Id != contact.Id)
+                    checkBox1.Enabled = false;
+                else
+                {
+                    checkBox1.Enabled = true;
+                    checkBox1.Checked = true;
+                }
+            }
+            else if(ticket.TicketStatus == 2){
+                checkBox1.Enabled = false;
+                checkBox1.Enabled = false;
+            }
+            else if(ticket.TicketStatus == 1 || ticket.TicketStatus == 0)
+            {
+                checkBox2.Enabled = false;
+                if (current.Id != assignedMember.Id)
+                    checkBox1.Enabled = false;
+                else
+                {
+                    if (ticket.TicketStatus == 0)
+                    {
+                        ticket.TicketStatus = 1;
+                        handler.UpdateTicket(ticket);
+                    }
+                    checkBox1.Enabled = true;
+                    checkBox1.Checked = false;
+                }
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (ticket.Assigned != -1)
+            if (ticket.TicketStatus == 1)
             {
                 if (current.Id == assignedMember.Id)
                 {
@@ -78,14 +109,59 @@ namespace unnamedProject.Forms
                         ticket.Description = richTextBox1.Text;
                         handler.UpdateTicket(ticket);
                     }
+                    if(checkBox1.Checked == true)
+                    {
+                        ticket.TicketStatus = 3;
+                        handler.UpdateTicket(ticket);
+
+                        //kick out
+                        var admin = new Thread(() => Application.Run(current.getForm()));
+                        admin.Start();
+
+                        Thread th = Thread.CurrentThread;
+                        th.Abort();
+                    }
                 }
             }
-            if (current.LevelAccess == 0 || current.LevelAccess == 1)
+            if ((current.LevelAccess == 0 || current.LevelAccess == 1) && (ticket.TicketStatus != 3))
             {
                 ticket.Assigned = (int)comboBox1.SelectedItem;
+                if (ticket.TicketStatus == 4)
+                    ticket.TicketStatus = 0;
                 handler.UpdateTicket(ticket);
                 assignedMember = handler.LoadUserInfoFromDb(ticket.Assigned);
                 l.Text = assignedMember.Username;
+            }
+            if (ticket.TicketStatus == 3)
+            {
+                if(current.Id == contact.Id)
+                {
+                    if(checkBox1.Checked == false)
+                    {
+                        ticket.TicketStatus = 1;
+                        ticket.Priority += 1;
+                        handler.UpdateTicket(ticket);
+
+                        //kick out
+                        var admin = new Thread(() => Application.Run(current.getForm()));
+                        admin.Start();
+
+                        Thread th = Thread.CurrentThread;
+                        th.Abort();
+                    }
+                }
+                if(checkBox2.Checked == true)
+                {
+                    ticket.TicketStatus = 2;
+                    handler.UpdateTicket(ticket);
+
+                    //kick out
+                    var admin = new Thread(() => Application.Run(current.getForm()));
+                    admin.Start();
+
+                    Thread th = Thread.CurrentThread;
+                    th.Abort();
+                }
             }
         }
 
