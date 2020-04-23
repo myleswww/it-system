@@ -52,7 +52,7 @@
             this.lblSubmit.AutoSize = true;
             this.lblSubmit.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSubmit.Location = new System.Drawing.Point(292, 39);
+            this.lblSubmit.Location = new System.Drawing.Point(276, 39);
             this.lblSubmit.Name = "lblSubmit";
             this.lblSubmit.Size = new System.Drawing.Size(196, 33);
             this.lblSubmit.TabIndex = 0;
@@ -63,7 +63,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitle.Location = new System.Drawing.Point(284, 179);
+            this.lblTitle.Location = new System.Drawing.Point(204, 179);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(55, 16);
             this.lblTitle.TabIndex = 1;
@@ -74,7 +74,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDescription.Location = new System.Drawing.Point(258, 229);
+            this.lblDescription.Location = new System.Drawing.Point(178, 228);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(81, 16);
             this.lblDescription.TabIndex = 2;
@@ -82,19 +82,25 @@
             // 
             // txtbxSubject
             // 
+            this.txtbxSubject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbxSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtbxSubject.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtbxSubject.Location = new System.Drawing.Point(345, 179);
+            this.txtbxSubject.Location = new System.Drawing.Point(265, 179);
             this.txtbxSubject.Name = "txtbxSubject";
-            this.txtbxSubject.Size = new System.Drawing.Size(100, 22);
+            this.txtbxSubject.Size = new System.Drawing.Size(237, 22);
             this.txtbxSubject.TabIndex = 3;
             // 
             // btnSubmit
             // 
+            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSubmit.Location = new System.Drawing.Point(355, 337);
+            this.btnSubmit.Location = new System.Drawing.Point(334, 358);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 27);
             this.btnSubmit.TabIndex = 5;
@@ -157,6 +163,7 @@
             this.minimizeBtn.TabIndex = 25;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
+            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
             // 
             // fullBtn
             // 
@@ -172,6 +179,7 @@
             this.fullBtn.Size = new System.Drawing.Size(18, 11);
             this.fullBtn.TabIndex = 24;
             this.fullBtn.UseVisualStyleBackColor = true;
+            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
             // 
             // exitBtn
             // 
@@ -192,21 +200,28 @@
             // 
             // txtbxDesc
             // 
+            this.txtbxDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbxDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtbxDesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbxDesc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtbxDesc.Location = new System.Drawing.Point(345, 225);
+            this.txtbxDesc.Location = new System.Drawing.Point(265, 228);
             this.txtbxDesc.Name = "txtbxDesc";
-            this.txtbxDesc.Size = new System.Drawing.Size(100, 96);
+            this.txtbxDesc.Size = new System.Drawing.Size(237, 96);
             this.txtbxDesc.TabIndex = 27;
             this.txtbxDesc.Text = "";
+            this.txtbxDesc.TextChanged += new System.EventHandler(this.txtbxDesc_TextChanged);
             // 
             // errorMsg
             // 
+            this.errorMsg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.errorMsg.AutoSize = true;
             this.errorMsg.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorMsg.ForeColor = System.Drawing.Color.Red;
-            this.errorMsg.Location = new System.Drawing.Point(303, 95);
+            this.errorMsg.Location = new System.Drawing.Point(330, 120);
             this.errorMsg.Name = "errorMsg";
             this.errorMsg.Size = new System.Drawing.Size(66, 19);
             this.errorMsg.TabIndex = 28;
@@ -231,6 +246,7 @@
             this.Controls.Add(this.lblSubmit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateTicketForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateTicketForm";
             this.Load += new System.EventHandler(this.CreateTicketForm_Load);
             this.ResumeLayout(false);

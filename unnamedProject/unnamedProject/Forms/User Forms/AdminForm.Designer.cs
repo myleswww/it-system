@@ -35,6 +35,7 @@
             this.optionPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.usersBtn = new System.Windows.Forms.Button();
             this.problemBtn = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.reportBtn = new System.Windows.Forms.Button();
             this.settingsBtn = new System.Windows.Forms.Button();
             this.buttonCollapse = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.ticketTable = new System.Windows.Forms.TableLayoutPanel();
             this.OpenList = new System.Windows.Forms.ListBox();
             this.LblHello = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
             this.optionPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.ticketTable.SuspendLayout();
@@ -164,6 +164,22 @@
             this.problemBtn.Text = "View Existing Problems";
             this.problemBtn.UseVisualStyleBackColor = false;
             this.problemBtn.Click += new System.EventHandler(this.problemBtn_Click);
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSubmit.Location = new System.Drawing.Point(0, 91);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(214, 28);
+            this.btnSubmit.TabIndex = 6;
+            this.btnSubmit.Text = "Submit New Ticket";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // reportBtn
             // 
@@ -377,6 +393,7 @@
             this.onlineHelpBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.onlineHelpBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.onlineHelpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mainPanel.SetFlowBreak(this.onlineHelpBtn, true);
             this.onlineHelpBtn.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.onlineHelpBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.onlineHelpBtn.Location = new System.Drawing.Point(302, 0);
@@ -395,7 +412,7 @@
             this.ticketTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ticketTable.ColumnCount = 1;
             this.ticketTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ticketTable.Controls.Add(this.OpenList, 0, 0);
+            this.ticketTable.Controls.Add(this.OpenList, 5, 0);
             this.ticketTable.Location = new System.Drawing.Point(2, 31);
             this.ticketTable.Margin = new System.Windows.Forms.Padding(2);
             this.ticketTable.Name = "ticketTable";
@@ -415,7 +432,8 @@
             this.OpenList.HorizontalScrollbar = true;
             this.OpenList.ItemHeight = 16;
             this.OpenList.Location = new System.Drawing.Point(4, 4);
-            this.OpenList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OpenList.Margin = new System.Windows.Forms.Padding(4);
+            this.OpenList.MultiColumn = true;
             this.OpenList.Name = "OpenList";
             this.OpenList.Size = new System.Drawing.Size(1043, 436);
             this.OpenList.TabIndex = 0;
@@ -433,22 +451,6 @@
             this.LblHello.TabIndex = 20;
             this.LblHello.Text = "Hello ";
             // 
-            // btnSubmit
-            // 
-            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSubmit.Location = new System.Drawing.Point(0, 91);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(214, 28);
-            this.btnSubmit.TabIndex = 6;
-            this.btnSubmit.Text = "Submit New Ticket";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -465,7 +467,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.AdminForm_Load);

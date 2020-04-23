@@ -100,6 +100,7 @@
             this.minimizeBtn.TabIndex = 21;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
+            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click_1);
             // 
             // fullBtn
             // 

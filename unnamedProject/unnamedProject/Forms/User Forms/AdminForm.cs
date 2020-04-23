@@ -113,6 +113,9 @@ namespace unnamedProject
             OpenList.Items.Clear();
             tickets = dbhadler.LoadTicketsFromDb(1);
             OpenList.Items.AddRange(tickets.ToArray());
+
+
+
             //WindowState = FormWindowState.Maximized;
             if (this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
             {

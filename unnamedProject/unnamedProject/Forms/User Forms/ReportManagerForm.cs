@@ -183,8 +183,7 @@ namespace unnamedProject.Forms
             FAPTab.BackColor = Color.FromArgb(64, 64, 64);
             FAPTab.ForeColor = SystemColors.ControlLightLight;
 
-            newTab.BackColor = Color.FromArgb(64, 64, 64);
-            newTab.ForeColor = SystemColors.ControlLightLight;
+            
 
             closedTab.BackColor = Color.FromArgb(64, 64, 64);
             closedTab.ForeColor = SystemColors.ControlLightLight;

@@ -283,5 +283,10 @@ namespace unnamedProject.Forms
             }
             catch { }
         }
+
+        private void minimizeBtn_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

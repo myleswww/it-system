@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTicketForm));
             this.minimizeBtn = new System.Windows.Forms.Button();
-            this.fullBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
@@ -62,6 +61,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEmail = new System.Windows.Forms.Button();
             this.lblEdit = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -75,30 +75,14 @@
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minimizeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.minimizeBtn.Location = new System.Drawing.Point(522, 6);
-            this.minimizeBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.minimizeBtn.Location = new System.Drawing.Point(722, 9);
+            this.minimizeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minimizeBtn.Name = "minimizeBtn";
-            this.minimizeBtn.Size = new System.Drawing.Size(18, 26);
+            this.minimizeBtn.Size = new System.Drawing.Size(24, 32);
             this.minimizeBtn.TabIndex = 21;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
             this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click_1);
-            // 
-            // fullBtn
-            // 
-            this.fullBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.fullBtn.FlatAppearance.BorderSize = 2;
-            this.fullBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.fullBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.fullBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fullBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.fullBtn.Location = new System.Drawing.Point(544, 15);
-            this.fullBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.fullBtn.Name = "fullBtn";
-            this.fullBtn.Size = new System.Drawing.Size(15, 10);
-            this.fullBtn.TabIndex = 20;
-            this.fullBtn.UseVisualStyleBackColor = true;
-            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
             // 
             // exitBtn
             // 
@@ -109,10 +93,10 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.exitBtn.Location = new System.Drawing.Point(562, 7);
+            this.exitBtn.Location = new System.Drawing.Point(749, 9);
             this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(32, 26);
+            this.exitBtn.Size = new System.Drawing.Size(43, 32);
             this.exitBtn.TabIndex = 19;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
@@ -144,9 +128,10 @@
             this.back.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.back.ImageKey = "backbutton.png";
             this.back.ImageList = this.backButtonList;
-            this.back.Location = new System.Drawing.Point(10, 11);
+            this.back.Location = new System.Drawing.Point(13, 14);
+            this.back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(48, 48);
+            this.back.Size = new System.Drawing.Size(64, 59);
             this.back.TabIndex = 31;
             this.back.UseVisualStyleBackColor = false;
             this.back.Click += new System.EventHandler(this.back_Click_1);
@@ -162,7 +147,6 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Controls.Add(this.LblTicket);
             this.flowLayoutPanel1.Controls.Add(this.LblID);
             this.flowLayoutPanel1.Controls.Add(this.lblDescription);
             this.flowLayoutPanel1.Controls.Add(this.richTextBox1);
@@ -172,10 +156,10 @@
             this.flowLayoutPanel1.Controls.Add(this.label3);
             this.flowLayoutPanel1.Controls.Add(this.l);
             this.flowLayoutPanel1.Controls.Add(this.listBox1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 55);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 68);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(244, 301);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(325, 370);
             this.flowLayoutPanel1.TabIndex = 32;
             // 
             // LblTicket
@@ -183,11 +167,12 @@
             this.LblTicket.AutoSize = true;
             this.LblTicket.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LblTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblTicket.Font = new System.Drawing.Font("Britannic Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTicket.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblTicket.Location = new System.Drawing.Point(2, 0);
-            this.LblTicket.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.LblTicket.Location = new System.Drawing.Point(315, 18);
+            this.LblTicket.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.LblTicket.Name = "LblTicket";
-            this.LblTicket.Size = new System.Drawing.Size(76, 15);
+            this.LblTicket.Size = new System.Drawing.Size(131, 23);
             this.LblTicket.TabIndex = 0;
             this.LblTicket.Text = "Current Ticket";
             this.LblTicket.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,11 +183,11 @@
             this.LblID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel1.SetFlowBreak(this.LblID, true);
+            this.LblID.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblID.Location = new System.Drawing.Point(80, 0);
-            this.LblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblID.Location = new System.Drawing.Point(3, 0);
             this.LblID.Name = "LblID";
-            this.LblID.Size = new System.Drawing.Size(20, 15);
+            this.LblID.Size = new System.Drawing.Size(23, 18);
             this.LblID.TabIndex = 1;
             this.LblID.Text = "ID";
             // 
@@ -212,20 +197,21 @@
             this.lblDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblDescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel1.SetFlowBreak(this.lblDescription, true);
+            this.lblDescription.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDescription.Location = new System.Drawing.Point(2, 15);
-            this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescription.Location = new System.Drawing.Point(3, 18);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(62, 15);
+            this.lblDescription.Size = new System.Drawing.Size(83, 18);
             this.lblDescription.TabIndex = 4;
             this.lblDescription.Text = "Description";
             // 
             // richTextBox1
             // 
             this.flowLayoutPanel1.SetFlowBreak(this.richTextBox1, true);
-            this.richTextBox1.Location = new System.Drawing.Point(3, 33);
+            this.richTextBox1.Location = new System.Drawing.Point(4, 40);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(222, 24);
+            this.richTextBox1.Size = new System.Drawing.Size(295, 29);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
             // 
@@ -235,11 +221,11 @@
             this.lblContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel1.SetFlowBreak(this.lblContact, true);
+            this.lblContact.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContact.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblContact.Location = new System.Drawing.Point(2, 60);
-            this.lblContact.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContact.Location = new System.Drawing.Point(3, 73);
             this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(46, 15);
+            this.lblContact.Size = new System.Drawing.Size(58, 18);
             this.lblContact.TabIndex = 7;
             this.lblContact.Text = "Contact";
             // 
@@ -248,11 +234,11 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.SetFlowBreak(this.label1, true);
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(2, 75);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(3, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 15);
+            this.label1.Size = new System.Drawing.Size(97, 18);
             this.label1.TabIndex = 8;
             this.label1.Text = "Date Recieved";
             // 
@@ -262,11 +248,11 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel1.SetFlowBreak(this.label2, true);
+            this.label2.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(2, 90);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(3, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 15);
+            this.label2.Size = new System.Drawing.Size(37, 18);
             this.label2.TabIndex = 9;
             this.label2.Text = "date";
             // 
@@ -276,11 +262,11 @@
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel1.SetFlowBreak(this.label3, true);
+            this.label3.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(2, 105);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(3, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 15);
+            this.label3.Size = new System.Drawing.Size(85, 18);
             this.label3.TabIndex = 10;
             this.label3.Text = "Assigned To";
             // 
@@ -289,24 +275,26 @@
             this.l.AutoSize = true;
             this.l.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.SetFlowBreak(this.l, true);
+            this.l.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.l.Location = new System.Drawing.Point(2, 120);
-            this.l.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.l.Location = new System.Drawing.Point(3, 145);
             this.l.Name = "l";
-            this.l.Size = new System.Drawing.Size(29, 15);
+            this.l.Size = new System.Drawing.Size(38, 18);
             this.l.TabIndex = 11;
             this.l.Text = "user";
             // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.listBox1.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
-            this.listBox1.Location = new System.Drawing.Point(2, 137);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(3, 165);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(223, 147);
+            this.listBox1.Size = new System.Drawing.Size(296, 169);
             this.listBox1.TabIndex = 12;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -325,10 +313,10 @@
             this.flowLayoutPanel3.Controls.Add(this.btnSave);
             this.flowLayoutPanel3.Controls.Add(this.btnEmail);
             this.flowLayoutPanel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(258, 55);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(344, 68);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(324, 301);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(431, 370);
             this.flowLayoutPanel3.TabIndex = 34;
             // 
             // label4
@@ -337,11 +325,11 @@
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel3.SetFlowBreak(this.label4, true);
+            this.label4.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(2, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 15);
+            this.label4.Size = new System.Drawing.Size(166, 18);
             this.label4.TabIndex = 8;
             this.label4.Text = "Change Ticket Properties";
             // 
@@ -350,12 +338,13 @@
             this.lblAssigned.AutoSize = true;
             this.lblAssigned.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAssigned.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAssigned.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAssigned.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAssigned.Location = new System.Drawing.Point(2, 15);
-            this.lblAssigned.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.lblAssigned.Location = new System.Drawing.Point(3, 18);
+            this.lblAssigned.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.lblAssigned.Name = "lblAssigned";
-            this.lblAssigned.Padding = new System.Windows.Forms.Padding(0, 0, 56, 0);
-            this.lblAssigned.Size = new System.Drawing.Size(122, 15);
+            this.lblAssigned.Padding = new System.Windows.Forms.Padding(0, 0, 75, 0);
+            this.lblAssigned.Size = new System.Drawing.Size(161, 18);
             this.lblAssigned.TabIndex = 0;
             this.lblAssigned.Text = "Assignment:";
             // 
@@ -364,12 +353,12 @@
             this.label5.AutoSize = true;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(126, 15);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(167, 18);
             this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
-            this.label5.Size = new System.Drawing.Size(92, 15);
+            this.label5.Padding = new System.Windows.Forms.Padding(0, 0, 67, 0);
+            this.label5.Size = new System.Drawing.Size(121, 18);
             this.label5.TabIndex = 9;
             this.label5.Text = "Status:";
             // 
@@ -379,31 +368,32 @@
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel3.SetFlowBreak(this.label6, true);
+            this.label6.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(222, 15);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(294, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 15);
+            this.label6.Size = new System.Drawing.Size(91, 18);
             this.label6.TabIndex = 10;
             this.label6.Text = "Move To FAP:";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(2, 32);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 15, 2);
+            this.comboBox1.Location = new System.Drawing.Point(3, 38);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 20, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 1;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(109, 33);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.checkBox1.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(144, 40);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Padding = new System.Windows.Forms.Padding(20, 2, 15, 0);
-            this.checkBox1.Size = new System.Drawing.Size(93, 19);
+            this.checkBox1.Padding = new System.Windows.Forms.Padding(27, 2, 20, 0);
+            this.checkBox1.Size = new System.Drawing.Size(119, 22);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Closed";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -411,10 +401,12 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(205, 33);
+            this.checkBox2.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(267, 40);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Padding = new System.Windows.Forms.Padding(20, 2, 20, 0);
-            this.checkBox2.Size = new System.Drawing.Size(86, 19);
+            this.checkBox2.Padding = new System.Windows.Forms.Padding(27, 2, 27, 0);
+            this.checkBox2.Size = new System.Drawing.Size(107, 22);
             this.checkBox2.TabIndex = 11;
             this.checkBox2.Text = "FAP";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -423,20 +415,21 @@
             // 
             this.lblAddNotes.AutoSize = true;
             this.flowLayoutPanel3.SetFlowBreak(this.lblAddNotes, true);
+            this.lblAddNotes.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddNotes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAddNotes.Location = new System.Drawing.Point(2, 55);
-            this.lblAddNotes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddNotes.Location = new System.Drawing.Point(3, 66);
             this.lblAddNotes.Name = "lblAddNotes";
-            this.lblAddNotes.Size = new System.Drawing.Size(57, 13);
+            this.lblAddNotes.Size = new System.Drawing.Size(71, 16);
             this.lblAddNotes.TabIndex = 2;
             this.lblAddNotes.Text = "Add Notes";
             // 
             // richTextBox2
             // 
             this.flowLayoutPanel3.SetFlowBreak(this.richTextBox2, true);
-            this.richTextBox2.Location = new System.Drawing.Point(3, 71);
+            this.richTextBox2.Location = new System.Drawing.Point(4, 86);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(297, 156);
+            this.richTextBox2.Size = new System.Drawing.Size(395, 191);
             this.richTextBox2.TabIndex = 6;
             this.richTextBox2.Text = "";
             // 
@@ -444,10 +437,11 @@
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flowLayoutPanel3.SetFlowBreak(this.btnSave, true);
-            this.btnSave.Location = new System.Drawing.Point(2, 232);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(3, 283);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(56, 23);
+            this.btnSave.Size = new System.Drawing.Size(75, 28);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -456,10 +450,11 @@
             // btnEmail
             // 
             this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmail.Location = new System.Drawing.Point(2, 262);
-            this.btnEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmail.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.Location = new System.Drawing.Point(3, 319);
+            this.btnEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Size = new System.Drawing.Size(91, 26);
+            this.btnEmail.Size = new System.Drawing.Size(121, 32);
             this.btnEmail.TabIndex = 5;
             this.btnEmail.Text = "Send Email";
             this.btnEmail.UseVisualStyleBackColor = true;
@@ -469,29 +464,39 @@
             // 
             this.lblEdit.AutoSize = true;
             this.lblEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEdit.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEdit.Location = new System.Drawing.Point(394, 40);
-            this.lblEdit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEdit.Location = new System.Drawing.Point(525, 49);
             this.lblEdit.Name = "lblEdit";
-            this.lblEdit.Size = new System.Drawing.Size(60, 15);
+            this.lblEdit.Size = new System.Drawing.Size(75, 18);
             this.lblEdit.TabIndex = 36;
             this.lblEdit.Text = "Edit Ticket";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(345, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 17);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "label7";
+            // 
             // ViewTicketForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.LblTicket);
             this.Controls.Add(this.lblEdit);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.back);
             this.Controls.Add(this.minimizeBtn);
-            this.Controls.Add(this.fullBtn);
             this.Controls.Add(this.exitBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ViewTicketForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewTicketForm";
@@ -508,7 +513,6 @@
         #endregion
 
         private System.Windows.Forms.Button minimizeBtn;
-        private System.Windows.Forms.Button fullBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
@@ -539,5 +543,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label7;
     }
 }

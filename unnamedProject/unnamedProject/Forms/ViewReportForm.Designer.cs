@@ -38,10 +38,10 @@
             this.LblID = new System.Windows.Forms.Label();
             this.LblReport = new System.Windows.Forms.Label();
             this.back = new System.Windows.Forms.Button();
+            this.backButtonList = new System.Windows.Forms.ImageList(this.components);
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.fullBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
-            this.backButtonList = new System.Windows.Forms.ImageList(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -152,6 +152,13 @@
             this.back.UseVisualStyleBackColor = false;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // backButtonList
+            // 
+            this.backButtonList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("backButtonList.ImageStream")));
+            this.backButtonList.TransparentColor = System.Drawing.Color.Transparent;
+            this.backButtonList.Images.SetKeyName(0, "icons8-rewind-button-round-80.png");
+            this.backButtonList.Images.SetKeyName(1, "backbutton.png");
+            // 
             // minimizeBtn
             // 
             this.minimizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -167,6 +174,7 @@
             this.minimizeBtn.TabIndex = 43;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
+            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
             // 
             // fullBtn
             // 
@@ -182,6 +190,7 @@
             this.fullBtn.Size = new System.Drawing.Size(18, 11);
             this.fullBtn.TabIndex = 42;
             this.fullBtn.UseVisualStyleBackColor = true;
+            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
             // 
             // exitBtn
             // 
@@ -199,13 +208,6 @@
             this.exitBtn.TabIndex = 41;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
-            // 
-            // backButtonList
-            // 
-            this.backButtonList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("backButtonList.ImageStream")));
-            this.backButtonList.TransparentColor = System.Drawing.Color.Transparent;
-            this.backButtonList.Images.SetKeyName(0, "icons8-rewind-button-round-80.png");
-            this.backButtonList.Images.SetKeyName(1, "backbutton.png");
             // 
             // imageList1
             // 
