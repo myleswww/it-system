@@ -1,181 +1,181 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="unnamedProject.dbHandler" Collapsed="true">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="14" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAgAIJAAAIAEAAAAAAAAAAAAAQAEgAAAEAAACAAICAE=</HashCode>
       <FileName>Classes\dbHandler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.EmailSend" Collapsed="true">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Position X="14" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAAAAAIAAAIAAAAACIAwAAAAAAEAAAAgAAAAA=</HashCode>
       <FileName>Classes\EmailSend.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Notes" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+    <Position X="14" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAACEEAACAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Classes\Notes.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Program" Collapsed="true">
-    <Position X="2.25" Y="1.5" Width="1.5" />
+    <Position X="12.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Classes\Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Report" Collapsed="true">
-    <Position X="7.5" Y="1.5" Width="1.5" />
+    <Position X="14" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAggAAEAAAAAAgAAAAAAAABAQAAAAAAAAA=</HashCode>
       <FileName>Classes\Report.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Tickets" Collapsed="true">
-    <Position X="0.5" Y="3.5" Width="1.5" />
+    <Position X="14" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAggAAAEAAAAAAAAAAAAABAAAAAIAAAQAgA=</HashCode>
       <FileName>Classes\Tickets.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Users" Collapsed="true">
-    <Position X="2.25" Y="3.5" Width="1.5" />
+    <Position X="14" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAEACAAAAAEAQAAAAAAAAUAABACAAAAAAMAFAA=</HashCode>
+      <HashCode>AAACAAAEACAAAAAEAQAAAAAAAAUAABACAAAAAAMAFEA=</HashCode>
       <FileName>Classes\Users.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.CreateTicketForm" Collapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="12.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAkAACAAAAAAAACAAEgCgAgAAgUAAAgEiEQBAAA=</HashCode>
       <FileName>Forms\CreateTicketForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.LoginForm" Collapsed="true">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+    <Position X="12.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIQBAAABACEAAAEAAACBAAQCAAQAAAAAgEgCgAAAAAA=</HashCode>
       <FileName>Forms\Form1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.register" Collapsed="true">
-    <Position X="5.75" Y="1.5" Width="1.5" />
+    <Position X="10.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAZAIAUAASBCAAEhHAGAAIECgAwAKgBAighEigAAIAM=</HashCode>
       <FileName>Forms\RegisterForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.ReportForm" Collapsed="true">
-    <Position X="9.25" Y="1.5" Width="1.5" />
+    <Position X="10.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAEAAsBACAAAAAAACCAAEACgIgAAmQAAIgCiAAAAAg=</HashCode>
       <FileName>Forms\ReportForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.AdminForm" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="10.5" Y="7" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AEAAoUAEIGIAIIEAAACARUjPyAQAAAQAIxgFiABAoRA=</HashCode>
       <FileName>Forms\User Forms\AdminForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.ViewExistingProblems" Collapsed="true">
-    <Position X="5.75" Y="3.5" Width="1.5" />
+    <Position X="12.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAEAACAAAAEEAACAAAACgIwAAgABAAgAiAAAAAA=</HashCode>
       <FileName>Forms\ViewExistingProblems.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.ViewReportsForm" Collapsed="true">
-    <Position X="9.25" Y="3.5" Width="1.5" />
+    <Position X="12.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAGCACAAQAAAACCAAEACgAgAAgQAAAkAiCAAAAA=</HashCode>
       <FileName>Forms\ViewReportsForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.WebBrowserForm" Collapsed="true">
-    <Position X="2.25" Y="4.5" Width="1.5" />
+    <Position X="10.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAEAEAYCAAAgEAAACAAEASgAwAAgAACAsCiAABAAA=</HashCode>
       <FileName>Forms\WebBrowserForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.ViewReportForm" Collapsed="true">
-    <Position X="7.5" Y="3.5" Width="1.5" />
+    <Position X="12.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAEIAMBACAAAAAAAACAAEACgIgAAgQAAIgCiAAAAAA=</HashCode>
       <FileName>ViewReportForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Forms.GenerateReportForm" Collapsed="true">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Position X="10.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AFSAAAEAACAAABEAAACAAEICgAwAAgQABAgAiEgAAAA=</HashCode>
       <FileName>Forms\GenerateReportForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Forms.SettingsForm" Collapsed="true">
-    <Position X="5.75" Y="2.5" Width="1.5" />
+    <Position X="12.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQQJAEAAGACQAEAAhCBwEACgAwAAgQAAAgAiAAAAAQ=</HashCode>
       <FileName>Forms\SettingsForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Forms.SplashScreen" Collapsed="true">
-    <Position X="7.5" Y="2.5" Width="1.5" />
+    <Position X="12.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IQAAAAAAACCAQAAAAACCAAACAAAAAAAAACAAAABBAAI=</HashCode>
       <FileName>Forms\SplashScreen.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Forms.ProjectMemberForm" Collapsed="true">
-    <Position X="4" Y="1.5" Width="1.5" />
+    <Position X="10" Y="6.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AEQAoUAMIGAAAAEAAAiABUAOiAQgACYAAxgFiABAoRA=</HashCode>
       <FileName>Forms\User Forms\ProjectMemberForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Forms.ReportManagerForm" Collapsed="true">
-    <Position X="0.5" Y="2.5" Width="1.5" />
+    <Position X="10.25" Y="5.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AEAAIUAEIGIAACEAAACQRUCLyAQAAAQACxgFiAAAoQA=</HashCode>
       <FileName>Forms\User Forms\ReportManagerForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Forms.SupportForm" Collapsed="true">
-    <Position X="9.25" Y="2.5" Width="1.5" />
+    <Position X="10.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEQAoUAEIGAAACEAAACABUAOigQAAAQAAxgFiABgoRA=</HashCode>
       <FileName>Forms\User Forms\SupportForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Forms.UserViewForm" Collapsed="true">
-    <Position X="4" Y="3.5" Width="1.5" />
+    <Position X="10.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQABAEAACQAAAMAACCAAEACpIwBAgQARIkAiACAAAA=</HashCode>
       <FileName>Forms\UserViewForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Forms.ViewTicketForm" Collapsed="true">
-    <Position X="0.5" Y="4.5" Width="1.5" />
+    <Position X="10.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAYBAAkCACIAIBAQADCAAGgCgIQCAhQCBIgQiAYAIEA=</HashCode>
       <FileName>Forms\ViewTicketForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Properties.Resources" Collapsed="true">
-    <Position X="2.25" Y="2.5" Width="1.5" />
+    <Position X="12.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="unnamedProject.Properties.Settings" Collapsed="true">
-    <Position X="4" Y="2.5" Width="1.5" />
+    <Position X="12.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
