@@ -44,6 +44,7 @@
             this.fullBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.txtbxDesc = new System.Windows.Forms.RichTextBox();
+            this.errorMsg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblSubmit
@@ -200,12 +201,24 @@
             this.txtbxDesc.TabIndex = 27;
             this.txtbxDesc.Text = "";
             // 
+            // errorMsg
+            // 
+            this.errorMsg.AutoSize = true;
+            this.errorMsg.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorMsg.ForeColor = System.Drawing.Color.Red;
+            this.errorMsg.Location = new System.Drawing.Point(303, 95);
+            this.errorMsg.Name = "errorMsg";
+            this.errorMsg.Size = new System.Drawing.Size(66, 19);
+            this.errorMsg.TabIndex = 28;
+            this.errorMsg.Text = "errorlbl";
+            // 
             // CreateTicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.errorMsg);
             this.Controls.Add(this.txtbxDesc);
             this.Controls.Add(this.back);
             this.Controls.Add(this.minimizeBtn);
@@ -241,5 +254,6 @@
         private System.Windows.Forms.Button fullBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.RichTextBox txtbxDesc;
+        private System.Windows.Forms.Label errorMsg;
     }
 }
