@@ -28,7 +28,7 @@ namespace unnamedProject.Forms
 
         private void SupportForm_Load(object sender, EventArgs e)
         {
-
+            LblHello.Text += current.Fname + "!";
             tickets = dbhadler.LoadTicketsFromDb(1);
             OpenList.Items.AddRange(tickets.ToArray());
             if (this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)

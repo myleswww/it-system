@@ -28,6 +28,7 @@ namespace unnamedProject.Forms
 
         private void ProjectMemberForm_Load(object sender, EventArgs e)
         {
+            LblHello.Text += current.Fname + "!";
             tickets = dbhadler.LoadTicketsFromDb(1);
             OpenList.Items.AddRange(tickets.ToArray());
             //WindowState = FormWindowState.Maximized;
@@ -142,7 +143,12 @@ namespace unnamedProject.Forms
 
         private void btnSubmitTicket_Click(object sender, EventArgs e)
         {
+            var form = new Thread(() => Application.Run(new CreateTicketForm(current)));
 
+            form.Start();
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
         }
 
         private void openTab_Click(object sender, EventArgs e)

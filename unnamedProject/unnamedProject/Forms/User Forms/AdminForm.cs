@@ -243,5 +243,15 @@ namespace unnamedProject
             webbrowser.Start();
 
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            var form = new Thread(() => Application.Run(new CreateTicketForm(current)));
+
+            form.Start();
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
+        }
     }
 }

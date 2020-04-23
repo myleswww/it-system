@@ -100,6 +100,7 @@ namespace unnamedProject.Forms
 
         private void ReportManagerForm_Load(object sender, EventArgs e)
         {
+            LblHello.Text += current.Fname + "!";
             if (this.Width > 1067 || this.Height > 554 || WindowState == FormWindowState.Maximized)
             {
                 //maximize button image is set to the png image
