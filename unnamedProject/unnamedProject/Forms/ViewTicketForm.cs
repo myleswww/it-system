@@ -46,8 +46,8 @@ namespace unnamedProject.Forms
             if (ticket.TicketStatus != 4)
             {
                 l.Text = assignedMember.Username;
-                assignedIndex = comboBox1.Items.IndexOf(assignedMember.Id);
-                comboBox1.SelectedIndex = assignedIndex;
+
+                comboBox1.SelectedIndex = (assignedMember.Id - 1);
             }
             else
             {
@@ -67,10 +67,6 @@ namespace unnamedProject.Forms
                     checkBox1.Checked = true;
                 }
             }
-            else if(ticket.TicketStatus == 2){
-                checkBox1.Enabled = false;
-                checkBox2.Enabled = false;
-            }
             else if(ticket.TicketStatus == 1 || ticket.TicketStatus == 0)
             {
                 checkBox2.Enabled = false;
@@ -86,6 +82,11 @@ namespace unnamedProject.Forms
                     checkBox1.Enabled = true;
                     checkBox1.Checked = false;
                 }
+            }
+            else
+            {
+                checkBox1.Enabled = false;
+                checkBox2.Enabled = false;
             }
         }
 
@@ -131,13 +132,6 @@ namespace unnamedProject.Forms
                 handler.UpdateTicket(ticket);
                 assignedMember = handler.LoadUserInfoFromDb(ticket.Assigned);
                 l.Text = assignedMember.Username;
-                
-                //kick out
-                var admin = new Thread(() => Application.Run(current.getForm()));
-                admin.Start();
-
-                Thread th = Thread.CurrentThread;
-                th.Abort();
             }
             if (ticket.TicketStatus == 3)
             {
