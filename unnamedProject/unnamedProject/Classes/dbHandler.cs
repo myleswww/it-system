@@ -171,8 +171,9 @@ namespace unnamedProject
                     string description = (string)reader["description"];
                     string notes = (string)reader["notes"];
                     int assigned = (int)reader["Assigned"];
+                    int priority = (int)reader["priority"];
 
-                    tempticket = new Tickets(ticketID,userInfo,dateAccessed,ticketStatus,description,assigned);
+                    tempticket = new Tickets(ticketID,userInfo,dateAccessed,ticketStatus,description,assigned, priority);
 
                     tickets.Add(tempticket);
                 }
@@ -284,12 +285,13 @@ namespace unnamedProject
         public void UpdateTicket(Tickets ticket) //updates tickets
         {
             sqlcon.Open();
-            string update = "UPDATE tickets SET ID = @id, date_accessed = @date, ticket_status = @status, description = @desc, assigned = @ass WHERE ID = @id";
+            string update = "UPDATE tickets SET ID = @id, date_accessed = @date, ticket_status = @status, description = @desc, priority = @priority, assigned = @ass WHERE ID = @id";
             SqlCommand command = new SqlCommand(update, sqlcon);
             command.Parameters.AddWithValue("@id", ticket.TicketID);
             command.Parameters.AddWithValue("@date", ticket.DateAccessed);
             command.Parameters.AddWithValue("@status", ticket.TicketStatus);
             command.Parameters.AddWithValue("@desc", ticket.Description);
+            command.Parameters.AddWithValue("@priority", ticket.Priority);
             command.Parameters.AddWithValue("@ass", ticket.Assigned);
 
             command.ExecuteNonQuery();

@@ -31,7 +31,7 @@ namespace unnamedProject
             Assigned = assigned;
         }
 
-        public Tickets(int ID, int userInfo, DateTime dateAccessed, int ticketStatus, string description, int assigned)
+        public Tickets(int ID, int userInfo, DateTime dateAccessed, int ticketStatus, string description, int assigned, int priority)
         {
             TicketID = ID;
             UserInfo = userInfo;
@@ -39,6 +39,7 @@ namespace unnamedProject
             TicketStatus = ticketStatus;
             Description = description;
             Assigned = assigned;
+            Priority = priority;
         }
 
         public override string ToString() //this needs to be formatted better

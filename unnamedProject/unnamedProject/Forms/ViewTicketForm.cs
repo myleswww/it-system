@@ -20,7 +20,6 @@ namespace unnamedProject.Forms
         List<Notes> notes;
         List<Users> allUsers;
         Users assignedMember;
-        int assignedIndex;
 
         public ViewTicketForm(Users cur, Tickets tick)
         {
@@ -146,7 +145,7 @@ namespace unnamedProject.Forms
                     if(checkBox1.Checked == false)
                     {
                         ticket.TicketStatus = 1;
-                        ticket.Priority += 1;
+                        ticket.Priority = ticket.Priority + 1;
                         handler.UpdateTicket(ticket);
 
                         //kick out
