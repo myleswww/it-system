@@ -69,7 +69,7 @@ namespace unnamedProject.Forms
             }
             else if(ticket.TicketStatus == 2){
                 checkBox1.Enabled = false;
-                checkBox1.Enabled = false;
+                checkBox2.Enabled = false;
             }
             else if(ticket.TicketStatus == 1 || ticket.TicketStatus == 0)
             {
@@ -131,6 +131,13 @@ namespace unnamedProject.Forms
                 handler.UpdateTicket(ticket);
                 assignedMember = handler.LoadUserInfoFromDb(ticket.Assigned);
                 l.Text = assignedMember.Username;
+                
+                //kick out
+                var admin = new Thread(() => Application.Run(current.getForm()));
+                admin.Start();
+
+                Thread th = Thread.CurrentThread;
+                th.Abort();
             }
             if (ticket.TicketStatus == 3)
             {
@@ -168,14 +175,17 @@ namespace unnamedProject.Forms
 
         private void btnEmail_Click(object sender, EventArgs e)
         {
-            string subject = "Your Ticket has been updated!";
-            string body = String.Format("<p> Your Ticket has been updated! <br>" +
-                           "Ticket ID: {0} <br>" +
-                           "Description: {1} <br>" +
-                           "{3} <p>"
-                           , ticket.TicketID, ticket.Description, richTextBox2.Text);
+            if (ticket.TicketStatus != 2 && richTextBox2.Text != "")
+            {
+                string subject = "Your Ticket has been updated!";
+                string body = String.Format("<p> Your Ticket has been updated! <br>" +
+                               "Ticket ID: {0} <br>" +
+                               "Description: {1} <br>" +
+                               "{3} <p>"
+                               , ticket.TicketID, ticket.Description, richTextBox2.Text);
 
-            EmailSend send = new EmailSend(contact.Email, subject, body);
+                EmailSend send = new EmailSend(contact.Email, subject, body);
+            }
         }
 
 

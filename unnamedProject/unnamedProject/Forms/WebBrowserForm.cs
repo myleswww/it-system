@@ -26,8 +26,9 @@ namespace unnamedProject
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Application.Exit();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
         }
 
         private void fullBtn_Click(object sender, EventArgs e)
