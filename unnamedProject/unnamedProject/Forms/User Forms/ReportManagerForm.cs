@@ -216,6 +216,15 @@ namespace unnamedProject.Forms
 
         private void FAPTab_Click(object sender, EventArgs e)
         {
+            openTab.BackColor = Color.FromArgb(64, 64, 64);
+            openTab.ForeColor = SystemColors.ControlLightLight;
+
+            closedTab.BackColor = Color.FromArgb(64, 64, 64);
+            closedTab.ForeColor = SystemColors.ControlLightLight;
+
+            FAPTab.BackColor = Color.FromArgb(240, 188, 94);
+            FAPTab.ForeColor = Color.Black;
+
             OpenList.Visible = true;
             OpenList.Items.Clear();
             tickets = dbhadler.LoadTicketsFromDb(3);

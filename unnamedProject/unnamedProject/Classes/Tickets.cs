@@ -43,8 +43,8 @@ namespace unnamedProject
 
         public override string ToString() //this needs to be formatted better
         {
-            return string.Format("{0}, {4}, {2:f}",
-                TicketID, UserInfo, DateAccessed, TicketStatus, Description);
+            return string.Format("{0}            {2:f}           {4}         Priority: {5}",
+                TicketID, UserInfo, DateAccessed, TicketStatus, Description , Priority);
         }
     }
 }
