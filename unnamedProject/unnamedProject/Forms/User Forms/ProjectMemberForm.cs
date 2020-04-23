@@ -186,9 +186,12 @@ namespace unnamedProject.Forms
 
         private void OpenList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OpenList.Visible = true;
+            try
+            {
+                OpenList.Visible = true;
 
-            Tickets selectedTicket = tickets[OpenList.SelectedIndex];
+                Tickets selectedTicket = tickets[OpenList.SelectedIndex];
+
             this.Hide();
 
             var form = new Thread(() => Application.Run(new Forms.ViewTicketForm(current, selectedTicket)));
@@ -196,6 +199,8 @@ namespace unnamedProject.Forms
             Thread th = Thread.CurrentThread;
             th.Abort();
             this.Close();
+            }
+            catch { }
         }
     }
 }

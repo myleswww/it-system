@@ -215,17 +215,20 @@ namespace unnamedProject
 
         private void OpenList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OpenList.Visible = true;
+            try
+            {
+                OpenList.Visible = true;
+                Tickets selectedTicket = tickets[OpenList.SelectedIndex];
+                this.Hide();
 
-            Tickets selectedTicket = tickets[OpenList.SelectedIndex];
-            this.Hide();
+                var form = new Thread(() => Application.Run(new Forms.ViewTicketForm(current, selectedTicket)));
 
-            var form = new Thread(() => Application.Run(new Forms.ViewTicketForm(current, selectedTicket)));
-            
-            form.Start();
-            Thread th = Thread.CurrentThread;
-            th.Abort();
-            this.Close();
+                form.Start();
+                Thread th = Thread.CurrentThread;
+                th.Abort();
+                this.Close();
+            }
+            catch { }
         }
 
         private void onlineHelpBtn_Click(object sender, EventArgs e)
