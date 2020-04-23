@@ -42,6 +42,7 @@
             this.LblTicket = new System.Windows.Forms.Label();
             this.LblID = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.lblContact = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,11 +53,10 @@
             this.lblAssigned = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblAddNotes = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEmail = new System.Windows.Forms.Button();
             this.lblEdit = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,7 @@
             this.minimizeBtn.TabIndex = 21;
             this.minimizeBtn.Text = "-";
             this.minimizeBtn.UseVisualStyleBackColor = true;
+            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click_1);
             // 
             // fullBtn
             // 
@@ -92,6 +93,7 @@
             this.fullBtn.Size = new System.Drawing.Size(15, 10);
             this.fullBtn.TabIndex = 20;
             this.fullBtn.UseVisualStyleBackColor = true;
+            this.fullBtn.Click += new System.EventHandler(this.fullBtn_Click);
             // 
             // exitBtn
             // 
@@ -109,6 +111,7 @@
             this.exitBtn.TabIndex = 19;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // imageList1
             // 
@@ -141,6 +144,7 @@
             this.back.Size = new System.Drawing.Size(48, 48);
             this.back.TabIndex = 31;
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click_1);
             // 
             // backButtonList
             // 
@@ -168,7 +172,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(244, 301);
             this.flowLayoutPanel1.TabIndex = 32;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // LblTicket
             // 
@@ -212,6 +215,15 @@
             this.lblDescription.TabIndex = 4;
             this.lblDescription.Text = "Description";
             // 
+            // richTextBox1
+            // 
+            this.flowLayoutPanel1.SetFlowBreak(this.richTextBox1, true);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 33);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(222, 24);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.Text = "";
+            // 
             // lblContact
             // 
             this.lblContact.AutoSize = true;
@@ -225,7 +237,6 @@
             this.lblContact.Size = new System.Drawing.Size(46, 15);
             this.lblContact.TabIndex = 7;
             this.lblContact.Text = "Contact";
-            this.lblContact.Click += new System.EventHandler(this.lblContact_Click);
             // 
             // label1
             // 
@@ -253,7 +264,6 @@
             this.label2.Size = new System.Drawing.Size(30, 15);
             this.label2.TabIndex = 9;
             this.label2.Text = "date";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -281,7 +291,6 @@
             this.l.Size = new System.Drawing.Size(29, 15);
             this.l.TabIndex = 11;
             this.l.Text = "user";
-            this.l.Click += new System.EventHandler(this.l_Click);
             // 
             // listBox1
             // 
@@ -325,7 +334,6 @@
             this.lblAssigned.Size = new System.Drawing.Size(108, 15);
             this.lblAssigned.TabIndex = 0;
             this.lblAssigned.Text = "Change Assigned To";
-            this.lblAssigned.Click += new System.EventHandler(this.lblAssigned_Click);
             // 
             // comboBox1
             // 
@@ -336,7 +344,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lblAddNotes
             // 
@@ -349,6 +356,15 @@
             this.lblAddNotes.Size = new System.Drawing.Size(57, 13);
             this.lblAddNotes.TabIndex = 2;
             this.lblAddNotes.Text = "Add Notes";
+            // 
+            // richTextBox2
+            // 
+            this.flowLayoutPanel3.SetFlowBreak(this.richTextBox2, true);
+            this.richTextBox2.Location = new System.Drawing.Point(3, 66);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(297, 156);
+            this.richTextBox2.TabIndex = 6;
+            this.richTextBox2.Text = "";
             // 
             // btnSave
             // 
@@ -386,25 +402,6 @@
             this.lblEdit.Size = new System.Drawing.Size(60, 15);
             this.lblEdit.TabIndex = 36;
             this.lblEdit.Text = "Edit Ticket";
-            // 
-            // richTextBox1
-            // 
-            this.flowLayoutPanel1.SetFlowBreak(this.richTextBox1, true);
-            this.richTextBox1.Location = new System.Drawing.Point(3, 33);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(222, 24);
-            this.richTextBox1.TabIndex = 13;
-            this.richTextBox1.Text = "";
-            // 
-            // richTextBox2
-            // 
-            this.flowLayoutPanel3.SetFlowBreak(this.richTextBox2, true);
-            this.richTextBox2.Location = new System.Drawing.Point(3, 66);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(297, 156);
-            this.richTextBox2.TabIndex = 6;
-            this.richTextBox2.Text = "";
-            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // ViewTicketForm
             // 

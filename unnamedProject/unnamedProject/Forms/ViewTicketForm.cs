@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace unnamedProject.Forms
@@ -33,6 +34,7 @@ namespace unnamedProject.Forms
 
         private void ViewTicketForm_Load(object sender, EventArgs e)
         {
+            LblID.Text = "ID: "+ ticket.TicketID;
             richTextBox1.Text = ticket.Description;
             lblContact.Text = "Contact: " + contact.Username;
             label2.Text = ticket.DateAccessed.ToString();
@@ -56,56 +58,37 @@ namespace unnamedProject.Forms
             listBox1.Items.AddRange(notes.ToArray());
         }
 
-        private void lblContact_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void l_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (ticket.Assigned != -1)
+            {
+                if (current.Id == assignedMember.Id)
+                {
+                    if (richTextBox2.Text != "")
+                    {
+                        Notes newnote = new Notes(current.Id, ticket.TicketID, DateTime.Now, richTextBox2.Text);
+                        handler.AddNote(newnote);
+                        MessageBox.Show("Your note has been submitted!");
+                        listBox1.Items.Clear();
+                        notes = handler.GetNotes(ticket.TicketID);
+                        listBox1.Items.AddRange(notes.ToArray());
+                    }
+                    if (richTextBox1.Text != "")
+                    {
+                        ticket.Description = richTextBox1.Text;
+                        handler.UpdateTicket(ticket);
+                    }
+                }
+            }
             if (current.LevelAccess == 0 || current.LevelAccess == 1)
             {
-                 ticket.Assigned = (int)comboBox1.SelectedItem;
-                 handler.UpdateTicket(ticket);
+                ticket.Assigned = (int)comboBox1.SelectedItem;
+                handler.UpdateTicket(ticket);
+                assignedMember = handler.LoadUserInfoFromDb(ticket.Assigned);
+                l.Text = assignedMember.Username;
             }
-            Notes newnote = new Notes(current.Id,ticket.TicketID,DateTime.Now, richTextBox2.Text);
-            handler.AddNote(newnote);
-            MessageBox.Show("Your note has been submitted!");
-            listBox1.Items.Clear();
-            notes = handler.GetNotes(ticket.TicketID);
-            listBox1.Items.AddRange(notes.ToArray());
-
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnEmail_Click(object sender, EventArgs e)
         {
@@ -119,14 +102,49 @@ namespace unnamedProject.Forms
             EmailSend send = new EmailSend(contact.Email, subject, body);
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
         }
 
-        private void lblAssigned_Click(object sender, EventArgs e)
+        private void fullBtn_Click(object sender, EventArgs e)
         {
+            if (this.Width > 753 || this.Height > 429 || WindowState == FormWindowState.Maximized)
+            {
 
+                WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+        }
+
+
+        private void back_Click_1(object sender, EventArgs e)
+        {
+            var admin = new Thread(() => Application.Run(current.getForm()));
+            admin.Start();
+
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+        }
+
+        private void minimizeBtn_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Notes selectedNote = notes[listBox1.SelectedIndex];
+                richTextBox2.Text = selectedNote.getNoteInfo();
+            }
+            catch { }
         }
     }
 }

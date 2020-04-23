@@ -25,9 +25,18 @@ namespace unnamedProject
 
         }
 
+        public string getNoteInfo()
+        {
+            return note_info;
+        }
+
         public override string ToString()
         {
-            return note_info + "   " + date_written;
+            int slength = note_info.Length;
+            if(slength > 25)
+                return note_info.Substring(0, 25) + "   " + date_written;
+            else
+                return note_info + "   " + date_written;
         }
     }
 }
