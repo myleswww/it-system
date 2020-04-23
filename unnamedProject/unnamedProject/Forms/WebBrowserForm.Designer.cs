@@ -166,7 +166,9 @@
             // 
             // btnGo
             // 
-            this.btnGo.ForeColor = System.Drawing.Color.Fuchsia;
+            this.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGo.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGo.Location = new System.Drawing.Point(625, 71);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(75, 32);

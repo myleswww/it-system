@@ -257,6 +257,18 @@ namespace unnamedProject
             sqlcon.Close();
         }
 
+        public void UpdateLevel(Users user)
+        {
+            sqlcon.Open(); //dont forget to open that connection!
+            string update = "UPDATE User_Info SET Id = @id, levelAccess = @level WHERE Id = @id"; //update where ID's are equal
+            SqlCommand command = new SqlCommand(update, sqlcon);
+            command.Parameters.AddWithValue("@id", user.Id);
+            command.Parameters.AddWithValue("@level", user.LevelAccess);
+
+            command.ExecuteNonQuery();
+            sqlcon.Close();
+        }
+
 
 
         public void UpdateTicket(Tickets ticket) //updates tickets

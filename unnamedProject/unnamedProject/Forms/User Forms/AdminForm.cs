@@ -209,7 +209,7 @@ namespace unnamedProject
         {
             OpenList.Visible = true;
             OpenList.Items.Clear();
-            tickets = dbhadler.LoadTicketsFromDb(4);
+            tickets = dbhadler.LoadTicketsFromDb(3);
             OpenList.Items.AddRange(tickets.ToArray());
         }
 
