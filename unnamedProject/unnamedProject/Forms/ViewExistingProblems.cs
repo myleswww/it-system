@@ -14,10 +14,11 @@ namespace unnamedProject
     public partial class ViewExistingProblems : Form
     {
         Users current;
+        List<Tickets> tickets;
         public void ViewExistingProblems_Load(object sender, EventArgs e)
         {
             dbHandler handler = new dbHandler();
-            List<Tickets> tickets = handler.LoadTicketsFromDb(4);
+            tickets = handler.LoadTicketsFromDb(4);
             LstBxProblems.Items.AddRange(tickets.ToArray());
         }
         public ViewExistingProblems(Users current)
@@ -73,6 +74,23 @@ namespace unnamedProject
         {
             this.Close();
             Application.Exit();
+        }
+
+        private void LstBxProblems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Tickets selectedTicket = tickets[LstBxProblems.SelectedIndex];
+                this.Hide();
+
+                var form = new Thread(() => Application.Run(new Forms.ViewTicketForm(current, selectedTicket)));
+
+                form.Start();
+                Thread th = Thread.CurrentThread;
+                th.Abort();
+                this.Close();
+            }
+            catch { }
         }
     }
 }
