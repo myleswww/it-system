@@ -46,8 +46,8 @@ namespace unnamedProject.Forms
             if (ticket.TicketStatus != 4)
             {
                 l.Text = assignedMember.Username;
-                assignedIndex = comboBox1.Items.IndexOf(assignedMember.Id);
-                comboBox1.SelectedIndex = assignedIndex;
+
+                comboBox1.SelectedIndex = (assignedMember.Id - 1);
             }
             else
             {
