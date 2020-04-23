@@ -47,6 +47,9 @@
             this.TxtbxPassword = new System.Windows.Forms.TextBox();
             this.LblSettings = new System.Windows.Forms.Label();
             this.BtnSave = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
+            this.lblConfirm = new System.Windows.Forms.Label();
+            this.txtBxConfirm = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // imageList1
@@ -145,7 +148,7 @@
             this.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEdit.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnEdit.Location = new System.Drawing.Point(373, 294);
+            this.BtnEdit.Location = new System.Drawing.Point(373, 335);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Size = new System.Drawing.Size(75, 25);
             this.BtnEdit.TabIndex = 27;
@@ -222,18 +225,18 @@
             this.LblSettings.AutoSize = true;
             this.LblSettings.Font = new System.Drawing.Font("Britannic Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSettings.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblSettings.Location = new System.Drawing.Point(352, 67);
+            this.LblSettings.Location = new System.Drawing.Point(288, 71);
             this.LblSettings.Name = "LblSettings";
-            this.LblSettings.Size = new System.Drawing.Size(98, 27);
+            this.LblSettings.Size = new System.Drawing.Size(232, 27);
             this.LblSettings.TabIndex = 34;
-            this.LblSettings.Text = "Settings";
+            this.LblSettings.Text = "Account Preferences";
             // 
             // BtnSave
             // 
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnSave.Location = new System.Drawing.Point(373, 335);
+            this.BtnSave.Location = new System.Drawing.Point(373, 376);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(75, 28);
             this.BtnSave.TabIndex = 35;
@@ -242,12 +245,48 @@
             this.BtnSave.Visible = false;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(304, 30);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(67, 19);
+            this.lblError.TabIndex = 36;
+            this.lblError.Text = "lblError";
+            this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblError.Visible = false;
+            // 
+            // lblConfirm
+            // 
+            this.lblConfirm.AutoSize = true;
+            this.lblConfirm.Font = new System.Drawing.Font("Britannic Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblConfirm.Location = new System.Drawing.Point(222, 293);
+            this.lblConfirm.Name = "lblConfirm";
+            this.lblConfirm.Size = new System.Drawing.Size(125, 16);
+            this.lblConfirm.TabIndex = 37;
+            this.lblConfirm.Text = "Confirm Password:";
+            // 
+            // txtBxConfirm
+            // 
+            this.txtBxConfirm.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtBxConfirm.Location = new System.Drawing.Point(357, 286);
+            this.txtBxConfirm.Name = "txtBxConfirm";
+            this.txtBxConfirm.PasswordChar = '•';
+            this.txtBxConfirm.Size = new System.Drawing.Size(100, 22);
+            this.txtBxConfirm.TabIndex = 38;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBxConfirm);
+            this.Controls.Add(this.lblConfirm);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.LblSettings);
             this.Controls.Add(this.TxtbxPassword);
@@ -290,5 +329,8 @@
         private System.Windows.Forms.TextBox TxtbxPassword;
         private System.Windows.Forms.Label LblSettings;
         private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label lblConfirm;
+        private System.Windows.Forms.TextBox txtBxConfirm;
     }
 }

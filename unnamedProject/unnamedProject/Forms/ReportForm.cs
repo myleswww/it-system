@@ -59,6 +59,7 @@ namespace unnamedProject
                 case 2:
                     LblReport.Text = "Existing Ticket Report";
                     tickets = handler.GetTicketCount();
+                    percent = 0;
                     LblNum.Text = "Number of Tickets in System: ";
                     LblPercent.Visible = false;
                     break;

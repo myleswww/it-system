@@ -139,6 +139,7 @@
             this.back.Size = new System.Drawing.Size(48, 48);
             this.back.TabIndex = 26;
             this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // minimizeBtn
             // 

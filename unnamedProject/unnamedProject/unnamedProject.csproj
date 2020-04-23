@@ -151,6 +151,12 @@
     <Compile Include="Forms\ViewReportsForm.Designer.cs">
       <DependentUpon>ViewReportsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewReportForm.Designer.cs">
+      <DependentUpon>ViewReportForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\CreateTicketForm.resx">
       <DependentUpon>CreateTicketForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewReportForm.resx">
+      <DependentUpon>ViewReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />

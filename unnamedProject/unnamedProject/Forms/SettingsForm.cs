@@ -59,22 +59,36 @@ namespace unnamedProject.Forms
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            lblError.Visible = false;
             dbHandler handler = new dbHandler();
+            if(TxtbxEmail.Text == "" || TxtbxPassword.Text == "" || TxtbxUsername.Text == "" || txtBxConfirm.Text == "" || TxtbxEmail.Text == null || TxtbxPassword.Text == null || TxtbxUsername.Text == null || txtBxConfirm.Text == null)
+            {
+                lblError.Visible = true;
+                lblError.Text = "You have left a field blank!";
+            }
+            else if (TxtbxPassword.Text != txtBxConfirm.Text)
+            {
+                lblError.Visible = true;
+                lblError.Text = "Your passwords must match!";
+            }
+            else
+            {
+                //save the data to the textboxes
+                TxtbxEmail.ReadOnly = true;
+                TxtbxPassword.ReadOnly = true;
+                TxtbxUsername.ReadOnly = true;
 
-            //save the data to the textboxes
-            TxtbxEmail.ReadOnly = true;
-            TxtbxPassword.ReadOnly = true;
-            TxtbxUsername.ReadOnly = true;
+                BtnSave.Visible = false;
 
-            BtnSave.Visible = false;
+                //update the database 
 
-            //update the database 
+                current.Email = TxtbxEmail.Text;
+                current.Username = TxtbxUsername.Text;
+                current.Password = TxtbxPassword.Text;
 
-            current.Email = TxtbxEmail.Text;
-            current.Username = TxtbxUsername.Text;
-            current.Password = TxtbxPassword.Text;
-
-            handler.UpdateUser(current);
+                handler.UpdateUser(current);
+            }
+            
 
             
             

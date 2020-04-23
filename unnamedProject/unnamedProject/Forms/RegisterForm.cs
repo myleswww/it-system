@@ -87,10 +87,10 @@ namespace unnamedProject
 
         private void back_Click(object sender, EventArgs e)
         {
-            
-            var admin = new Thread(() => Application.Run(new AdminForm(current)));
+
+            var admin = new Thread(() => Application.Run(current.getForm()));
             admin.Start();
-            
+
             Thread th = Thread.CurrentThread;
             th.Abort();
         }
