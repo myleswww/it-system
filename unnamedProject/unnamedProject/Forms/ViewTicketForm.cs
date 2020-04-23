@@ -41,7 +41,7 @@ namespace unnamedProject.Forms
             allUsers = handler.LoadAll();
             foreach (Users user in allUsers)
             {
-                comboBox1.Items.Add(user.Id);
+                comboBox1.Items.Add(user.Username);
             }
             if (ticket.TicketStatus != 4)
             {
@@ -125,7 +125,7 @@ namespace unnamedProject.Forms
             }
             if ((current.LevelAccess == 0 || current.LevelAccess == 1) && (ticket.TicketStatus != 3))
             {
-                ticket.Assigned = (int)comboBox1.SelectedItem;
+                ticket.Assigned = (int)comboBox1.SelectedIndex + 1; //the index is one less than the id because the user id's start at 1 in the db
                 if (ticket.TicketStatus == 4)
                     ticket.TicketStatus = 0;
                 handler.UpdateTicket(ticket);
