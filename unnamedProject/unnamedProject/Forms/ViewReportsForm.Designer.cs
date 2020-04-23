@@ -119,7 +119,7 @@
             this.back.ImageKey = "backbutton.png";
             this.back.ImageList = this.backButtonList;
             this.back.Location = new System.Drawing.Point(13, 14);
-            this.back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.back.Margin = new System.Windows.Forms.Padding(4);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(64, 59);
             this.back.TabIndex = 34;
@@ -155,6 +155,7 @@
             this.LstBxReports.Name = "LstBxReports";
             this.LstBxReports.Size = new System.Drawing.Size(779, 372);
             this.LstBxReports.TabIndex = 36;
+            this.LstBxReports.SelectedIndexChanged += new System.EventHandler(this.LstBxReports_SelectedIndexChanged);
             // 
             // ViewReportsForm
             // 

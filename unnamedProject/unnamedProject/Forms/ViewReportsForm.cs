@@ -14,6 +14,8 @@ namespace unnamedProject
     public partial class ViewReportsForm : Form
     {
         Users current;
+        public List<Report> reports;
+
         public ViewReportsForm(Users cur)
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace unnamedProject
         private void ViewReportsForm_Load(object sender, EventArgs e)
         { 
             dbHandler handler = new dbHandler();
-            List<Report> reports = handler.GetReports();
+            reports = handler.GetReports();
             LstBxReports.Items.AddRange(mergeSort(reports.ToArray(),0,reports.Count()-1,0));
         }
 
@@ -85,6 +87,19 @@ namespace unnamedProject
                 merge(usersArray, first, middle, last, orderType);
             }
             return usersArray;
+        }
+
+        private void LstBxReports_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Report selectedReport = reports[LstBxReports.SelectedIndex];
+            this.Hide();
+
+            var form = new Thread(() => Application.Run(new ViewReportForm(current, selectedReport)));
+
+            form.Start();
+            Thread th = Thread.CurrentThread;
+            th.Abort();
+            this.Close();
         }
     }
 }
